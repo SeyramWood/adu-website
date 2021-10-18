@@ -1,0 +1,126 @@
+.s__row {
+    width: $max-width;
+    &:not(:last-child) {
+        margin-bottom: $row-gutter;
+    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include respond-only(xs) {
+        flex-direction: column;
+    }
+
+    & > .s__col {
+        &:not(:last-child) {
+            margin-right: $column-gutter;
+            margin-bottom: $row-gutter;
+        }
+        &.c--12 {
+            @include grid-12;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--11 {
+            @include grid-11;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--10 {
+            @include grid-10;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--9 {
+            @include grid-9;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--8 {
+            @include grid-8;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--7 {
+            @include grid-7;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--6 {
+            @include grid-6;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--5 {
+            @include grid-5;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--4 {
+            @include grid-4;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--3 {
+            @include grid-3;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--2 {
+            @include grid-2;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--1 {
+            @include grid-1;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    & > .line {
+        flex: 1;
+        height: 1px;
+        background-color: $line;
+    }
+
+    & > .title {
+        padding: 0 1rem;
+        text-transform: uppercase;
+        &.text-white {
+            color: $white;
+        }
+    }
+
+    &.primary {
+        font-size: 2rem;
+        font-weight: 300;
+        color: $primary;
+    }
+}
+.slide__title {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.mb-4 {
+    margin-bottom: 4rem;
+}
