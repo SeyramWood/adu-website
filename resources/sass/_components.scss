@@ -439,7 +439,7 @@
 
 .banner__wrapper {
     width: 100%;
-    height: calc(100vh - #{$nav-height});
+    height: calc(80vh - #{$nav-height});
     & .banner {
         width: 100%;
         height: 100%;
@@ -582,7 +582,7 @@
 
 .calenda__box {
     width: 100%;
-    height: 10rem;
+    height: 15rem;
     border-top: 5px $primary solid;
     @include center;
     display: flex;
@@ -598,5 +598,53 @@
     &__date {
     }
     &__title {
+    }
+}
+
+.feed__wrapper {
+    width: 100%;
+    padding: 0 15rem;
+    margin-top: 5rem;
+    background: #eae6dd;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &__content {
+        flex: 1;
+        height: 45rem;
+        & > .image {
+            width: 100%;
+            height: 50%;
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        & > .content {
+            width: 100%;
+            height: 50%;
+            text-align: center;
+            color: $white;
+            padding: 0.8rem;
+            & > .title {
+                font-size: 2.5rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+            }
+            & > .text {
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+            & > .link {
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+        &--left-bg {
+            background-color: $primary;
+        }
+        &--right-bg {
+            background-color: #353535;
+        }
     }
 }

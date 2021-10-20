@@ -612,7 +612,7 @@
 
 .banner__wrapper {
   width: 100%;
-  height: calc(100vh - 10rem);
+  height: calc(80vh - 10rem);
 }
 .banner__wrapper .banner {
   width: 100%;
@@ -732,7 +732,7 @@
 
 .calenda__box {
   width: 100%;
-  height: 10rem;
+  height: 15rem;
   border-top: 5px #99001c solid;
   position: absolute;
   top: 50%;
@@ -745,6 +745,54 @@
   background-color: #fff;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
 }
+.feed__wrapper {
+  width: 100%;
+  padding: 0 15rem;
+  margin-top: 5rem;
+  background: #eae6dd;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.feed__wrapper__content {
+  flex: 1;
+  height: 45rem;
+}
+.feed__wrapper__content > .image {
+  width: 100%;
+  height: 50%;
+}
+.feed__wrapper__content > .image > img {
+  width: 100%;
+  height: 100%;
+}
+.feed__wrapper__content > .content {
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  color: #fff;
+  padding: 0.8rem;
+}
+.feed__wrapper__content > .content > .title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.feed__wrapper__content > .content > .text {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.feed__wrapper__content > .content > .link {
+  color: #fff;
+  text-decoration: underline;
+}
+.feed__wrapper__content--left-bg {
+  background-color: #99001c;
+}
+.feed__wrapper__content--right-bg {
+  background-color: #353535;
+}
+
 /***********************************
             BASIC RESET
 ***********************************/
@@ -1085,11 +1133,11 @@ a:active {
   background: #262626;
 }
 .page__footer__bottom__brand {
-  width: 40%;
+  flex: 1;
+  margin-right: 2rem;
 }
 .page__footer__bottom__brand > .logo {
   width: 20rem;
-  margin: 0 auto;
 }
 .page__footer__bottom__brand > .logo > img {
   width: 100%;
@@ -1102,7 +1150,10 @@ a:active {
   padding-top: 1rem;
 }
 .page__footer__bottom__links {
-  width: 20%;
+  flex: 1;
+}
+.page__footer__bottom__links:not(:last-child) {
+  margin-right: 2rem;
 }
 .page__footer__bottom__links__link > a {
   font-size: 1rem;
@@ -1410,7 +1461,7 @@ a:active {
   padding: 2rem 0;
 }
 .academics__calenda__slider {
-  height: 10rem;
+  height: 15rem;
   width: 100%;
 }
 .academics__calenda__btn {

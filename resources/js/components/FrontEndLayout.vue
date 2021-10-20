@@ -170,7 +170,9 @@
         <div class="page__footer__bottom__links">
           <ul class="">
             <li class="page__footer__bottom__links__link">
-              <Link href="#">ADU at a Glance</Link>
+              <Link href="#"
+                >ADU at a GlanceADU at a GlanceADU at a Glance</Link
+              >
             </li>
             <li class="page__footer__bottom__links__link">
               <Link href="#">ADU at a Glance</Link>
@@ -198,7 +200,9 @@
         <div class="page__footer__bottom__links">
           <ul class="">
             <li class="page__footer__bottom__links__link">
-              <Link href="#">ADU at a Glance</Link>
+              <Link href="#"
+                >ADU at a GlanceADU at a GlanceADU at a Glance</Link
+              >
             </li>
             <li class="page__footer__bottom__links__link">
               <Link href="#">ADU at a Glance</Link>
