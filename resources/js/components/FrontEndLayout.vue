@@ -9,13 +9,16 @@
           <Link href="#">My Ilimi</Link>
         </li>
         <li class="page__header__top__navigation__link">
+          <Link href="#">APPLY</Link>
+        </li>
+        <li class="page__header__top__navigation__link">
           <Link href="#">Donate</Link>
         </li>
       </ul>
     </nav>
     <nav class="page__header__main" ref="mainNav">
       <div :class="['page__header__logo', getLogoClass]">
-        <img src="/storage/logo.png" alt="ADU LOGO" srcset="" />
+        <img src="/storage/logo.png" alt="A.D.U LOGO" srcset="" />
       </div>
       <div class="page__header__main__left">
         <ul class="page__header__main__navigation">
@@ -33,13 +36,13 @@
       <div class="page__header__main__right">
         <ul class="page__header__main__navigation">
           <li class="page__header__main__navigation__link">
-            <Link href="#">IILab</Link>
+            <Link href="/iilab">IILab</Link>
           </li>
           <li class="page__header__main__navigation__link">
-            <Link href="#">Student Life</Link>
+            <Link href="/student-life">Student Life</Link>
           </li>
           <li class="page__header__main__navigation__link">
-            <Link href="#">Gallery</Link>
+            <Link href="/gallery">Gallery</Link>
           </li>
         </ul>
       </div>
@@ -53,16 +56,16 @@
         <div class="s__row">
           <div class="s__col c--3">
             <div class="page__footer__top__content">
-              <h3 class="page__footer__top__content__header">About ADU</h3>
+              <h3 class="page__footer__top__content__header">About A.D.U</h3>
               <ul class="page__footer__top__content__links">
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
               </ul>
             </div>
@@ -70,13 +73,13 @@
               <h3 class="page__footer__top__content__header">Global Scope</h3>
               <ul class="page__footer__top__content__links">
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
               </ul>
             </div>
@@ -86,13 +89,13 @@
               <h3 class="page__footer__top__content__header">Admissions</h3>
               <ul class="page__footer__top__content__links">
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
               </ul>
             </div>
@@ -104,13 +107,13 @@
               </h3>
               <ul class="page__footer__top__content__links">
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
               </ul>
             </div>
@@ -120,13 +123,13 @@
               </h3>
               <ul class="page__footer__top__content__links">
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__content__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
               </ul>
             </div>
@@ -135,13 +138,13 @@
             <div class="page__footer__top__right">
               <ul class="page__footer__top__right__links">
                 <li class="page__footer__top__right__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__right__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
                 <li class="page__footer__top__right__links__link">
-                  <Link href="#">ADU at a Glance</Link>
+                  <Link href="#">A.D.U at a Glance</Link>
                 </li>
               </ul>
             </div>
@@ -164,21 +167,21 @@
       <section class="page__footer__bottom">
         <div class="page__footer__bottom__brand">
           <div class="logo">
-            <img src="/storage/logo-1.png" alt="ADU LOGO" srcset="" />
+            <img src="/storage/logo-1.png" alt="A.D.U LOGO" srcset="" />
           </div>
         </div>
         <div class="page__footer__bottom__links">
           <ul class="">
             <li class="page__footer__bottom__links__link">
               <Link href="#"
-                >ADU at a GlanceADU at a GlanceADU at a Glance</Link
+                >A.D.U at a GlanceADU at a GlanceADU at a Glance</Link
               >
             </li>
             <li class="page__footer__bottom__links__link">
-              <Link href="#">ADU at a Glance</Link>
+              <Link href="#">A.D.U at a Glance</Link>
             </li>
             <li class="page__footer__bottom__links__link">
-              <Link href="#">ADU at a Glance</Link>
+              <Link href="#">A.D.U at a Glance</Link>
             </li>
           </ul>
         </div>
@@ -186,14 +189,14 @@
           <ul class="">
             <li class="page__footer__bottom__links__link">
               <Link href="#"
-                >ADU at a Glance ADU at a Glance ADU at a Glance</Link
+                >A.D.U at a Glance A.D.U at a Glance A.D.U at a Glance</Link
               >
             </li>
             <li class="page__footer__bottom__links__link">
-              <Link href="#">ADU at a Glance</Link>
+              <Link href="#">A.D.U at a Glance</Link>
             </li>
             <li class="page__footer__bottom__links__link">
-              <Link href="#">ADU at a Glance</Link>
+              <Link href="#">A.D.U at a Glance</Link>
             </li>
           </ul>
         </div>
@@ -201,20 +204,23 @@
           <ul class="">
             <li class="page__footer__bottom__links__link">
               <Link href="#"
-                >ADU at a GlanceADU at a GlanceADU at a Glance</Link
+                >A.D.U at a GlanceADU at a GlanceADU at a Glance</Link
               >
             </li>
             <li class="page__footer__bottom__links__link">
-              <Link href="#">ADU at a Glance</Link>
+              <Link href="#">A.D.U at a Glance</Link>
             </li>
             <li class="page__footer__bottom__links__link">
-              <Link href="#">ADU at a Glance</Link>
+              <Link href="#">A.D.U at a Glance</Link>
             </li>
           </ul>
         </div>
       </section>
       <section class="page__footer__copyright">
-        <span>&copy;2021 ADU, All Right Reserved</span>
+        <span
+          >&copy;{{ new Date().getUTCFullYear() }} A.D.U, All Right
+          Reserved</span
+        >
       </section>
     </footer>
   </div>

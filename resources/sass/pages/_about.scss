@@ -1,3 +1,104 @@
 .about {
     width: 100%;
+
+    .leadership__avatar {
+        @include grid-row;
+        &__card {
+            @include grid-column(
+                $width: 33.333%,
+                $height: 15rem,
+                $gutter: $column-gutter-1
+            );
+            @include card-bg;
+            @include respond-only(xs) {
+                width: column-width(50%, $column-gutter-1);
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            & > .image__wrapper {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                & > .avatar {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.3s ease-in;
+
+                    & > img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                & > .info {
+                    position: absolute;
+                    bottom: -100%;
+                    right: -100%;
+                    width: 100%;
+                    height: 100%;
+                    transition: all 0.3s ease-in;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: $white;
+                    & > p {
+                        font-size: 1rem;
+                        &:first-child {
+                            font-weight: bold;
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+                &:hover > .avatar {
+                    transform: scale(0.95);
+                }
+                &:hover > .info {
+                    bottom: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.705);
+                }
+            }
+            & > .avatar {
+                background-color: #eee;
+                width: 8rem;
+                height: 8rem;
+                border-radius: 99999px;
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 99999px;
+                }
+            }
+            & > .info {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                & .info__details {
+                    & > a {
+                        color: $text;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 0.3rem;
+                    }
+                }
+                & .info__details.info--header {
+                    margin-top: 0.5rem;
+                    margin-bottom: 1rem;
+                }
+                & .info__details.info--btn {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
 }

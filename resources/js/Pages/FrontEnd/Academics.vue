@@ -81,6 +81,8 @@
         title="Artificial Intelligence"
         image="stats.jpg"
         :ltr="true"
+        :btn="true"
+        btnText="Read more"
       >
         <template #article>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illo,
@@ -91,50 +93,24 @@
           sit amet consectetur adipisicing elit. Iste illo, tenetur dolore
           placeat cumque dignissimos!
         </template>
-        <template #links>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template>
-        <template #linksRight>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template>
       </page-article>
     </section>
-    <section class="article__wrapper" id="EnglishProgramme">
-      <page-article title="English Programme" image="stats.jpg" :ltr="true">
+    <section
+      class="article__wrapper article__wrapper--epbg"
+      id="EnglishProgramme"
+    >
+      <page-article
+        title="English Programme"
+        image="stats.jpg"
+        :ltr="true"
+        :btn="true"
+        btnText="Read more"
+      >
         <template #article>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illo,
-          tenetur dolore placeat cumque dignissimos!Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Iste illo, tenetur dolore placeat cumque
-          dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Iste illo, tenetur dolore placeat cumque dignissimos!Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Iste illo, tenetur dolore
-          placeat cumque dignissimos!
-        </template>
-        <template #links>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template>
-        <template #linksRight>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+          excepturi optio nostrum eius nihil aperiam sed recusandae ipsa?
+          Obcaecati architecto saepe dolore officiis! Dicta quasi omnis, quam
+          quos quidem nobis?
         </template>
       </page-article>
     </section>

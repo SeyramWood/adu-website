@@ -439,7 +439,7 @@
 
 .banner__wrapper {
     width: 100%;
-    height: calc(80vh - #{$nav-height});
+    // min-height: calc(100vh - #{$nav-height});
     & .banner {
         width: 100%;
         height: 100%;
@@ -489,10 +489,12 @@
                     background-position: 0 0, 0 0;
                     background-repeat: no-repeat;
                     margin-bottom: 0;
+                    transition: all 0.3s ease-in;
 
                     & > a {
                         color: $primary;
                         font-size: 1.5rem;
+                        display: block;
                     }
                     &:hover {
                         background: rgba(193, 193, 193, 0.49);
@@ -508,6 +510,19 @@
 
 .article__wrapper {
     width: 100%;
+    &--epbg {
+        background: #eae6dd;
+        margin-top: 2rem;
+    }
+    &--services {
+        background: #eae6dd;
+        margin-top: 2rem;
+        padding-bottom: 5rem;
+    }
+    & .services--btn {
+        color: $primary;
+        margin-top: 0.5;
+    }
     // margin-bottom: 5rem;
     padding: 8rem 15rem 0 15rem;
     &:last-child {
@@ -561,6 +576,15 @@
                         text-decoration: underline;
                     }
                 }
+            }
+
+            &__leadership {
+                width: 100%;
+            }
+            &__video {
+                width: 100%;
+                height: 25rem;
+                margin-top: 1rem;
             }
         }
 
@@ -645,6 +669,186 @@
         }
         &--right-bg {
             background-color: #353535;
+        }
+    }
+}
+
+.iilab__events__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.4rem;
+
+    & > span {
+        color: $primary;
+        padding-right: 0.5rem;
+        font-weight: bold;
+    }
+    & > a {
+        flex: 1;
+        color: $info;
+        font-style: italic;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__more {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2rem;
+        & > a {
+            color: $primary;
+        }
+        & > span {
+            padding-left: 0.5rem;
+            font-size: 1.4rem;
+            transition: all 0.3s ease-out;
+            color: $primary;
+        }
+        &:hover > a {
+            text-decoration: underline;
+        }
+        &:hover > span {
+            transform: translateX(0.5rem);
+        }
+    }
+}
+
+.iilab__events__event {
+    & > .image {
+        width: 100%;
+        height: 10rem;
+        & > img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    & > .date {
+        color: $primary;
+        font-size: 1.4rem;
+        padding-top: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    & > .link {
+        color: $info;
+        font-size: 1.4rem;
+        font-style: italic;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.detail__article {
+    width: 100%;
+    position: sticky;
+    top: $nav-height;
+    left: 0;
+    padding: 5rem $container-padding;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__aside {
+        width: 40%;
+        border-right: $line solid 1px;
+        & > .links {
+            & > .link {
+                padding: 0.5rem 1rem;
+                text-align: right;
+                background-image: linear-gradient(
+                    to right,
+                    rgba(193, 193, 193, 0) 0%,
+                    rgba(193, 193, 193, 0.49) 21%,
+                    rgba(193, 193, 193, 0.74) 51%,
+                    rgba(193, 193, 193, 0.49) 80%,
+                    rgba(193, 193, 193, 0) 100%
+                );
+                -moz-background-size: 100% 2px;
+                background-size: 100% 2px;
+                background-position: 0 0, 0 0;
+                background-repeat: no-repeat;
+                margin-bottom: 0;
+                transition: all 0.3s ease-in;
+
+                & > a {
+                    color: $primary;
+                    font-size: 1.5rem;
+                    display: block;
+                }
+                &:hover {
+                    background: rgba(193, 193, 193, 0.49);
+                }
+                &:hover a {
+                    text-decoration: underline;
+                }
+
+                &.active {
+                    background: rgba(193, 193, 193, 0.49);
+                    & > a {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &__main {
+        width: 60%;
+        padding-left: 2rem;
+        &__title {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1rem;
+            & > h1 {
+                font-size: 1.6rem;
+                color: $secondary;
+            }
+        }
+    }
+}
+
+.album {
+    width: 100%;
+    padding: 5rem $container-padding;
+    @include grid-row;
+    &__card {
+        @include grid-column(
+            $width: 33.333%,
+            $height: 30.2rem,
+            $gutter: $column-gutter-1
+        );
+        @include card-bg;
+        @include respond-only(xs) {
+            width: column-width(50%, $column-gutter-1);
+        }
+
+        & > .details {
+            width: 100%;
+            height: 5rem;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            & > .details__content {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                & > span:first-child {
+                    width: 20%;
+                    color: $primary;
+                    text-align: right;
+                    font-weight: bold;
+                }
+                & > span:last-child {
+                    padding-left: 1rem;
+                }
+            }
         }
     }
 }

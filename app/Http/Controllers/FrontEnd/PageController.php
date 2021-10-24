@@ -32,4 +32,28 @@ class PageController extends Controller
             //
         ]);
     }
+    public function iilab()
+    {
+        return inertia('FrontEnd/IiLab', [
+            //
+        ]);
+    }
+    public function studentLife()
+    {
+        return inertia('FrontEnd/StudentLife', [
+            //
+        ]);
+    }
+    public function studentLifeDetails($id, $slug)
+    {
+        return inertia('FrontEnd/StudentLifeDetails', [
+            //
+        ]);
+    }
+    public function gallery()
+    {
+        return inertia('FrontEnd/Gallery', [
+            //
+        ]);
+    }
 }

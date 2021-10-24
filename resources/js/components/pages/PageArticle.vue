@@ -2,9 +2,18 @@
   <div :class="['article', ltr && 'ltr']">
     <div class="article__content">
       <h1 class="article__content__title">{{ title }}</h1>
+
+      <section class="article__content__video" v-if="video">
+        <slot name="video"></slot>
+      </section>
+
       <article class="article__content__body">
         <slot name="article"></slot>
       </article>
+
+      <section class="article__content__leadership">
+        <slot name="leadership"></slot>
+      </section>
 
       <section class="article__content__links">
         <div class="article__content__links__left">
@@ -55,6 +64,10 @@ export default {
       default: "button",
     },
     ltr: {
+      type: Boolean,
+      default: false,
+    },
+    video: {
       type: Boolean,
       default: false,
     },

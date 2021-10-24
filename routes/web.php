@@ -28,3 +28,8 @@ Route::get('/', 'FrontEnd\PageController@index')->name('home');
 Route::get('/about', 'FrontEnd\PageController@about')->name('about');
 Route::get('/admissions', 'FrontEnd\PageController@admissions')->name('admissions');
 Route::get('/academics', 'FrontEnd\PageController@academics')->name('academics');
+Route::get('/iilab', 'FrontEnd\PageController@iilab')->name('iilab');
+Route::get('/student-life', 'FrontEnd\PageController@studentLife')->name('studentLife');
+Route::get('/gallery', 'FrontEnd\PageController@gallery')->name('gallery');
+
+Route::get('/student-life/{id}/{slug}', 'FrontEnd\PageController@studentLifeDetails')->name('studentLifeDetails');

@@ -13,10 +13,10 @@ import VueSmoothScroll from "vue2-smooth-scroll";
 import VueMeta from "vue-meta";
 import store from "./store";
 import axios from "axios";
+import Lightbox from "@morioh/v-lightbox";
 
 InertiaProgress.init();
-
-// Vue.use(plugin);
+Vue.use(Lightbox);
 Vue.use(VueMeta, {
     // optional pluginOptions
     refreshOnceOnNavigation: true

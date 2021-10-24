@@ -154,7 +154,7 @@
     -webkit-box-shadow: -8px 2px 52px -8px rgba(238, 238, 238, 0.95);
     -moz-box-shadow: -8px 2px 52px -8px rgba(238, 238, 238, 0.95);
     box-shadow: -8px 2px 52px -8px rgba(238, 238, 238, 0.95);
-    padding: 1rem;
+    // padding: 1rem;
 }
 @mixin grid-1 {
     width: calc((#{$max-width} - (#{$column-gutter} * 11)) / 12);

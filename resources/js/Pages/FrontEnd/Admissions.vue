@@ -6,11 +6,10 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
           recusandae officia, similique quam, accusamus tempore consequuntur
           dolores sapiente non, omnis blanditiis molestiae tempora aspernatur
-          distinctio a debitis qui quas necessitatibus!
         </template>
         <template #links>
           <s-links>
-            <s-link href="#TheADUAdvantage">The ADU Advantage</s-link>
+            <s-link href="#TheADUAdvantage">The A.D.U Advantage</s-link>
             <s-link href="#ScholarshipInformation"
               >Scholarship Information</s-link
             >
@@ -69,18 +68,10 @@
         </template>
         <template #links>
           <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template>
-        <template #linksRight>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
+            <s-link href="/kfdjklfdjhkl">A.D.U. Scholarship</s-link>
+            <s-link href="/kfdjklfdjhkl"
+              >MasterCard Foundation Scholarships</s-link
+            >
           </s-links>
         </template>
       </page-article>
