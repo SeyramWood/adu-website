@@ -107,10 +107,15 @@
         btnText="Read more"
       >
         <template #article>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-          excepturi optio nostrum eius nihil aperiam sed recusandae ipsa?
-          Obcaecati architecto saepe dolore officiis! Dicta quasi omnis, quam
-          quos quidem nobis?
+          <p>
+            The ADU English program is an English Learning establishment of the
+            African Development University that is focused on building the
+            English language proficiency of professionals, businessmen and
+            businesswomen etc., especially in the francophone region and is
+            committed to taking learners through an exciting language learning
+            journey with courses tailored to give learners an all-round study of
+            the language.
+          </p>
         </template>
       </page-article>
     </section>

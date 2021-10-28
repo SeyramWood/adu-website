@@ -9,7 +9,7 @@
           <Link href="#">My Ilimi</Link>
         </li>
         <li class="page__header__top__navigation__link">
-          <Link href="#">APPLY</Link>
+          <Link href="#">Apply</Link>
         </li>
         <li class="page__header__top__navigation__link">
           <Link href="#">Donate</Link>
