@@ -9,10 +9,10 @@
           <Link href="#">My Ilimi</Link>
         </li>
         <li class="page__header__top__navigation__link">
-          <Link href="#">Apply</Link>
+          <Link href="#">Donate</Link>
         </li>
         <li class="page__header__top__navigation__link">
-          <Link href="#">Donate</Link>
+          <Link href="#" as="button">Apply</Link>
         </li>
       </ul>
     </nav>
@@ -22,32 +22,118 @@
       </div>
       <div class="page__header__main__left">
         <ul class="page__header__main__navigation">
-          <li class="page__header__main__navigation__link">
+          <li
+            :class="[
+              'page__header__main__navigation__link',
+              route().current('about') && 'active',
+            ]"
+          >
             <Link href="/about">About</Link>
           </li>
-          <li class="page__header__main__navigation__link">
+          <li
+            :class="[
+              'page__header__main__navigation__link',
+              route().current('admissions') && 'active',
+            ]"
+          >
             <Link href="/admissions">Admissions</Link>
           </li>
-          <li class="page__header__main__navigation__link">
+          <li
+            :class="[
+              'page__header__main__navigation__link',
+              route().current('academics') && 'active',
+            ]"
+          >
             <Link href="/academics">Academics</Link>
           </li>
         </ul>
       </div>
       <div class="page__header__main__right">
         <ul class="page__header__main__navigation">
-          <li class="page__header__main__navigation__link">
+          <li
+            :class="[
+              'page__header__main__navigation__link',
+              route().current('iilab') && 'active',
+            ]"
+          >
             <Link href="/iilab">IILab</Link>
           </li>
-          <li class="page__header__main__navigation__link">
+          <li
+            :class="[
+              'page__header__main__navigation__link',
+              route().current('studentLife') && 'active',
+            ]"
+          >
             <Link href="/student-life">Student Life</Link>
           </li>
-          <li class="page__header__main__navigation__link">
+          <li
+            :class="[
+              'page__header__main__navigation__link',
+              route().current('gallery') && 'active',
+            ]"
+          >
             <Link href="/gallery">Gallery</Link>
           </li>
         </ul>
       </div>
     </nav>
-
+    <nav class="page__mobile__nav">
+      <div class="page__mobile__nav__content">
+        <div class="page__mobile__nav__content__brand">
+          <div class="logo">
+            <Link href="/">
+              <img src="/storage/logo-2.png" alt="A.D.U LOGO" srcset="" />
+            </Link>
+          </div>
+          <Link href="#" as="button">Apply</Link>
+        </div>
+        <div
+          class="page__mobile__nav__content__icon"
+          role="button"
+          @click="toggleMobileNav = !toggleMobileNav"
+        >
+          <span :class="['menu', toggleMobileNav && 'active']"></span>
+        </div>
+      </div>
+    </nav>
+    <section :class="['page__mobile__drawer']" v-show="toggleMobileNav">
+      <div
+        :class="['page__mobile__drawer__content', toggleMobileNav && 'open']"
+      >
+        <ul class="mobile__navigation">
+          <li
+            :class="[
+              'mobile__navigation__link',
+              route().current('about') && 'active',
+            ]"
+          >
+            <Link href="/about">About</Link>
+          </li>
+          <li
+            :class="[
+              'mobile__navigation__link',
+              route().current('admissions') && 'active',
+            ]"
+          >
+            <Link href="/admissions">Admissions</Link>
+          </li>
+          <li
+            :class="[
+              'mobile__navigation__link',
+              route().current('academics') && 'active',
+            ]"
+          >
+            <Link href="/academics">Academics</Link>
+          </li>
+          <li class="mobile__navigation__link">
+            <Link href="#">My Ilimi</Link>
+          </li>
+          <li class="mobile__navigation__link">
+            <Link href="#">Donate</Link>
+          </li>
+        </ul>
+      </div>
+    </section>
     <main class="page__main">
       <slot></slot>
     </main>
@@ -251,6 +337,7 @@ export default {
   data() {
     return {
       logoClass: "big",
+      toggleMobileNav: false,
     };
   },
 };

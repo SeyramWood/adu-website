@@ -7,6 +7,12 @@
         align-items: center;
         height: $nav-top-height;
         padding: 0 10rem;
+        @include respond-down(lg) {
+            padding: 0 5rem;
+        }
+        @include respond-down(md) {
+            display: none;
+        }
         &__brand {
             text-transform: uppercase;
             & > a {
@@ -17,7 +23,7 @@
                 justify-content: center;
                 align-items: center;
                 color: $primary;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 font-weight: 400;
                 letter-spacing: 1.5px;
             }
@@ -46,9 +52,22 @@
                     justify-content: center;
                     align-items: center;
                     color: $primary;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-weight: 400;
                     letter-spacing: 1.5px;
+                }
+
+                & > button {
+                    background: $secondary;
+                    color: $white;
+                    border: none;
+                    padding: 0.5rem 2rem;
+                    letter-spacing: 1.5px;
+                    font-size: 1.2rem;
+                    text-transform: capitalize;
+                }
+                & > button:hover {
+                    text-decoration: underline;
                 }
 
                 &:hover > a {
@@ -73,6 +92,13 @@
         -webkit-box-shadow: inset -2px 3px 18px -1px rgba(38, 38, 38, 1);
         -moz-box-shadow: inset -2px 3px 18px -1px rgba(38, 38, 38, 1);
         box-shadow: inset -2px 3px 18px -1px rgba(38, 38, 38, 1);
+
+        @include respond-down(lg) {
+            padding: 0 7.5rem;
+        }
+        @include respond-down(md) {
+            display: none;
+        }
 
         &__left {
             align-self: stretch;
@@ -102,7 +128,7 @@
                     justify-content: center;
                     align-items: center;
                     color: $white;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-weight: 400;
                     letter-spacing: 1.5px;
                 }
@@ -110,7 +136,8 @@
                 &:hover {
                     background-color: $primary-dark;
                 }
-                &:hover > a {
+                &.active {
+                    background-color: $primary-dark;
                 }
             }
         }
@@ -127,11 +154,13 @@
         &.big {
             top: -$nav-top-height;
             left: calc(55% - 100px);
+            width: 8rem;
             height: $nav-height;
         }
         &.small {
             top: 0;
             left: calc(57% - 100px);
+            width: 5rem;
             height: calc(#{$nav-height} - #{$nav-top-height});
         }
 
@@ -141,11 +170,139 @@
         }
     }
 
+    &__mobile__nav {
+        width: 100%;
+        height: $nav-height;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        display: none;
+        @include respond-down(md) {
+            display: block;
+        }
+        &__content {
+            width: 100%;
+            height: $nav-height;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            background: $primary;
+
+            -webkit-box-shadow: inset -2px 3px 18px -1px rgba(38, 38, 38, 1);
+            -moz-box-shadow: inset -2px 3px 18px -1px rgba(38, 38, 38, 1);
+            box-shadow: inset -2px 3px 18px -1px rgba(38, 38, 38, 1);
+
+            &__brand {
+                & > .logo {
+                    // width: 5rem;
+                    height: calc(#{$nav-height}/ 2);
+                    & > a {
+                        display: block;
+                        height: calc(#{$nav-height}/ 2);
+                        & > img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                & > button {
+                    background: $secondary;
+                    color: $white;
+                    border: none;
+                    padding: 0.5rem 2rem;
+                    letter-spacing: 1.5px;
+                    font-size: 1.2rem;
+                    text-transform: capitalize;
+                    margin-top: 0.5rem;
+                }
+                & > button:hover {
+                    text-decoration: underline;
+                }
+            }
+            &__icon {
+                $icon-height: 2.5rem;
+                width: 3.5rem;
+                height: $icon-height;
+                background: transparent;
+                position: relative;
+                & > span.menu {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 9999px;
+                    background-color: $white;
+                    transition: all 0.2s ease-in;
+                    &::before,
+                    &::after {
+                        position: absolute;
+                        display: block;
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        border-radius: 9999px;
+                        background-color: $white;
+                        transition: all 0.2s ease-in;
+                    }
+                    &::before {
+                        top: calc(calc(#{$icon-height} / 2) - 1px);
+                        left: 0;
+                    }
+
+                    &::after {
+                        top: calc(#{$icon-height} - 1px);
+                        left: 0;
+                    }
+
+                    &.active {
+                        top: calc(calc(#{$icon-height} / 2) - 1px);
+                        transform: rotate(45deg);
+                        &::before {
+                            display: none;
+                        }
+                        &::after {
+                            top: 0;
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__mobile__drawer {
+        position: fixed;
+        top: 10rem;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 1001;
+        background: rgba(20, 20, 20, 0.342);
+        &__content {
+            width: 0;
+            height: 100%;
+            background: $white;
+            transition: width 0.3s cubic-bezier(0, 0, 0.55, 0.54);
+            &.open {
+                width: 90%;
+            }
+        }
+    }
+
     &__footer {
         width: 100%;
         &__top {
             background-color: #f3f3f3;
             padding: 5rem $container-padding;
+            @include respond-down(md) {
+                padding: 5rem 2rem;
+            }
             &__content {
                 width: 100%;
                 &__header {
@@ -231,11 +388,21 @@
             display: flex;
             justify-content: flex-start;
             background: $secondary;
+            @include respond-down(md) {
+                padding: 5rem 2rem;
+            }
+            @include respond-down(sm) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
 
             &__brand {
                 flex: 1;
                 margin-right: 2rem;
-                // background-color: blue;
+                @include respond-down(sm) {
+                    margin-bottom: 2rem;
+                }
                 & > .logo {
                     width: 20rem;
                     // margin: 0 auto;
@@ -256,8 +423,12 @@
                 // width: 20%;
                 &:not(:last-child) {
                     margin-right: 2rem;
+                    @include respond-down(sm) {
+                        margin-bottom: 2rem;
+                    }
                 }
                 flex: 1;
+
                 &__link {
                     & > a {
                         font-size: 1rem;

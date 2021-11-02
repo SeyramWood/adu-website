@@ -28,6 +28,7 @@ Vue.use(VueSmoothScroll, {
     updateHistory: true // whether to push hash to history
 });
 Object.defineProperty(Vue.prototype, "$axios", { value: axios });
+Object.defineProperty(Vue.prototype, "route", { value: window.route });
 
 createInertiaApp({
     resolve: name => import(`./Pages/${name}`),

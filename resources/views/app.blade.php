@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <?php echo app('Tightenco\Ziggy\BladeRouteGenerator')->generate(); ?>
     @inertia
 </body>
 
