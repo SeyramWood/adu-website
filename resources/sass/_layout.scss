@@ -57,17 +57,19 @@
                     letter-spacing: 1.5px;
                 }
 
-                & > button {
+                & > .button {
+                    height: 80%;
                     background: $secondary;
                     color: $white;
                     border: none;
-                    padding: 0.5rem 2rem;
+                    // padding: 0.2rem 2rem;
                     letter-spacing: 1.5px;
                     font-size: 1.2rem;
                     text-transform: capitalize;
                 }
-                & > button:hover {
+                & > .button:hover {
                     text-decoration: underline;
+                    color: $white;
                 }
 
                 &:hover > a {

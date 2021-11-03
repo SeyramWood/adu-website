@@ -24,49 +24,121 @@
       </banner>
     </div>
 
-    <section class="article__wrapper" id="TheADUAdvantage">
-      <page-article title="The ADU Advantage" image="stats.jpg" :ltr="true">
-        <template #article>
-          <ul style="list-style-type: disc; margin-left: 4rem">
-            <li>
-              We are an institution that is student centered – Students FIRST
-            </li>
-            <li>US-Style Higher Education Model</li>
-            <li>
-              Liberal Arts Framework: an educational model that develops problem
-              solving, freedom of choice, breadth of knowledge and transferable
-              skills
-            </li>
-            <li>Entrepreneurial Focused</li>
-            <li>
-              Student Development Trough Experiential Learning: building
-              student’s leadership, relations, life skills, social & emotional
-              skills and intellectual curiosity
-            </li>
-            <li>
-              Blended Learning: a combination of in-person and virtual teaching
-              & learning
-            </li>
-            <li>
-              Bilingual Education and Campus Environment (English & French)
-            </li>
-            <li>We provide high level career placement support</li>
-          </ul>
-        </template>
-        <!-- <template #links>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template> -->
-      </page-article>
+    <section class="admissions__advantage" id="TheADUAdvantage">
+      <h1 class="title">The A.D.U. Advantage</h1>
+      <v-app>
+        <v-timeline
+          :dense="$vuetify.breakpoint.smAndDown"
+          class="front-end-timeline"
+        >
+          <v-timeline-item color="purple lighten-2" fill-dot right>
+            <v-card>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" md="12">
+                    We are an institution that is student centered – Students
+                    FIRST
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item color="amber lighten-1" fill-dot left small>
+            <v-card>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" md="12">
+                    US-Style Higher Education Model
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item color="cyan lighten-1" fill-dot right>
+            <v-card>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" md="12">
+                    Liberal Arts Framework: an educational model that develops
+                    problem solving, freedom of choice, breadth of knowledge and
+                    transferable skills
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item color="red lighten-1" fill-dot left small>
+            <v-card>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" md="12"> Entrepreneurial Focused </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item color="green lighten-1" fill-dot right>
+            <v-card>
+              <v-container>
+                <v-row>
+                  <v-col>
+                    Student Development Trough Experiential Learning: building
+                    student’s leadership, relations, life skills, social &
+                    emotional skills and intellectual curiosity
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item color="red lighten-1" fill-dot left small>
+            <v-card>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" md="12">
+                    Blended Learning: a combination of in-person and virtual
+                    teaching & learning
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item color="green lighten-1" fill-dot right>
+            <v-card>
+              <v-container>
+                <v-row>
+                  <v-col>
+                    Bilingual Education and Campus Environment (English &
+                    French)
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+
+          <v-timeline-item color="red lighten-1" fill-dot left small>
+            <v-card>
+              <v-container>
+                <v-row>
+                  <v-col cols="12" md="12">
+                    We provide high level career placement support
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-card>
+          </v-timeline-item>
+        </v-timeline>
+      </v-app>
     </section>
     <section class="article__wrapper" id="ScholarshipInformation">
       <page-article
         title="Scholarship Information"
-        image="stats.jpg"
+        image="scholarship.jpg"
+        :imageRround="true"
         :ltr="true"
       >
         <template #article>
@@ -101,7 +173,11 @@
       </page-article>
     </section>
     <section class="article__wrapper" id="AcademicProgramsSummary">
-      <page-article title="Academic Programs Summary" image="stats.jpg">
+      <page-article
+        title="Academic Programs Summary"
+        image="tour.jpg"
+        :imageRround="true"
+      >
         <template #article>
           <h1>Program Info</h1>
           <p>
@@ -112,17 +188,12 @@
           </p>
           <article>
             <h5>Our BBA degree program has</h5>
-            <ol style="margin-left: 4rem">
+            <ol style="margin-left: 4rem; font-size: 1.2rem">
               <li>Two Core courses: Leadership and Management.</li>
-              <li>
-                Main Majors:
-                <ul style="list-style-type: disc; margin-left: 4rem">
-                  <li>LAW</li>
-                  <li>ACCOUNTING</li>
-                  <li>PROJECT MANAGEMENT</li>
-                  <li>IT</li>
-                </ul>
-              </li>
+              <li>LAW</li>
+              <li>ACCOUNTING</li>
+              <li>PROJECT MANAGEMENT</li>
+              <li>IT</li>
             </ol>
           </article>
           <article>
@@ -135,9 +206,15 @@
         </template>
         <template #links>
           <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">How to Apply</s-link>
+            <s-link
+              href="https://aduilimi-my.sharepoint.com/:b:/g/personal/fafagnibo_ilimi_edu_ne/Efz0yLO5bV1AkPv22eCnkKsBn13Yy1sUJkBTASqsSC2sGw?e=7vG1V8"
+              :external="true"
+              >How to Apply</s-link
+            >
             <s-link href="/kfdjklfdjhkl">Entry requirements</s-link>
-            <s-link href="/kfdjklfdjhkl">Click to Apply</s-link>
+            <s-link href="https://applications.eduappgh.com" :external="true"
+              >Click to Apply</s-link
+            >
           </s-links>
         </template>
         <!-- <template #linksRight>
@@ -150,52 +227,31 @@
         </template> -->
       </page-article>
     </section>
-    <section class="article__wrapper" id="ContactAdmissionTeam">
-      <page-article
-        title="Contact Admission Team"
-        image="stats.jpg"
-        :ltr="true"
-      >
-        <template #article>
-          <p>
-            For additional questions and/or inquiry regarding the status of your
-            application, you can reach us through:
-          </p>
-          <ul style="list-style-type: disc; margin-left: 4rem">
-            <li>
-              <a href="mailto:admissions@ilimi.edu.ne" class="color-primary"
-                >admissions@ilimi.edu.ne</a
-              >
-            </li>
-            <li>
-              <a href="tel:+22792396868" class="color-primary"
-                >+227 92 39 68 68 (WhatsApp)</a
-              >
-            </li>
-            <li>
-              <a href="tel:+22793396868" class="color-primary"
-                >+227 93 39 68 68</a
-              >
-            </li>
-          </ul>
-        </template>
-        <!-- <template #links>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template>
-        <template #linksRight>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template> -->
-      </page-article>
+    <section class="contact" id="ContactAdmissionTeam">
+      <h1 class="title">CONTACT ADMISSION TEAM</h1>
+      <article>
+        <p>
+          For additional questions and/or inquiry regarding the status of your
+          application, you can reach us through:
+        </p>
+        <ul style="list-style-type: disc; margin-left: 1.2rem">
+          <li>
+            <a href="mailto:admissions@ilimi.edu.ne" class="color-primary"
+              >admissions@ilimi.edu.ne</a
+            >
+          </li>
+          <li>
+            <a href="tel:+22792396868" class="color-primary"
+              >+227 92 39 68 68 (WhatsApp)</a
+            >
+          </li>
+          <li>
+            <a href="tel:+22793396868" class="color-primary"
+              >+227 93 39 68 68</a
+            >
+          </li>
+        </ul>
+      </article>
     </section>
   </section>
 </template>
@@ -207,6 +263,15 @@ import SLink from "../../components/pages/SLink";
 import Banner from "../../components/pages/Banner";
 import PageArticle from "../../components/pages/PageArticle";
 import { Link } from "@inertiajs/inertia-vue";
+
+const COLORS = ["info", "warning", "error", "success"];
+const ICONS = {
+  info: "mdi-information",
+  warning: "mdi-alert",
+  error: "mdi-alert-circle",
+  success: "mdi-check-circle",
+};
+
 export default {
   name: "Academics",
   layout: FrontEndLayout,
@@ -216,6 +281,9 @@ export default {
     SLinks,
     SLink,
     PageArticle,
+  },
+  data() {
+    return {};
   },
 };
 </script>

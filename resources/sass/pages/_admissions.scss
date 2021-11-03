@@ -1,0 +1,42 @@
+.admissions {
+    &__advantage {
+        width: 100%;
+        padding: 8rem $container-padding 0 $container-padding;
+        background: rgb(234, 230, 221);
+
+        background-image: linear-gradient(
+            to right,
+            rgba(234, 230, 221, 1),
+            rgba(234, 230, 221, 0.8),
+            rgba(234, 230, 221, 0.5),
+            rgba(234, 230, 221, 0.2)
+        );
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $white;
+        & > .title {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: $primary;
+            margin-bottom: 3rem;
+        }
+        & > .theme--light.v-application {
+            background: transparent !important;
+        }
+        & .front-end-timeline {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+
+    & > .contact {
+        width: 100%;
+        padding: 5rem $container-padding;
+        & > .title {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: $primary;
+            margin-bottom: 2rem;
+        }
+    }
+}

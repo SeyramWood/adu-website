@@ -34,7 +34,7 @@
           style="margin-bottom: 0px"
         >
           <vueper-slide
-            v-for="(cal, i) in calenda"
+            v-for="(cal, i) in calendar"
             :key="i"
             :content="cal.content"
             style="height: 100%"
@@ -42,22 +42,22 @@
         </vueper-slides>
       </div>
       <div class="academics__calenda__btn">
-        <Link href="#">View full calenda</Link>
+        <Link href="#">View full calendar</Link>
       </div>
     </section>
     <section class="academics__major" id="BusinessManagement">
-      <h1 class="title">Business Management Major</h1>
+      <h1 class="title">Business Administration Majors</h1>
       <div class="academics__major__links">
         <div class="link">
           <h3 class="title">Law</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <a @click.stop="openDialog('Law')"> View More</a>
           </div>
         </div>
         <div class="link">
           <h3 class="title">Project Management</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <a @click.stop="openDialog('Project Management')"> View More</a>
           </div>
         </div>
       </div>
@@ -65,13 +65,15 @@
         <div class="link">
           <h3 class="title">Accounting</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <a @click.stop="openDialog('Accounting')"> View More</a>
           </div>
         </div>
         <div class="link">
           <h3 class="title">Management Information System</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <a @click.stop="openDialog('Management Information System')">
+              View More</a
+            >
           </div>
         </div>
       </div>
@@ -79,7 +81,7 @@
     <section class="article__wrapper" id="ArtificialIntelligence">
       <page-article
         title="Artificial Intelligence"
-        image="stats.jpg"
+        image="ai.jpg"
         :ltr="true"
         :btn="true"
         btnText="Read more"
@@ -101,7 +103,7 @@
     >
       <page-article
         title="English Programme"
-        image="stats.jpg"
+        image="academics.jpg"
         :ltr="true"
         :btn="true"
         btnText="Read more"
@@ -119,6 +121,31 @@
         </template>
       </page-article>
     </section>
+
+    <v-dialog v-model="dialog" max-width="600px">
+      <v-card>
+        <v-card-title class="text-h5"> {{ dialogTitle }}</v-card-title>
+
+        <v-card-text>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero,
+          similique totam iure nesciunt doloremque omnis mollitia cumque labore,
+          quae ipsa accusamus nam modi quaerat ipsam culpa ex iusto, repudiandae
+          sapiente!
+        </v-card-text>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn color="green darken-1" text @click="dialog = false">
+            Disagree
+          </v-btn>
+
+          <v-btn color="green darken-1" text @click="dialog = false">
+            Agree
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </section>
 </template>
 
@@ -145,7 +172,9 @@ export default {
   },
   data() {
     return {
-      calenda: [
+      dialog: false,
+      dialogTitle: "",
+      calendar: [
         {
           content: `<div class='calenda__box'><h6 class='calenda__box__date'>TUE, NOV  2021</h6><h4 class='calenda__box__title'>African Development Universalis</h4></div>`,
         },
@@ -169,6 +198,14 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    openDialog(data) {
+      this.dialogTitle = data;
+      this.$nextTick(() => {
+        this.dialog = true;
+      });
+    },
   },
 };
 </script>

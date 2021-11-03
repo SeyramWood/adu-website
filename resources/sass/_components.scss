@@ -447,7 +447,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-
         &__cta {
             width: 30rem;
             height: 100%;
@@ -464,7 +463,7 @@
                 }
                 &__article {
                     width: 100%;
-                    // text-align: justify;
+                    font-size: 1.1rem;
                     padding: 0 2rem;
                 }
             }
@@ -493,7 +492,7 @@
 
                     & > a {
                         color: $primary;
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         display: block;
                     }
                     &:hover {
@@ -510,6 +509,21 @@
 
 .article__wrapper {
     width: 100%;
+    &--bg-image {
+        padding-bottom: 5rem;
+        margin-top: 5rem;
+        background-image: linear-gradient(
+                to right,
+                rgba(38, 38, 38, 1),
+                rgba(38, 38, 38, 0.8),
+                rgba(38, 38, 38, 0.5),
+                rgba(38, 38, 38, 0.2)
+            ),
+            url("/storage/bg/why.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $white;
+    }
     &--epbg {
         background: #eae6dd;
         margin-top: 2rem;
@@ -523,13 +537,19 @@
         color: $primary;
         margin-top: 0.5;
     }
-    // margin-bottom: 5rem;
     padding: 8rem 15rem 0 15rem;
     &:last-child {
         padding-bottom: 5rem;
     }
     & .article {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         &__content {
+            width: 65%;
+            padding-right: 3rem;
             &__title {
                 font-size: 2rem;
                 text-transform: uppercase;
@@ -537,7 +557,8 @@
             }
             &__body {
                 padding: 1rem 0;
-                font-size: 1.4rem;
+                font-size: 1.2rem;
+                // color: $text;
             }
             &__links {
                 padding-left: 18px;
@@ -553,6 +574,7 @@
                         color: $info;
                         border-bottom: 1px dotted;
                         transition: all 0.2s ease-in;
+                        font-size: 1.2rem;
                     }
                     &:hover a {
                         border-bottom: 1px solid;
@@ -589,16 +611,29 @@
         }
 
         &__image {
+            width: 35%;
             & .image {
-                width: 25rem;
-                height: 25rem;
-                border-radius: 99999px;
-
+                width: 27.5rem;
+                height: 27.5rem;
                 & > img {
                     width: 100%;
                     height: 100%;
-                    border-radius: 99999px;
                 }
+                &.round {
+                    border-radius: 99999px;
+                    & > img {
+                        border-radius: 99999px;
+                    }
+                }
+            }
+        }
+        &.ltr {
+            flex-direction: row-reverse;
+            & > .article__content {
+                padding-right: 0;
+            }
+            & > .article__image {
+                padding-right: 3rem;
             }
         }
     }
@@ -651,12 +686,12 @@
             color: $white;
             padding: 0.8rem;
             & > .title {
-                font-size: 2.5rem;
+                font-size: 2rem;
                 font-weight: bold;
                 margin-bottom: 1rem;
             }
             & > .text {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 margin-bottom: 1rem;
             }
             & > .link {

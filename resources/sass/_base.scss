@@ -42,6 +42,7 @@ html {
 
     overflow-y: initial !important;
 }
+
 body {
     text-rendering: optimizeLegibility;
     box-sizing: border-box;
@@ -53,6 +54,12 @@ body {
     background: $body-bg;
     min-height: 100vh !important;
 }
+
+.v-application {
+    font-family: $font-family-sans-serif !important;
+    line-height: $line-height-base !important;
+}
+
 a,
 a:active {
     color: $text;
@@ -68,4 +75,8 @@ a:active {
 
 .vueperslides--fixed-height {
     height: 100%;
+}
+.front-end-timeline.theme--light {
+    background: transparent !important;
+    color: $text !important;
 }

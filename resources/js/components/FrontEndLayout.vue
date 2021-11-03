@@ -6,13 +6,24 @@
       </div>
       <ul class="page__header__top__navigation">
         <li class="page__header__top__navigation__link">
-          <Link href="#">My Ilimi</Link>
+          <a
+            href="https://ilimi.edu.ne/my-ilimi"
+            target="_blank"
+            rel="noopener noreferrer"
+            >My Ilimi</a
+          >
         </li>
         <li class="page__header__top__navigation__link">
           <Link href="#">Donate</Link>
         </li>
         <li class="page__header__top__navigation__link">
-          <Link href="#" as="button">Apply</Link>
+          <a
+            href="https://applications.eduappgh.com"
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Apply</a
+          >
         </li>
       </ul>
     </nav>

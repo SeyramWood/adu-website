@@ -3,6 +3,13 @@
     <Link :href="href" v-smooth-scroll v-if="linkClass === 'banner__link'"
       ><slot></slot
     ></Link>
+    <a
+      :href="href"
+      target="_blank"
+      rel="noopener noreferrer"
+      v-else-if="external"
+      ><slot></slot
+    ></a>
     <Link :href="href" v-else><slot></slot></Link>
   </li>
 </template>
@@ -18,6 +25,10 @@ export default {
     href: {
       require: true,
       type: String,
+    },
+    external: {
+      require: false,
+      type: Boolean,
     },
   },
   inject: ["linkClass"],

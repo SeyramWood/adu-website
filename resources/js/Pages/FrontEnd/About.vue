@@ -1,12 +1,9 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="stats.jpg" title="about">
+      <banner bg="banner.jpg" title="about">
         <template #description>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-          recusandae officia, similique quam, accusamus tempore consequuntur
-          dolores sapiente non, omnis blanditiis molestiae tempora aspernatur
-          distinctio a debitis qui quas necessitatibus!
+          A.D.U. is a rapidly growing organization, and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you. 
         </template>
         <template #links>
           <s-links>
@@ -21,17 +18,10 @@
     <section class="article__wrapper" id="welcome">
       <page-article
         title="Welcome to ilimi"
-        image="stats.jpg"
-        :btn="true"
-        btnText="Take a virtual tour"
+        image='welcome.jpg'
+        :imageRround="true"
         :video="true"
       >
-        <template #article>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illo,
-          tenetur dolore placeat cumque dignissimos!Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Iste illo, tenetur dolore placeat cumque
-          dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </template>
         <template #video>
           <vueper-slides
             :dragging-distance="50"
@@ -48,8 +38,8 @@
         </template>
       </page-article>
     </section>
-    <section class="article__wrapper" id="why">
-      <page-article title="Our Why" image="stats.jpg">
+    <section class="article__wrapper article__wrapper--bg-image" id="why">
+      <page-article title="Our Why">
         <template #article>
           <p>
             African Development University (A.D.U.) is an innovative
@@ -115,10 +105,11 @@
         </template> -->
       </page-article>
     </section>
-    <section class="article__wrapper" id="leadership">
-      <page-article title="Leadership" image="stats.jpg" :ltr="true">
-        <template #article>
-          <p>
+    <section class="leadership" id="leadership">
+      <h1 class="title">leadership</h1>
+      <!-- <main class="leadership__container">
+        <article class="leadership__article">
+        <p>
             A.D.U. is a rapidly growing organization, and we bring together the
             most talented individuals from Niger and around the globe. If you
             share our values, believe that higher education can transform the
@@ -133,33 +124,29 @@
               >talent@ilimi.edu.ne</a
             >.
           </p>
-        </template>
-        <template #leadership>
-          <div class="leadership__avatar">
+      </article> -->
+        <div class="leadership__avatar">
             <div
               class="leadership__avatar__card"
               v-for="leader in leadership"
               :key="leader.name"
             >
-              <div class="image__wrapper">
-                <div class="avatar">
-                  <img :src="leader.image" alt="" srcset="" />
-                </div>
-                <div class="info">
+            <div class="avatar">
+              <img :src="leader.image" alt="" srcset="" />
+            </div>
+              <div class="info">
                   <p class="name">{{ leader.name }}</p>
-                  <!-- <p class="faculty">Stem Center</p> -->
                   <p class="position">{{ leader.position }}</p>
                 </div>
-              </div>
             </div>
-          </div>
-        </template>
-      </page-article>
+      </div>
+      
+      </main>
     </section>
     <section class="feed__wrapper">
       <div class="feed__wrapper__content feed__wrapper__content--left-bg">
         <div class="image">
-          <img src="/storage/images/news-1.jpg" alt="" srcset="" />
+          <img src="/storage/images/tour-1.jpeg" alt="" srcset="" />
         </div>
         <div class="content">
           <h1 class="title">Tour Ilimi</h1>
@@ -174,7 +161,7 @@
       </div>
       <div class="feed__wrapper__content feed__wrapper__content--right-bg">
         <div class="image">
-          <img src="/storage/images/news-2.jpg" alt="" srcset="" />
+          <img src="/storage/images/tour.jpg" alt="" srcset="" />
         </div>
         <div class="content">
           <h1 class="title">Tour Ilimi</h1>
@@ -223,10 +210,16 @@ export default {
           image: "/storage/pages/about/AlmoktarAllahoury.jpg",
         },
         {
-          name: "Carl Manlan",
+          name: `KHADIJAH DIALLO`,
           faculty: "",
-          position: "Vice President, Social Impact, CEMEA at Visa",
-          image: "/storage/pages/about/CarlManlan.jpg",
+          position: `CEO, High Authority of Waqf Is DB Senior Officer in Niger`,
+          image: "/storage/pages/about/KhadijahDiallo.jpeg",
+        },
+        {
+          name: `ROSE A. DODD`,
+          faculty: "",
+          position: `Director, the Education Collaborative Ashesi University`,
+          image: "/storage/pages/about/RoseDodd.jpg",
         },
         {
           name: `FATI N'ZI-HASSANE`,
@@ -234,6 +227,19 @@ export default {
           position: `Head of Human Capital and Institutions Development, African Union Development
                     Agency (AUDA-NEPAD)`,
           image: "/storage/pages/about/FatiNzi-Hassane.jpg",
+        },
+
+        {
+          name: `MANON KARAMOKO `,
+          faculty: "",
+          position: `CEO, Unilever Cote d'Ivoire`,
+          image: "/storage/pages/about/ManonKaramoko.jpg",
+        },
+        {
+          name: "Carl Manlan",
+          faculty: "",
+          position: "Vice President, Social Impact, CEMEA at Visa",
+          image: "/storage/pages/about/CarlManlan.jpg",
         },
       ],
       slides: [

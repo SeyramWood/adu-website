@@ -28,7 +28,13 @@ export default {
     },
   },
   mounted() {
-    this.$refs.banner.style = `background-image: url("/storage/bg/${this.bg}");`;
+    this.$refs.banner.style = `background-image:linear-gradient(
+                to right,
+                rgba(38, 38, 38, 0.8),
+                rgba(38, 38, 38, 0.766),
+                rgba(38, 38, 38, 0.766),
+                rgba(38, 38, 38, 0.99)
+            ), url("/storage/bg/${this.bg}");`;
   },
 };
 </script>

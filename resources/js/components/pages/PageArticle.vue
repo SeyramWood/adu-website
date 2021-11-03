@@ -30,9 +30,9 @@
         </Link>
       </div>
     </div>
-    <div class="article__image">
-      <div class="image">
-        <img :src="`/storage/bg/${image}`" alt="article image" srcset="" />
+    <div class="article__image" v-if="image">
+      <div :class="['image', imageRround && 'round']">
+        <img :src="`/storage/images/${image}`" alt="article image" srcset="" />
       </div>
     </div>
   </div>
@@ -48,6 +48,10 @@ export default {
   props: {
     image: {
       type: String,
+      require: false,
+    },
+    imageRround: {
+      type: Boolean,
       require: true,
     },
     title: {
@@ -78,22 +82,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.article {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  &__content {
-    padding-right: 10rem;
-  }
-  &.ltr {
-    flex-direction: row-reverse;
-    & > .article__content {
-      padding-right: 0;
-    }
-    & > .article__image {
-      padding-right: 10rem;
-    }
-  }
-}
 </style>
