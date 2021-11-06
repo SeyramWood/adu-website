@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="banner.jpg" title="about">
+      <banner bg="bg/banner.jpg" title="about">
         <template #description>
           A.D.U. is a rapidly growing organization, and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you. 
         </template>
@@ -107,8 +107,8 @@
     </section>
     <section class="leadership" id="leadership">
       <h1 class="title">leadership</h1>
-      <!-- <main class="leadership__container">
-        <article class="leadership__article">
+      <main class="leadership__container">
+        <!-- <article class="leadership__article">
         <p>
             A.D.U. is a rapidly growing organization, and we bring together the
             most talented individuals from Niger and around the globe. If you
@@ -125,7 +125,7 @@
             >.
           </p>
       </article> -->
-        <div class="leadership__avatar">
+      <div class="leadership__avatar">
             <div
               class="leadership__avatar__card"
               v-for="leader in leadership"
@@ -249,9 +249,7 @@ export default {
             "This video is autoplayed, played in loop, has no controls and is not reacting to user interactions.",
           image: `${process.env.BASE_URL}images/flower.jpg`,
           video: {
-            url: "https://www.youtube.com/embed/ehJg_OlcjpE?rel=0&showinfo=0&controls=0&fs=0&modestbranding=1&color=white&iv_load_policy=3&autohide=1&enablejsapi=1",
-            // webm: `${process.env.BASE_URL}images/flower.webm`,
-            // mp4: `${process.env.BASE_URL}images/flower.mp4`,
+            url: "https://www.youtube.com/embed/2d_7v9bda24",
             props: { autoplay: true, loop: true, controls: false, muted: true },
           },
         },
@@ -261,8 +259,7 @@ export default {
             "This video is played once, has controls and is reacting to user interactions.",
           image: `${process.env.BASE_URL}images/flower.jpg`,
           video: {
-            webm: `${process.env.BASE_URL}images/flower.webm`,
-            mp4: `${process.env.BASE_URL}images/flower.mp4`,
+            url: "https://www.youtube.com/embed/2d_7v9bda24",
           },
         },
       ],

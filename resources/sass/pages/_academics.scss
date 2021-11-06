@@ -118,3 +118,42 @@
         }
     }
 }
+
+.english-programme-details {
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+    p,
+    q,
+    ul > li {
+        font-size: 1.1rem;
+    }
+    h1 {
+        @include modalH1;
+    }
+    strong {
+        color: $secondary;
+    }
+    .section {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+    & > .intro {
+        & > .image {
+            width: 100%;
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    & > .testimonials {
+        & > .cta {
+            color: $secondary;
+            font-weight: bold;
+        }
+        & > .testimonial:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+}

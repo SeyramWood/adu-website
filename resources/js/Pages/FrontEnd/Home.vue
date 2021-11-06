@@ -259,17 +259,6 @@
       <div class="view__more">
         <Link as="button">read more</Link>
       </div>
-      <section class="page__footer__top__social">
-        <div class="page__footer__top__social__line"></div>
-        <div class="page__footer__top__social__icons">
-          <v-icon>mdi-facebook</v-icon>
-          <v-icon>mdi-twitter</v-icon>
-          <v-icon>mdi-whatsapp</v-icon>
-          <v-icon>mdi-instagram</v-icon>
-          <v-icon>mdi-snpchat</v-icon>
-        </div>
-        <div class="page__footer__top__social__line"></div>
-      </section>
     </div>
   </div>
 </template>

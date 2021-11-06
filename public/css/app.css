@@ -1423,17 +1423,13 @@
   width: 100%;
   padding: 8rem 15rem 0 15rem;
 }
-.article__wrapper--bg-image {
+.article__wrapper:last-child {
   padding-bottom: 5rem;
-  margin-top: 5rem;
-  background-image: linear-gradient(to right, #262626, rgba(38, 38, 38, 0.8), rgba(38, 38, 38, 0.5), rgba(38, 38, 38, 0.2)), url("/storage/bg/why.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
 }
 .article__wrapper--epbg {
   background: #eae6dd;
   margin-top: 2rem;
+  padding-bottom: 8rem;
 }
 .article__wrapper--services {
   background: #eae6dd;
@@ -1444,7 +1440,15 @@
   color: #99001c;
   margin-top: 0.5;
 }
-.article__wrapper:last-child {
+.article__wrapper--bg-image {
+  margin-top: 5rem;
+  background-image: linear-gradient(to right, #262626, rgba(38, 38, 38, 0.8), rgba(38, 38, 38, 0.5), rgba(38, 38, 38, 0.2)), url("/storage/bg/why.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-bottom: 8rem;
+}
+.article__wrapper.ArtificialIntelligence {
   padding-bottom: 5rem;
 }
 .article__wrapper .article {
@@ -1491,7 +1495,7 @@
 .article__wrapper .article__content__btn {
   padding-top: 3rem;
 }
-.article__wrapper .article__content__btn > a {
+.article__wrapper .article__content__btn > a, .article__wrapper .article__content__btn > button {
   padding: 1rem 2rem;
   background-color: #262626;
   color: #fff;
@@ -1499,7 +1503,7 @@
   font-size: 1.4rem;
   transition: all 0.3s ease-in;
 }
-.article__wrapper .article__content__btn > a:hover {
+.article__wrapper .article__content__btn > a:hover, .article__wrapper .article__content__btn > button:hover {
   text-decoration: underline;
 }
 .article__wrapper .article__content__leadership {
@@ -1516,10 +1520,14 @@
 .article__wrapper .article__image .image {
   width: 27.5rem;
   height: 27.5rem;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 .article__wrapper .article__image .image > img {
   width: 100%;
   height: 100%;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 .article__wrapper .article__image .image.round {
   border-radius: 99999px;
@@ -1604,7 +1612,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .iilab__events__link > span {
   color: #99001c;
@@ -1627,10 +1635,11 @@
 }
 .iilab__events__link__more > a {
   color: #99001c;
+  font-size: 1.2rem;
 }
 .iilab__events__link__more > span {
   padding-left: 0.5rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease-out;
   color: #99001c;
 }
@@ -1651,17 +1660,20 @@
 }
 .iilab__events__event > .date {
   color: #99001c;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding-top: 0.5rem;
   text-transform: uppercase;
 }
 .iilab__events__event > .link {
   color: #2196f3;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-style: italic;
 }
 .iilab__events__event > .link:hover {
   text-decoration: underline;
+}
+.iilab__events__event > .description {
+  font-size: 1.2rem;
 }
 
 .detail__article {
@@ -1675,12 +1687,11 @@
   align-items: flex-start;
 }
 .detail__article__aside {
-  width: 40%;
+  width: 35%;
   border-right: #88868644 solid 1px;
 }
 .detail__article__aside > .links > .link {
   padding: 0.5rem 1rem;
-  text-align: right;
   background-image: linear-gradient(to right, rgba(193, 193, 193, 0) 0%, rgba(193, 193, 193, 0.49) 21%, rgba(193, 193, 193, 0.74) 51%, rgba(193, 193, 193, 0.49) 80%, rgba(193, 193, 193, 0) 100%);
   background-size: 100% 2px;
   background-position: 0 0, 0 0;
@@ -1706,7 +1717,7 @@
   text-decoration: underline;
 }
 .detail__article__main {
-  width: 60%;
+  width: 65%;
   padding-left: 2rem;
 }
 .detail__article__main__title {
@@ -2184,6 +2195,30 @@ a:active {
 .page__footer {
   width: 100%;
 }
+.page__footer__social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5rem 15rem;
+}
+.page__footer__social__line {
+  flex: 1;
+  height: 1px;
+  background: #88868644;
+}
+.page__footer__social__icons {
+  padding: 0 1rem;
+}
+.page__footer__social__icons > i {
+  color: #99001c !important;
+  cursor: pointer;
+}
+.page__footer__social__icons > i:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.page__footer__social__icons > i:hover {
+  color: #6b0c1db0 !important;
+}
 .page__footer__top {
   background-color: #f3f3f3;
   padding: 5rem 15rem;
@@ -2238,30 +2273,6 @@ a:active {
 }
 .page__footer__top__right__links__link:hover a {
   text-decoration: underline;
-}
-.page__footer__top__social {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-top: 5rem;
-}
-.page__footer__top__social__line {
-  flex: 1;
-  height: 1px;
-  background: #88868644;
-}
-.page__footer__top__social__icons {
-  padding: 0 1rem;
-}
-.page__footer__top__social__icons > i {
-  color: #99001c !important;
-  cursor: pointer;
-}
-.page__footer__top__social__icons > i:not(:last-child) {
-  margin-right: 0.5rem;
-}
-.page__footer__top__social__icons > i:hover {
-  color: #6b0c1db0 !important;
 }
 .page__footer__bottom {
   width: 100%;
@@ -2332,7 +2343,7 @@ a:active {
   align-items: center;
   background: #202020;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 1.5px;
 }
 
@@ -2443,11 +2454,12 @@ a:active {
   height: 100%;
 }
 .home__news .news__container > .title {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   padding: 1rem 0;
 }
 .home__news .news__container > .text {
   padding-bottom: 1rem;
+  font-size: 1.2rem;
 }
 .home__news .news__container > .link {
   display: flex;
@@ -2699,12 +2711,45 @@ a:active {
   color: #99001c;
   margin-bottom: 3rem;
 }
-.admissions__advantage > .theme--light.v-application {
-  background: transparent !important;
+.admissions__advantage > .advantages {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-bottom: 10rem;
 }
-.admissions__advantage .front-end-timeline {
-  width: 70%;
-  margin: 0 auto;
+.admissions__advantage > .advantages > .advantages__card {
+  background-color: #fff;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  height: 10rem;
+  margin: 0.5rem;
+  width: calc(25% - (0.5rem * 2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  padding: 1rem;
+  border-left: 10px solid #262626;
+}
+@media only screen and (max-width: 35.999em) {
+  .admissions__advantage > .advantages > .advantages__card {
+    width: calc(50% - (0.5rem * 2));
+  }
+}
+.admissions__advantage > .advantages > .advantages__card > p {
+  color: #262626;
+  font-size: 1.2rem;
+}
+.admissions__advantage > .advantages > .advantages__card:hover {
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 83px -17px rgba(56, 56, 56, 0.568);
+  background: #99001c;
+}
+.admissions__advantage > .advantages > .advantages__card:hover > p {
+  color: #fff;
 }
 .admissions > .contact {
   width: 100%;
@@ -2824,6 +2869,83 @@ a:active {
 .academics__major__links > .link > .title {
   color: #99001c;
   font-size: 1.6rem;
+}
+
+.english-programme-details {
+  width: 100%;
+  padding: 0 1rem 1rem 1rem;
+}
+.english-programme-details p,
+.english-programme-details q,
+.english-programme-details ul > li {
+  font-size: 1.1rem;
+}
+.english-programme-details h1 {
+  color: #99001c;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.english-programme-details strong {
+  color: #262626;
+}
+.english-programme-details .section:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.english-programme-details > .intro > .image {
+  width: 100%;
+}
+.english-programme-details > .intro > .image > img {
+  width: 100%;
+  height: 100%;
+}
+.english-programme-details > .testimonials > .cta {
+  color: #262626;
+  font-weight: bold;
+}
+.english-programme-details > .testimonials > .testimonial:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.event-details {
+  width: 100%;
+  padding: 0 2rem;
+}
+.event-details > .image {
+  width: 100%;
+  height: 20rem;
+}
+.event-details > .image > img {
+  width: 100%;
+  height: 100%;
+}
+.event-details > h1 {
+  color: #99001c;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.event-details > p {
+  font-size: 1.1rem;
+}
+
+.showrooms {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.showrooms__card {
+  height: 34rem;
+  margin: 0.5rem;
+  width: calc(33.333% - (0.5rem * 2));
+  padding: 2rem 0.5rem;
+}
+@media only screen and (max-width: 35.999em) {
+  .showrooms__card {
+    width: calc(50% - (0.5rem * 2));
+  }
 }
 
 .d__wrapper {

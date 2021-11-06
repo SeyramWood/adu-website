@@ -31,10 +31,10 @@ export default {
     this.$refs.banner.style = `background-image:linear-gradient(
                 to right,
                 rgba(38, 38, 38, 0.8),
-                rgba(38, 38, 38, 0.766),
-                rgba(38, 38, 38, 0.766),
-                rgba(38, 38, 38, 0.99)
-            ), url("/storage/bg/${this.bg}");`;
+                rgba(38, 38, 38, 0.3),
+                rgba(38, 38, 38, 0.3),
+                rgba(38, 38, 38, 0.8)
+            ), url("/storage/${this.bg}");`;
   },
 };
 </script>

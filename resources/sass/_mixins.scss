@@ -11,6 +11,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+@mixin image {
+    width: 100%;
+    height: 100%;
+}
+@mixin modalH1 {
+    color: $primary;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
 @mixin truncate {
     white-space: nowrap;
     overflow: hidden;

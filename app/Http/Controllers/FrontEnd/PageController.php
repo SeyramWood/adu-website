@@ -44,9 +44,27 @@ class PageController extends Controller
             //
         ]);
     }
-    public function studentLifeDetails($id, $slug)
+    public function studentLifeCampuse($id, $slug)
     {
-        return inertia('FrontEnd/StudentLifeDetails', [
+        return inertia('FrontEnd/StudentLifeCampuse', [
+            //
+        ]);
+    }
+    public function studentLifeSpotlight($id, $slug)
+    {
+        return inertia('FrontEnd/StudentLifeSpotlight', [
+            //
+        ]);
+    }
+    public function iilabEvents()
+    {
+        return inertia('FrontEnd/IilabEvents', [
+            //
+        ]);
+    }
+    public function iilabShowroom()
+    {
+        return inertia('FrontEnd/IilabShowroom', [
             //
         ]);
     }

@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="stats.jpg" title="Student Life">
+      <banner bg="images/student-life-1.jpg" title="Student Life">
         <template #description>
           <p style="padding-bottom: 4rem">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
@@ -10,16 +10,24 @@
             distinctio a debitis qui quas necessitatibus!
           </p>
         </template>
+        <template #links>
+          <s-links>
+            <s-link href="#lifeOnCampus">Life on Campus</s-link>
+            <s-link href="#spotlight">Spotlight</s-link>
+          </s-links>
+        </template>
       </banner>
     </div>
 
-    <section class="academics__major" id="BusinessManagement">
+    <section class="academics__major" id="lifeOnCampus">
       <h1 class="title">LIFE ON CAMPUS</h1>
       <div class="academics__major__links">
         <div class="link">
           <h3 class="title">ilimi Student Government</h3>
           <div class="link__box">
-            <Link :href="`student-life/${1}/ilimi-student-government`">
+            <Link
+              :href="`student-life/life-on-campuse/${1}/ilimi-student-government`"
+            >
               View More</Link
             >
           </div>
@@ -69,7 +77,7 @@
       </div>
     </section>
 
-    <div class="home__spotlight">
+    <div class="home__spotlight" id="spotlight">
       <div class="header primary mb-4">
         <div class="line"></div>
         <h4 class="title">STUDENT SPOTLIGHT</h4>

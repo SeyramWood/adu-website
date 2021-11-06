@@ -299,6 +299,30 @@
 
     &__footer {
         width: 100%;
+        &__social {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 5rem 15rem;
+            &__line {
+                flex: 1;
+                height: 1px;
+                background: $line;
+            }
+            &__icons {
+                padding: 0 1rem;
+                & > i {
+                    color: $primary !important;
+                    cursor: pointer;
+                    &:not(:last-child) {
+                        margin-right: 0.5rem;
+                    }
+                    &:hover {
+                        color: $primary-dark !important;
+                    }
+                }
+            }
+        }
         &__top {
             background-color: #f3f3f3;
             padding: 5rem $container-padding;
@@ -355,30 +379,6 @@
                         }
                         &:hover a {
                             text-decoration: underline;
-                        }
-                    }
-                }
-            }
-            &__social {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                padding-top: 5rem;
-                &__line {
-                    flex: 1;
-                    height: 1px;
-                    background: $line;
-                }
-                &__icons {
-                    padding: 0 1rem;
-                    & > i {
-                        color: $primary !important;
-                        cursor: pointer;
-                        &:not(:last-child) {
-                            margin-right: 0.5rem;
-                        }
-                        &:hover {
-                            color: $primary-dark !important;
                         }
                     }
                 }
@@ -453,7 +453,7 @@
             align-items: center;
             background: #202020;
             color: $white;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             letter-spacing: 1.5px;
         }
     }

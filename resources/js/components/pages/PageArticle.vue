@@ -23,12 +23,6 @@
           <slot name="linksRight"></slot>
         </div>
       </section>
-
-      <div class="article__content__btn" v-if="btn">
-        <Link>
-          {{ btnText }}
-        </Link>
-      </div>
     </div>
     <div class="article__image" v-if="image">
       <div :class="['image', imageRround && 'round']">

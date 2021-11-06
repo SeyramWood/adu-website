@@ -64,7 +64,7 @@
           <li
             :class="[
               'page__header__main__navigation__link',
-              route().current('iilab') && 'active',
+              route().current('iilab*') && 'active',
             ]"
           >
             <Link href="/iilab">IILab</Link>
@@ -72,7 +72,7 @@
           <li
             :class="[
               'page__header__main__navigation__link',
-              route().current('studentLife') && 'active',
+              route().current('studentLife*') && 'active',
             ]"
           >
             <Link href="/student-life">Student Life</Link>
@@ -148,6 +148,17 @@
     <main class="page__main">
       <slot></slot>
     </main>
+    <section class="page__footer__social">
+      <div class="page__footer__social__line"></div>
+      <div class="page__footer__social__icons">
+        <v-icon>mdi-facebook</v-icon>
+        <v-icon>mdi-twitter</v-icon>
+        <v-icon>mdi-whatsapp</v-icon>
+        <v-icon>mdi-instagram</v-icon>
+        <v-icon>mdi-snpchat</v-icon>
+      </div>
+      <div class="page__footer__social__line"></div>
+    </section>
     <footer class="page__footer">
       <!-- <section class="page__footer__top">
         <div class="s__row">
@@ -260,7 +271,6 @@
           <div class="page__footer__top__social__line"></div>
         </section>
       </section> -->
-
       <section class="page__footer__bottom">
         <div class="page__footer__bottom__brand">
           <div class="logo">

@@ -1,10 +1,9 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="stats.jpg" title="iiLab">
+      <banner bg="images/library-2.jpeg" title="iiLab">
         <template #description>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-          recusandae officia, similique quam, accusamus tempore
+          <p>A.D.U’s innovation and entrepreneurship hub.</p>
         </template>
         <template #links>
           <s-links>
@@ -19,13 +18,14 @@
     </div>
 
     <section class="article__wrapper" id="welcome">
-      <page-article title="Welcome to IILab" image="stats.jpg">
+      <page-article title="Welcome to IILab">
         <template #article>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illo,
-          tenetur dolore placeat cumque dignissimos!Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Iste illo, tenetur dolore placeat cumque
-          dignissimos! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          <button class="btn services--btn">Read more</button>
+          <p>
+            The iiLab (ilimi Innovation Lab) is A.D.U’s innovation and
+            entrepreneurship hub committed to empowering our Young Leaders by
+            providing and connecting them with tools, resources, networks and
+            support to scale their innovative and entrepreneurial ideas.
+          </p>
         </template>
       </page-article>
     </section>
@@ -47,53 +47,47 @@
       </div>
       <div class="s__row">
         <div class="s__col c--5">
-          <div class="iilab__events__link">
-            <span>OCT 24</span>
-            <Link>Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</Link>
-          </div>
-          <div class="iilab__events__link">
-            <span>SEP 15</span>
-            <Link>Lorem ipsum dolor sit amet</Link>
-          </div>
-          <div class="iilab__events__link">
-            <span>SEP 01</span>
-            <Link>Lorem ipsum dolor sit amet</Link>
+          <div class="iilab__events__link" v-for="e in events" :key="e.name">
+            <span
+              >{{ e.date.split(" ")[0].substr(0, 3) }}
+              {{ e.date.split(" ")[1].substr(0, 2) }}</span
+            >
+            <a role="button" @click="getEventData(e)">{{
+              `${e.title.substr(0, 50)} ${e.title.length > 50 ? "..." : ""}`
+            }}</a>
           </div>
           <div class="iilab__events__link__more">
-            <Link>More events</Link>
+            <Link href="/iilab/events">More events</Link>
             <span>&rarr;</span>
           </div>
         </div>
         <div class="s__col c--7">
           <div class="iilab__events s__row">
-            <div class="iilab__events__event s__col c--6">
+            <div
+              class="iilab__events__event s__col c--6"
+              v-for="e in events"
+              :key="e.name"
+            >
               <div class="image">
-                <img
-                  src="/storage/images/business-1.jpg"
-                  alt="event image"
-                  srcset=""
-                />
+                <img :src="e.image" alt="event image" srcset="" />
               </div>
-              <div class="date">October 03, 2021</div>
-              <Link class="link">Event name</Link>
+              <div class="date">{{ e.date }}</div>
+              <a
+                ref="javascript:"
+                class="link"
+                @click="getEventData(e)"
+                role="button"
+              >
+                {{
+                  `${e.title.substr(0, 32)} ${e.title.length > 32 ? "..." : ""}`
+                }}
+              </a>
               <div class="description">
-                The show will be at 7:30pm in consectetur adipisicing elit.
-                Ratione illum quo saepe incidunt vero quod fuga
-              </div>
-            </div>
-            <div class="iilab__events__event s__col c--6">
-              <div class="image">
-                <img
-                  src="/storage/images/business-1.jpg"
-                  alt="event image"
-                  srcset=""
-                />
-              </div>
-              <div class="date">October 03, 2021</div>
-              <Link class="link">Event name</Link>
-              <div class="description">
-                The show will be at 7:30pm in consectetur adipisicing elit.
-                Ratione illum quo saepe incidunt vero quod fuga
+                {{
+                  `${e.description.substr(0, 70)} ${
+                    e.description.length > 70 ? "..." : "."
+                  }`
+                }}
               </div>
             </div>
           </div>
@@ -107,59 +101,34 @@
         <div class="line"></div>
       </div>
       <div class="s__row">
-        <div class="s__col c--4">
+        <div class="s__col c--4" v-for="show in showrooms" :key="show.title">
           <div class="news__container">
             <div class="image">
-              <img src="/storage/images/business-1.jpg" alt="" srcset="" />
+              <img :src="show.image" alt="" srcset="" />
             </div>
-            <h1 class="title">Virtual showroom,</h1>
+            <h1 class="title">
+              {{
+                `${show.title.substr(0, 50)} ${
+                  show.title.length > 50 ? "..." : ""
+                }`
+              }}
+            </h1>
             <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              soluta numquam, distinctio omnis doloremque repellendus error
-              repudiandae tempore obcaecati. Dolores vitae ratione ut delectus
+              {{
+                `${show.description.substr(0, 150)} ${
+                  show.description.length > 150 ? "..." : "."
+                }`
+              }}
             </p>
-            <div class="link">
-              <Link>Read more</Link>
-              <span>&rarr;</span>
-            </div>
-          </div>
-        </div>
-        <div class="s__col c--4">
-          <div class="news__container">
-            <div class="image">
-              <img src="/storage/images/ai.jpg" alt="" srcset="" />
-            </div>
-            <h1 class="title">Young leaders businesses and contacts</h1>
-            <p class="text">
-              Rich learning experiences that provide a broad liberal arts
-              foundation and deep subject-area expertise
-            </p>
-            <div class="link">
-              <Link>Read more</Link>
-              <span>&rarr;</span>
-            </div>
-          </div>
-        </div>
-        <div class="s__col c--4">
-          <div class="news__container">
-            <div class="image">
-              <img src="/storage/images/academics.jpg" alt="" srcset="" />
-            </div>
-            <h1 class="title">Project Name</h1>
-            <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              eaque corporis fugit ullam nobis exercitationem ipsum quo
-              doloribus reiciendis eos ducimus, temporibus excepturi, maxime
-            </p>
-            <div class="link">
-              <Link>Read more</Link>
+            <div class="link" @click="getShowroomData(show)" role="button">
+              <a ref="javascript:">Read more</a>
               <span>&rarr;</span>
             </div>
           </div>
         </div>
       </div>
       <div class="view__more">
-        <Link as="button">View all</Link>
+        <Link as="button" href="/iilab/showroom">View all</Link>
       </div>
     </div>
     <section class="feed__wrapper" id="spotlight">
@@ -216,6 +185,31 @@
         </div>
       </div>
     </section>
+
+    <s-modal v-model="eventModal" width="50rem">
+      <div class="event-details" v-if="currentEvent">
+        <div class="image">
+          <img :src="currentEvent.image" alt="event image" srcset="" />
+        </div>
+        <h1>{{ currentEvent.title }}</h1>
+
+        <p>
+          {{ currentEvent.description }}
+        </p>
+      </div>
+    </s-modal>
+    <s-modal v-model="showroomModal" width="50rem">
+      <div class="event-details" v-if="currentShowroom">
+        <div class="image">
+          <img :src="currentShowroom.image" alt="event image" srcset="" />
+        </div>
+        <h1>{{ currentShowroom.title }}</h1>
+
+        <p>
+          {{ currentShowroom.description }}
+        </p>
+      </div>
+    </s-modal>
   </section>
 </template>
 
@@ -228,6 +222,7 @@ import SLinks from "../../components/pages/SLinks";
 import SLink from "../../components/pages/SLink";
 import Banner from "../../components/pages/Banner";
 import PageArticle from "../../components/pages/PageArticle";
+import SModal from "../../components/SModal";
 export default {
   name: "IiLab",
   layout: FrontEndLayout,
@@ -239,34 +234,107 @@ export default {
     SLinks,
     SLink,
     PageArticle,
+    SModal,
   },
   data() {
     return {
+      eventModal: false,
+      showroomModal: false,
+      currentEvent: null,
+      currentShowroom: null,
+      events: [
+        {
+          title: "In collaboration with E-TAKARA",
+          description:
+            "In collaboration with E-Takara, the iiLab of A.D.U held an info session yesterday on the A.D.U campus. We were privileged to have previous laureates of the competition such as Latifa Salissou Hassane (via audio recording), Rafiou Ala Roi Fhad (in person) and Idriss Laouali Abdou (via video-recording) share with ADU Young Leaders about the incredible experience their participation in the competition has been for them. The E-Takara team also shared more about the vision behind the competition, as well as the selection criteria, before encouraging A.D.U Young Leaders to apply massively.",
+          date: "December 25, 2021",
+          image: "/storage/images/event-2.jpg",
+        },
+        {
+          title: "iiLab Open House for the Kagamé cohort",
+          description: `As lifelong members of the ilimi community, the iiLab’s support to the Kagamé cohort (which just graduated) will always be available. Nonetheless, for the upcoming months, the iiLab has an exciting and comprehensive entrepreneurship support program in store, just for the Kagamé Cohort, made up of large-group sessions, one-on-one sessions, some funding, and other activities aiming to equip our Kagame Cohort Young Leaders with tools and resources for them to catalyze their growth as entrepreneurs and that of their ideas, regardless of their current advancement level. The Open House allowed the iiLab to give out more details about the program which will be informed by insights from a currently ongoing needs-assessment process.
+Note: The iiLab also has exciting plans for the Wangari, Johnson and Jean cohorts, once they return to campus.
+`,
+          date: "September 14, 2021",
+          image: "/storage/images/event-1.jpeg",
+        },
+      ],
+      showrooms: [
+        {
+          title: "Aichatou Mahamane (Kagame Cohort): CEO of Tallit Design",
+          description:
+            "Tallit Design is a new company aiming to promote African and mainly Nigerien culture through the making of accessories for men and women and clothing combining modernity and culture. Tallit Design is also in the field of interior design and events, highlighting African cultures, using our various traditional loincloths. To date, Tallit has had to participate in several events and organized its very first fashion show for the launch of its collection named Mahba. Thanks to the success of such a fashion show, Tallit Design had the privilege to dress the hostesses during the opening ceremony of King Abdullah bin Abdulaziz Al Saoud University, organized by the Waqf authority, among other opportunities. Do not hesitate to contact them at 89257766 or via their email address tallitdesign227@gmail.com and follow them on",
+          image: "/storage/images/ceo-1.jpg",
+          social: [
+            "Facebook: tallit design",
+            "Instagram: tallitforculture",
+            "Twitter: tallit design",
+            "LinkedIn: tallit design",
+          ],
+        },
+        {
+          title:
+            "Mahaman Sani A. Souleymane (Obama Cohort): CEO of Kakaki Multimedia",
+          description: `Kakaki is an agency specializing in global business communication. We do all kinds of design, printing on any medium, embroidery, personalized advertising gadgets, business flyers, community management etc. Kakaki is also involved in major communication projects such as branding of buildings, vehicles, illuminated signs, totems, 3D illuminated initials, painting, etc. The very first companies to trust our services are (among others) EBTP Grand Projet (for which we crafted golden initials, and community management), SOPAMIN (for their new website), Le SULTAN (for their totem and community management), Polyclinic Magori (we branding their cars, sewing their blouses, digital embroidery, goodies, etc.), ADU (for kakemonos, photo frames, and others), Nikki Hotel (for their luminous initials), ETS Zaao (for their luminous initials and t-shirts), and Guimbia make-up (for their luminous initials). For all your communication needs, do not hesitate to contact them at 91912329/89417277, or via their email address contactkakaki@gmail.com / souleymanemsani@gmail.com. You can follow them on`,
+          image: "/storage/images/ceo-2.jpg",
+          social: [
+            "Facebook: kakaki multimedia",
+            "Instagram: kakakimultimedia",
+            "Twitter: kakaki multimedia",
+          ],
+        },
+        {
+          title:
+            "Abdoul-Rachid Maman Kadade (Kagame Cohort): CEO of Sahel Solar Academy",
+          description: `Sahel Solar Academy is a non-profit technical and vocational training institution on the various installation and maintenance techniques of solar power plants as well as underground water pumps powered by PV. It is a center where people will come to learn how to install and maintain PV powered power plants, solar panels and underground water pumps in households, businesses, communities, villages and any particular place it either commercial, industrial, institutional or residential.`,
+          image: "/storage/images/ceo-3.jpg",
+          social: [],
+        },
+      ],
       slides: [
         {
           title: "Blossoming flower",
           content:
             "This video is autoplayed, played in loop, has no controls and is not reacting to user interactions.",
-          image: `${process.env.BASE_URL}images/flower.jpg`,
+          image: `/storage/ADU_picture.png`,
           video: {
-            url: "https://www.youtube.com/embed/ehJg_OlcjpE?rel=0&showinfo=0&controls=0&fs=0&modestbranding=1&color=white&iv_load_policy=3&autohide=1&enablejsapi=1",
+            url: "https://www.youtube.com/embed/2d_7v9bda24",
             // webm: `${process.env.BASE_URL}images/flower.webm`,
             // mp4: `${process.env.BASE_URL}images/flower.mp4`,
-            props: { autoplay: true, loop: true, controls: false, muted: true },
+            props: {
+              autoplay: true,
+              loop: true,
+              controls: false,
+              muted: true,
+            },
           },
         },
         {
           title: "Blossoming flower",
           content:
             "This video is played once, has controls and is reacting to user interactions.",
-          image: `${process.env.BASE_URL}images/flower.jpg`,
+          image: `/storage/ADU_picture.png`,
           video: {
-            webm: `${process.env.BASE_URL}images/flower.webm`,
-            mp4: `${process.env.BASE_URL}images/flower.mp4`,
+            url: "https://www.youtube.com/embed/2d_7v9bda24",
           },
+          props: { autoplay: true, loop: true, controls: false, muted: true },
         },
       ],
     };
+  },
+  methods: {
+    getEventData(event) {
+      this.currentEvent = event;
+      this.$nextTick(() => {
+        this.eventModal = !this.eventModal;
+      });
+    },
+    getShowroomData(showroom) {
+      this.currentShowroom = showroom;
+      this.$nextTick(() => {
+        this.showroomModal = !this.showroomModal;
+      });
+    },
   },
 };
 </script>

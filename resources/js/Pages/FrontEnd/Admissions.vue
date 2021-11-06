@@ -1,7 +1,7 @@
 <template>
   <section class="admissions">
     <div class="banner__wrapper">
-      <banner bg="stats.jpg" title="admissions">
+      <banner bg="bg/banner.jpg" title="admissions">
         <template #description>
           African Development University (A.D.U) is a university of excellence
           based in Niamey (Niger). Our mission is to prepare the most talented
@@ -26,113 +26,32 @@
 
     <section class="admissions__advantage" id="TheADUAdvantage">
       <h1 class="title">The A.D.U. Advantage</h1>
-      <v-app>
-        <v-timeline
-          :dense="$vuetify.breakpoint.smAndDown"
-          class="front-end-timeline"
-        >
-          <v-timeline-item color="purple lighten-2" fill-dot right>
-            <v-card>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    We are an institution that is student centered – Students
-                    FIRST
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item color="amber lighten-1" fill-dot left small>
-            <v-card>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    US-Style Higher Education Model
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item color="cyan lighten-1" fill-dot right>
-            <v-card>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    Liberal Arts Framework: an educational model that develops
-                    problem solving, freedom of choice, breadth of knowledge and
-                    transferable skills
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item color="red lighten-1" fill-dot left small>
-            <v-card>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12"> Entrepreneurial Focused </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item color="green lighten-1" fill-dot right>
-            <v-card>
-              <v-container>
-                <v-row>
-                  <v-col>
-                    Student Development Trough Experiential Learning: building
-                    student’s leadership, relations, life skills, social &
-                    emotional skills and intellectual curiosity
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item color="red lighten-1" fill-dot left small>
-            <v-card>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    Blended Learning: a combination of in-person and virtual
-                    teaching & learning
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item color="green lighten-1" fill-dot right>
-            <v-card>
-              <v-container>
-                <v-row>
-                  <v-col>
-                    Bilingual Education and Campus Environment (English &
-                    French)
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-
-          <v-timeline-item color="red lighten-1" fill-dot left small>
-            <v-card>
-              <v-container>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    We provide high level career placement support
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
-      </v-app>
+      <div class="advantages">
+        <div class="advantages__card">
+          <p>Student centered institution – Student FIRST</p>
+        </div>
+        <div class="advantages__card">
+          <p>US-Style Higher Education Model</p>
+        </div>
+        <div class="advantages__card">
+          <p>Liberal arts framework for educational model</p>
+        </div>
+        <div class="advantages__card">
+          <p>Entrepreneurial Focused</p>
+        </div>
+        <div class="advantages__card">
+          <p>Student Development Trough Experiential Learning</p>
+        </div>
+        <div class="advantages__card">
+          <p>Blended learning - in-person and virtual modes</p>
+        </div>
+        <div class="advantages__card">
+          <p>Bilingual education - English and French</p>
+        </div>
+        <div class="advantages__card">
+          <p>Effective career services and placement support</p>
+        </div>
+      </div>
     </section>
     <section class="article__wrapper" id="ScholarshipInformation">
       <page-article
@@ -262,6 +181,7 @@ import SLinks from "../../components/pages/SLinks";
 import SLink from "../../components/pages/SLink";
 import Banner from "../../components/pages/Banner";
 import PageArticle from "../../components/pages/PageArticle";
+
 import { Link } from "@inertiajs/inertia-vue";
 
 const COLORS = ["info", "warning", "error", "success"];
@@ -285,6 +205,7 @@ export default {
   data() {
     return {};
   },
+  methods: {},
 };
 </script>
 
