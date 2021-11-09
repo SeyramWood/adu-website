@@ -204,6 +204,12 @@ export default {
       showMore: false,
       leadership: [
         {
+          name: "Kader Kaneye",
+          faculty: "",
+          position: "Founder and President, A.D.U",
+          image: "/storage/pages/about/KaderKaneye.jpg",
+        },
+        {
           name: "ALMOKTAR ALLAHOURY",
           faculty: "",
           position: "CEO, Total Chad",

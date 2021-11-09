@@ -34,6 +34,6 @@ Route::get('/student-life', 'FrontEnd\PageController@studentLife')->name('studen
 Route::get('/gallery', 'FrontEnd\PageController@gallery')->name('gallery');
 
 Route::get('/iilab/events', 'FrontEnd\PageController@iilabEvents')->name('iilab.events');
-Route::get('/iilab/showroom', 'FrontEnd\PageController@iilabShowroom')->name('iilab.showroom');
+Route::get('/iilab/entrepreneures', 'FrontEnd\PageController@iilabEntrepreneures')->name('iilab.entrepreneures');
 Route::get('/student-life/life-on-campuse/{id}/{slug}', 'FrontEnd\PageController@studentLifeCampuse')->name('studentLife.campuse');
 Route::get('/student-life/spotlight/{id}/{slug}', 'FrontEnd\PageController@studentLifeSpotlight')->name('studentLife.spotlight');

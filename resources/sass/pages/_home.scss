@@ -151,14 +151,7 @@
             align-items: center;
             margin-top: 5rem;
             & > button {
-                padding: 1rem 5rem;
-                background: $secondary;
-                color: $white;
-                text-transform: uppercase;
-                transition: all 0.3s ease-in;
-                &:hover {
-                    background: black;
-                }
+                @include readMoreBtn;
             }
         }
     }

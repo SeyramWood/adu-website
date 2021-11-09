@@ -553,7 +553,7 @@
         align-items: center;
 
         &__content {
-            width: 65%;
+            width: 50%;
             padding-right: 3rem;
             &__title {
                 font-size: 2rem;
@@ -617,9 +617,9 @@
         }
 
         &__image {
-            width: 35%;
+            width: 50%;
             & .image {
-                width: 27.5rem;
+                width: 100%;
                 height: 27.5rem;
                 border-top-left-radius: 100px;
                 border-bottom-right-radius: 100px;
@@ -630,9 +630,9 @@
                     border-bottom-right-radius: 100px;
                 }
                 &.round {
-                    border-radius: 99999px;
+                    // border-radius: 99999px;
                     & > img {
-                        border-radius: 99999px;
+                        // border-radius: 99999px;
                     }
                 }
             }

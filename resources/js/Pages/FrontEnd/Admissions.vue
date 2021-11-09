@@ -31,10 +31,10 @@
           <p>Student centered institution – Student FIRST</p>
         </div>
         <div class="advantages__card">
-          <p>US-Style Higher Education Model</p>
+          <p>US style Highee Education Model - liberal arts education</p>
         </div>
         <div class="advantages__card">
-          <p>Liberal arts framework for educational model</p>
+          <p>International opportunities and exchange programs for students</p>
         </div>
         <div class="advantages__card">
           <p>Entrepreneurial Focused</p>
@@ -56,7 +56,7 @@
     <section class="article__wrapper" id="ScholarshipInformation">
       <page-article
         title="Scholarship Information"
-        image="scholarship.jpg"
+        image="pages/admissions/scholarship.jpg"
         :imageRround="true"
         :ltr="true"
       >
@@ -98,52 +98,34 @@
         :imageRround="true"
       >
         <template #article>
-          <h1>Program Info</h1>
-          <p>
+          <p style="margin-bottom: 2rem">
             Our 3-year bachelor program is both nationally and internationally
             recognized. Our degree programs are all accredited by Ministry of
             Higher Education, Research and Innovation, Niger. We offer two
-            Bachelors: Business Administration & Sciences
+            Bachelors: Business Administration & Artificial Intelligence.
           </p>
-          <article>
-            <h5>Our BBA degree program has</h5>
-            <ol style="margin-left: 4rem; font-size: 1.2rem">
-              <li>Two Core courses: Leadership and Management.</li>
-              <li>LAW</li>
-              <li>ACCOUNTING</li>
-              <li>PROJECT MANAGEMENT</li>
-              <li>IT</li>
-            </ol>
-          </article>
-          <article>
-            <h5>Our BS</h5>
-            <ol style="margin-left: 4rem">
-              <li>Two Core courses: Leadership and Management.</li>
-              <li>Major: Artificial Intelligence</li>
-            </ol>
-          </article>
         </template>
         <template #links>
+          <Link
+            as="button"
+            href="/academics"
+            class="read-more-btn"
+            style="margin-left: -1.5rem"
+            >Read More</Link
+          >
+        </template>
+        <template #linksRight>
           <s-links type="article">
             <s-link
               href="https://aduilimi-my.sharepoint.com/:b:/g/personal/fafagnibo_ilimi_edu_ne/Efz0yLO5bV1AkPv22eCnkKsBn13Yy1sUJkBTASqsSC2sGw?e=7vG1V8"
               :external="true"
               >How to Apply</s-link
             >
-            <s-link href="/kfdjklfdjhkl">Entry requirements</s-link>
             <s-link href="https://applications.eduappgh.com" :external="true"
               >Click to Apply</s-link
             >
           </s-links>
         </template>
-        <!-- <template #linksRight>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template> -->
       </page-article>
     </section>
     <section class="contact" id="ContactAdmissionTeam">

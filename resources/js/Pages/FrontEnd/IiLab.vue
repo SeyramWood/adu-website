@@ -3,14 +3,19 @@
     <div class="banner__wrapper">
       <banner bg="images/library-2.jpeg" title="iiLab">
         <template #description>
-          <p>A.D.U’s innovation and entrepreneurship hub.</p>
+          <p>
+            The iiLab (ilimi Innovation Lab) is A.D.U’s innovation and
+            entrepreneurship hub committed to empowering our Young Leaders by
+            providing and connecting them with tools, resources, networks and
+            support to scale their innovative and entrepreneurial ideas.
+          </p>
         </template>
         <template #links>
           <s-links>
             <s-link href="#welcome">About iiLab</s-link>
             <s-link href="#services">Services</s-link>
             <s-link href="#events">Events</s-link>
-            <s-link href="#showroom">Showroom</s-link>
+            <s-link href="#entrepreneures">Our Entrepreneures</s-link>
             <s-link href="#spotlight ">Spotlight</s-link>
           </s-links>
         </template>
@@ -18,7 +23,7 @@
     </div>
 
     <section class="article__wrapper" id="welcome">
-      <page-article title="Welcome to IILab">
+      <page-article title="Welcome to IILab" image="pages/iilab/about.jpg">
         <template #article>
           <p>
             The iiLab (ilimi Innovation Lab) is A.D.U’s innovation and
@@ -29,15 +34,50 @@
         </template>
       </page-article>
     </section>
-    <section class="article__wrapper article__wrapper--services" id="services">
-      <page-article title="Services" image="stats.jpg" :ltr="true">
-        <template #article>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illo,
-          tenetur dolore placeat cumque dignissimos!Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Iste illo, tenetur dolore placeat cumque
-          <button class="btn services--btn">Read more</button>
-        </template>
-      </page-article>
+    <section class="admissions__advantage" id="services">
+      <h1 class="title">Services</h1>
+      <p class="text">
+        Career Services – is a unit within Student and Community Affairs, which
+        provides career readiness and preparation to our young leaders. The goal
+        of career services is to provide career assistance for students in their
+        career choices and help them to find work-study positions, internships
+        and full-time positions upon graduation.
+      </p>
+      <div class="advantages">
+        <div class="advantages__card">
+          <p>Students’ Career Development</p>
+        </div>
+        <div class="advantages__card">
+          <p>Career and Self-Assessments</p>
+        </div>
+        <div class="advantages__card">
+          <p>Career Counselling and Coaching</p>
+        </div>
+        <div class="advantages__card">
+          <p>Professional Week Series</p>
+        </div>
+        <div class="advantages__card">
+          <p>Mentorship Program</p>
+        </div>
+        <div class="advantages__card">
+          <p>Work Study Opportunities</p>
+        </div>
+        <div class="advantages__card">
+          <p>Seniors Exit Strategy</p>
+        </div>
+        <div class="advantages__card">
+          <p>Internships and Job Opportunities</p>
+        </div>
+        <div class="advantages__card">
+          <p>Practical and Technical Training Platforms</p>
+        </div>
+        <div class="advantages__card">
+          <p>Employer Engagement</p>
+        </div>
+        <div class="advantages__card">
+          <p>Developing and supporting Alumni on a case by case basis</p>
+        </div>
+      </div>
     </section>
     <div class="home__news" id="events">
       <div class="header primary mb-4">
@@ -94,10 +134,10 @@
         </div>
       </div>
     </div>
-    <div class="home__news" id="showroom">
+    <div class="home__news" id="entrepreneures">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">Showroom</h4>
+        <h4 class="title">Our Entrepreneures</h4>
         <div class="line"></div>
       </div>
       <div class="s__row">
@@ -128,7 +168,7 @@
         </div>
       </div>
       <div class="view__more">
-        <Link as="button" href="/iilab/showroom">View all</Link>
+        <Link as="button" href="/iilab/entrepreneures">View all</Link>
       </div>
     </div>
     <section class="feed__wrapper" id="spotlight">

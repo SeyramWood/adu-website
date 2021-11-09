@@ -20,6 +20,10 @@
             color: $primary;
             margin-bottom: 3rem;
         }
+        & > .text {
+            color: $secondary;
+            margin-bottom: 3rem;
+        }
         & > .advantages {
             @include grid-row;
             padding-bottom: 10rem;

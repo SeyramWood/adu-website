@@ -62,9 +62,9 @@ class PageController extends Controller
             //
         ]);
     }
-    public function iilabShowroom()
+    public function iilabEntrepreneures()
     {
-        return inertia('FrontEnd/IilabShowroom', [
+        return inertia('FrontEnd/IilabEntrepreneure', [
             //
         ]);
     }

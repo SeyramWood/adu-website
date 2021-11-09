@@ -29,7 +29,7 @@
             <Link>Guest Lecture Series</Link>
           </li>
           <li class="link">
-            <Link>Health and Webeing</Link>
+            <Link>Health and Well-being</Link>
           </li>
           <li class="link">
             <Link>Student Success Center</Link>

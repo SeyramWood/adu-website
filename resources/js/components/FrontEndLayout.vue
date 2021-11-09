@@ -278,49 +278,55 @@
           </div>
         </div>
         <div class="page__footer__bottom__links">
-          <ul class="">
-            <li class="page__footer__bottom__links__link">
-              <Link href="#"
-                >A.D.U at a GlanceADU at a GlanceADU at a Glance</Link
+          <h3 class="title">Bachelor Admissions</h3>
+          <div class="address">
+            <p>
+              Email:
+              <a href="mailto:admissions@ilimi.edu.ne"
+                >admissions@ilimi.edu.ne</a
               >
-            </li>
-            <li class="page__footer__bottom__links__link">
-              <Link href="#">A.D.U at a Glance</Link>
-            </li>
-            <li class="page__footer__bottom__links__link">
-              <Link href="#">A.D.U at a Glance</Link>
-            </li>
-          </ul>
+            </p>
+            <p>
+              Phone: <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+                href="tel:+22793396868"
+                >(+227) 93-39-68-68</a
+              >
+            </p>
+          </div>
         </div>
         <div class="page__footer__bottom__links">
-          <ul class="">
-            <li class="page__footer__bottom__links__link">
-              <Link href="#"
-                >A.D.U at a Glance A.D.U at a Glance A.D.U at a Glance</Link
+          <h3 class="title">Artificial Intelligence</h3>
+          <div class="address">
+            <p>
+              Email:
+              <a href="mailto:admissions@ilimi.edu.ne"
+                >admissions@ilimi.edu.ne</a
               >
-            </li>
-            <li class="page__footer__bottom__links__link">
-              <Link href="#">A.D.U at a Glance</Link>
-            </li>
-            <li class="page__footer__bottom__links__link">
-              <Link href="#">A.D.U at a Glance</Link>
-            </li>
-          </ul>
+            </p>
+            <p>
+              Phone: <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+                href="tel:+22793396868"
+                >(+227) 93-39-68-68</a
+              >
+            </p>
+          </div>
         </div>
         <div class="page__footer__bottom__links">
-          <ul class="">
-            <li class="page__footer__bottom__links__link">
-              <Link href="#"
-                >A.D.U at a GlanceADU at a GlanceADU at a Glance</Link
+          <h3 class="title">English Program</h3>
+          <div class="address">
+            <p>
+              Email:
+              <a href="mailto:admissions@ilimi.edu.ne"
+                >admissions@ilimi.edu.ne</a
               >
-            </li>
-            <li class="page__footer__bottom__links__link">
-              <Link href="#">A.D.U at a Glance</Link>
-            </li>
-            <li class="page__footer__bottom__links__link">
-              <Link href="#">A.D.U at a Glance</Link>
-            </li>
-          </ul>
+            </p>
+            <p>
+              Phone: <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+                href="tel:+22793396868"
+                >(+227) 93-39-68-68</a
+              >
+            </p>
+          </div>
         </div>
       </section>
       <section class="page__footer__copyright">

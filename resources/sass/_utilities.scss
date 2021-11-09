@@ -128,3 +128,6 @@
     color: $primary !important;
     // list-style-type: ;
 }
+button.read-more-btn {
+    @include readMoreBtn;
+}

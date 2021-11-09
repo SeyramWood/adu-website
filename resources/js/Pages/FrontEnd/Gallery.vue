@@ -1,7 +1,7 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="stats.jpg" title="Gallery">
+      <banner bg="pages/gallery/banner.jpg" title="Gallery">
         <template #description>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
           recusandae officia, similique quam, accusamus tempore consequuntur
@@ -9,42 +9,16 @@
       </banner>
     </div>
     <section class="album">
-      <div class="album__card">
-        <lightbox css="h-400 " :cells="5" :items="images"></lightbox>
+      <div class="album__card" v-for="g in gallery" :key="g.name">
+        <lightbox css="h-400 " :cells="5" :items="g.images"></lightbox>
         <div class="details">
           <div class="details__content">
             <span>Album</span>
-            <span>29th Graduation</span>
+            <span>{{ g.album }}</span>
           </div>
           <div class="details__content">
             <span>Date</span>
-            <span>Oct 15, 2021</span>
-          </div>
-        </div>
-      </div>
-      <div class="album__card">
-        <lightbox css="h-400 " :cells="5" :items="images"></lightbox>
-        <div class="details">
-          <div class="details__content">
-            <span>Album</span>
-            <span>29th Graduation</span>
-          </div>
-          <div class="details__content">
-            <span>Date</span>
-            <span>Oct 15, 2021</span>
-          </div>
-        </div>
-      </div>
-      <div class="album__card">
-        <lightbox css="h-400 " :cells="5" :items="images"></lightbox>
-        <div class="details">
-          <div class="details__content">
-            <span>Album</span>
-            <span>2009 Matriculation</span>
-          </div>
-          <div class="details__content">
-            <span>Date</span>
-            <span>Oct 15, 2021</span>
+            <span>{{ g.date }}</span>
           </div>
         </div>
       </div>
@@ -75,37 +49,47 @@ export default {
   },
   data() {
     return {
-      images: [
-        "/storage/images/academics.jpg",
-        "/storage/images/ai.jpg",
-        "/storage/images/business-1.jpg",
-        "/storage/images/business.jpg",
-        "/storage/images/news.jpg",
-        "/storage/images/news-2.jpg",
-        "/storage/images/news-1.jpg",
-      ],
-      slides: [
+      gallery: [
         {
-          title: "Blossoming flower",
-          content:
-            "This video is autoplayed, played in loop, has no controls and is not reacting to user interactions.",
-          image: `${process.env.BASE_URL}images/flower.jpg`,
-          video: {
-            url: "https://www.youtube.com/embed/ehJg_OlcjpE?rel=0&showinfo=0&controls=0&fs=0&modestbranding=1&color=white&iv_load_policy=3&autohide=1&enablejsapi=1",
-            // webm: `${process.env.BASE_URL}images/flower.webm`,
-            // mp4: `${process.env.BASE_URL}images/flower.mp4`,
-            props: { autoplay: true, loop: true, controls: false, muted: true },
-          },
+          album: "Community Service",
+          date: "Nov. 9, 2021",
+          images: [
+            "/storage/pages/gallery/community_service/1.jpeg",
+            "/storage/pages/gallery/community_service/2.jpeg",
+            "/storage/pages/gallery/community_service/3.jpeg",
+            "/storage/pages/gallery/community_service/4.jpeg",
+            "/storage/pages/gallery/community_service/5.jpeg",
+            "/storage/pages/gallery/community_service/6.jpeg",
+            "/storage/pages/gallery/community_service/7.jpeg",
+            "/storage/pages/gallery/community_service/8.jpeg",
+          ],
         },
         {
-          title: "Blossoming flower",
-          content:
-            "This video is played once, has controls and is reacting to user interactions.",
-          image: `${process.env.BASE_URL}images/flower.jpg`,
-          video: {
-            webm: `${process.env.BASE_URL}images/flower.webm`,
-            mp4: `${process.env.BASE_URL}images/flower.mp4`,
-          },
+          album: "Cultural Day",
+          date: "Nov. 9, 2021",
+          images: [
+            "/storage/pages/gallery/cultural_day/1.jpg",
+            "/storage/pages/gallery/cultural_day/2.jpg",
+            "/storage/pages/gallery/cultural_day/3.jpg",
+            "/storage/pages/gallery/cultural_day/4.jpg",
+            "/storage/pages/gallery/cultural_day/5.jpg",
+            "/storage/pages/gallery/cultural_day/6.jpg",
+            "/storage/pages/gallery/cultural_day/7.jpg",
+            "/storage/pages/gallery/cultural_day/8.jpg",
+            "/storage/pages/gallery/cultural_day/9.jpg",
+          ],
+        },
+        {
+          album: "Faculty",
+          date: "Nov. 9, 2021",
+          images: [
+            "/storage/pages/gallery/faculty/1.jpg",
+            "/storage/pages/gallery/faculty/2.jpg",
+            "/storage/pages/gallery/faculty/3.jpg",
+            "/storage/pages/gallery/faculty/4.jpg",
+            "/storage/pages/gallery/faculty/5.jpg",
+            "/storage/pages/gallery/faculty/6.jpg",
+          ],
         },
       ],
     };

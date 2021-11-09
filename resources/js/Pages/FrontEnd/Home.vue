@@ -74,17 +74,17 @@
         <div class="s__col c--4">
           <div class="news__container">
             <div class="image">
-              <img src="/storage/images/business-1.jpg" alt="" srcset="" />
+              <img src="/storage/pages/academics/law.jpg" alt="" srcset="" />
             </div>
-            <h1 class="title">Business Management</h1>
+            <h1 class="title">Law</h1>
             <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              soluta numquam, distinctio omnis doloremque repellendus error
-              repudiandae tempore obcaecati. Dolores vitae ratione ut delectus
-              laborum placeat cupiditate aperiam molestias voluptates!
+              A.D.U. offers a three-year degree in Business Law that teaches
+              courses in many different aspects of legal work. Students entering
+              this program should have a strong commitment to justice and
+              equality and fighting corruption.
             </p>
             <div class="link">
-              <Link>Bussiness Management</Link>
+              <Link href="/academics">Law</Link>
               <span>&rarr;</span>
             </div>
           </div>
@@ -92,15 +92,18 @@
         <div class="s__col c--4">
           <div class="news__container">
             <div class="image">
-              <img src="/storage/images/ai.jpg" alt="" srcset="" />
+              <img src="/storage/pages/academics/ai.jpg" alt="" srcset="" />
             </div>
             <h1 class="title">Artificial Intelligence</h1>
             <p class="text">
-              Rich learning experiences that provide a broad liberal arts
-              foundation and deep subject-area expertise
+              The Bachelor of Science in Artificial Intelligence - BS(AI)
+              program provides learners the knowledge and skills to transform
+              complex inputs of text, vision, language and large databases into
+              intelligible and actionable decisions to enhance human
+              capabilities.
             </p>
             <div class="link">
-              <Link>Artificial Intelligence</Link>
+              <Link href="/academics">Artificial Intelligence</Link>
               <span>&rarr;</span>
             </div>
           </div>
@@ -108,24 +111,28 @@
         <div class="s__col c--4">
           <div class="news__container">
             <div class="image">
-              <img src="/storage/images/academics.jpg" alt="" srcset="" />
+              <img
+                src="/storage/pages/academics/english.jpeg"
+                alt=""
+                srcset=""
+              />
             </div>
             <h1 class="title">English Programme</h1>
             <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-              eaque corporis fugit ullam nobis exercitationem ipsum quo
-              doloribus reiciendis eos ducimus, temporibus excepturi, maxime
-              deserunt quibusdam ad optio incidunt voluptates
+              The ADU English program is an English Learning establishment of
+              the African Development University that is focused on building the
+              English language proficiency of professionals, businessmen and
+              businesswomen etc.
             </p>
             <div class="link">
-              <Link>English Programme</Link>
+              <Link href="/academics">English Programme</Link>
               <span>&rarr;</span>
             </div>
           </div>
         </div>
       </div>
       <div class="view__more">
-        <Link as="button">read more</Link>
+        <Link as="button" href="/academics">read more</Link>
       </div>
     </div>
     <div class="home__spotlight">
@@ -281,19 +288,19 @@ export default {
     return {
       slides: [
         {
-          image: "/storage/slides/slide-1.jpg",
+          image: "/storage/pages/home/slides/3.jpg",
           content: `<div class='home__cta__box'><h6 class=''>Welcome to</h6><h4>African Development Universalis</h4></div>`,
         },
         {
-          image: "/storage/slides/slide-2.jpg",
+          image: "/storage/pages/home/slides/2.jpg",
           title: `<h4 class="slide__title">We are leaders, innovators and entreprenuers</h4>`,
         },
         {
-          image: "/storage/slides/slide-3.jpg",
+          image: "/storage/pages/home/slides/1.jpg",
           title: `<h4 class="slide__title">We are changing the future of the Sahel one leader at a time</h4>`,
         },
         {
-          image: "/storage/slides/slide-2.jpg",
+          image: "/storage/pages/home/slides/4.jpg",
           title: `<h4 class="slide__title">Are you ready to change the conversation about the Sahel?</h4>`,
         },
       ],

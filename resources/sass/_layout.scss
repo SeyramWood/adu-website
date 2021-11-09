@@ -423,20 +423,32 @@
             }
             &__links {
                 // width: 20%;
+                flex: 1;
                 &:not(:last-child) {
                     margin-right: 2rem;
                     @include respond-down(sm) {
                         margin-bottom: 2rem;
                     }
                 }
-                flex: 1;
+                & > .title {
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                    color: $primary;
+                }
+                & > .address {
+                    font-size: 1.2rem;
+                    & > a {
+                        font-size: 1.2rem;
+                    }
+                    // color: #ffffff;
+                }
 
                 &__link {
                     & > a {
                         font-size: 1rem;
                         padding: 0.2rem 0;
                         display: block;
-                        color: $white;
+                        // color: $white;
                     }
                     &:hover a {
                         text-decoration: underline;
@@ -452,7 +464,7 @@
             justify-content: center;
             align-items: center;
             background: #202020;
-            color: $white;
+            // color: $white;
             font-size: 1.1rem;
             letter-spacing: 1.5px;
         }

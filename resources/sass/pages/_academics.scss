@@ -156,4 +156,38 @@
             margin-bottom: 1rem;
         }
     }
+    & > p.info > span {
+        color: $secondary;
+        font-weight: bold;
+    }
+}
+
+.academic-calendar {
+    width: 100%;
+    & > table {
+        width: 100%;
+        & > thead {
+            & > tr {
+                background: $primary;
+                color: #ffffff;
+                padding: 1rem;
+                & > th {
+                    text-align: left;
+                }
+            }
+        }
+        & > tbody {
+            & > tr {
+                & > td {
+                    &.sub-heading {
+                        color: $primary;
+                        font-weight: bold;
+                        font-style: italic;
+                        font-size: 1.3rem;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }

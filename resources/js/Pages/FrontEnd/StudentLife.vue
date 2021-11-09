@@ -55,7 +55,7 @@
       </div>
       <div class="academics__major__links">
         <div class="link">
-          <h3 class="title">Health and Welbeing</h3>
+          <h3 class="title">Health and Well-being</h3>
           <div class="link__box">
             <Link> View More</Link>
           </div>

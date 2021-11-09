@@ -26,7 +26,7 @@
     </div>
     <div class="article__image" v-if="image">
       <div :class="['image', imageRround && 'round']">
-        <img :src="`/storage/images/${image}`" alt="article image" srcset="" />
+        <img :src="`/storage/${image}`" alt="article image" srcset="" />
       </div>
     </div>
   </div>

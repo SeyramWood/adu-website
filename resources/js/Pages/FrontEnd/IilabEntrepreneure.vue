@@ -1,13 +1,13 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="images/library-2.jpeg" title="iiLab showroom">
+      <banner bg="images/library-2.jpeg" title="entrepreneures">
         <template #description>
           <p style="padding-bottom: 4rem">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-            recusandae officia, similique quam, accusamus tempore consequuntur
-            dolores sapiente non, omnis blanditiis molestiae tempora aspernatur
-            distinctio a debitis qui quas necessitatibus!
+            The iiLab (ilimi Innovation Lab) is A.D.U’s innovation and
+            entrepreneurship hub committed to empowering our Young Leaders by
+            providing and connecting them with tools, resources, networks and
+            support to scale their innovative and entrepreneurial ideas.
           </p>
         </template>
       </banner>
@@ -47,7 +47,7 @@
       </div>
 
       <div class="view__more">
-        <Link as="button" href="/iilab/showroom">Load more</Link>
+        <Link as="button" href="/iilab/entrepreneures">Load more</Link>
       </div>
     </div>
 
@@ -75,7 +75,7 @@ import Banner from "../../components/pages/Banner";
 import PageArticle from "../../components/pages/PageArticle";
 import SModal from "../../components/SModal";
 export default {
-  name: "IilabEvents",
+  name: "IilabEntrepreneure",
   layout: FrontEndLayout,
   components: {
     Link,
