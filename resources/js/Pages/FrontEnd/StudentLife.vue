@@ -26,7 +26,7 @@
           <h3 class="title">ilimi Student Government</h3>
           <div class="link__box">
             <Link
-              :href="`student-life/life-on-campuse/${1}/ilimi-student-government`"
+              :href="`/student-life/life-on-campuse/ilimi-student-government`"
             >
               View More</Link
             >
@@ -35,7 +35,11 @@
         <div class="link">
           <h3 class="title">Internship and Career Services</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <Link
+              :href="`/student-life/life-on-campuse/internship-and-career-services`"
+            >
+              View More</Link
+            >
           </div>
         </div>
       </div>
@@ -43,13 +47,17 @@
         <div class="link">
           <h3 class="title">Clubs and Societies</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <Link :href="`/student-life/life-on-campuse/clubs-and-societies`">
+              View More</Link
+            >
           </div>
         </div>
         <div class="link">
           <h3 class="title">Guest Lecture Series</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <Link :href="`/student-life/life-on-campuse/guest-lecture-series`">
+              View More</Link
+            >
           </div>
         </div>
       </div>
@@ -57,13 +65,19 @@
         <div class="link">
           <h3 class="title">Health and Well-being</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <Link :href="`/student-life/life-on-campuse/health-and-well-being`">
+              View More</Link
+            >
           </div>
         </div>
         <div class="link">
           <h3 class="title">Student Success Center</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <Link
+              :href="`/student-life/life-on-campuse/student-success-center`"
+            >
+              View More</Link
+            >
           </div>
         </div>
       </div>
@@ -71,7 +85,9 @@
         <div class="link">
           <h3 class="title">Alumni</h3>
           <div class="link__box">
-            <Link> View More</Link>
+            <Link :href="`/student-life/life-on-campuse/alumni`">
+              View More</Link
+            >
           </div>
         </div>
       </div>

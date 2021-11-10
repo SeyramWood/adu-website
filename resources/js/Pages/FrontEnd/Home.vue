@@ -267,6 +267,18 @@
         <Link as="button">read more</Link>
       </div>
     </div>
+
+    <div class="home__donate">
+      <div class="home__donate__content">
+        <h3>ARE YOU READY TO CHANGE THE CONVERSATION ABOUT THE SAHEL?</h3>
+        <h1>Be part of the solution</h1>
+        <p>
+          A.D.U. is reshaping the future for the region by educating <br />
+          its most exceptional young women and men. We need your help.
+        </p>
+        <Link as="button" href="/donate">Donate Now</Link>
+      </div>
+    </div>
   </div>
 </template>
 

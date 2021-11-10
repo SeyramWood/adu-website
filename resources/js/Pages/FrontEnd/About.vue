@@ -3,7 +3,7 @@
     <div class="banner__wrapper">
       <banner bg="bg/banner.jpg" title="about">
         <template #description>
-          A.D.U. is a rapidly growing organization, and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you. 
+          A.D.U. is a rapidly growing non-profit organization and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you. 
         </template>
         <template #links>
           <s-links>

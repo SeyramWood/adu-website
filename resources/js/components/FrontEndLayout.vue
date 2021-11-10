@@ -7,14 +7,14 @@
       <ul class="page__header__top__navigation">
         <li class="page__header__top__navigation__link">
           <a
-            href="https://ilimi.edu.ne/my-ilimi"
+            href=" https://myilimilms.net/moodle"
             target="_blank"
             rel="noopener noreferrer"
             >My Ilimi</a
           >
         </li>
         <li class="page__header__top__navigation__link">
-          <Link href="#">Donate</Link>
+          <Link href="/donate">Donate</Link>
         </li>
         <li class="page__header__top__navigation__link">
           <a

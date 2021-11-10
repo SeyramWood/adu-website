@@ -44,10 +44,10 @@ class PageController extends Controller
             //
         ]);
     }
-    public function studentLifeCampuse($id, $slug)
+    public function studentLifeCampuse($slug)
     {
         return inertia('FrontEnd/StudentLifeCampuse', [
-            //
+            'lifeType' => fn () => $slug
         ]);
     }
     public function studentLifeSpotlight($id, $slug)
@@ -71,6 +71,12 @@ class PageController extends Controller
     public function gallery()
     {
         return inertia('FrontEnd/Gallery', [
+            //
+        ]);
+    }
+    public function donate()
+    {
+        return inertia('FrontEnd/Donate', [
             //
         ]);
     }

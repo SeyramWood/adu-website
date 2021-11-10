@@ -79,18 +79,6 @@ export default {
             "/storage/pages/gallery/cultural_day/9.jpg",
           ],
         },
-        {
-          album: "Faculty",
-          date: "Nov. 9, 2021",
-          images: [
-            "/storage/pages/gallery/faculty/1.jpg",
-            "/storage/pages/gallery/faculty/2.jpg",
-            "/storage/pages/gallery/faculty/3.jpg",
-            "/storage/pages/gallery/faculty/4.jpg",
-            "/storage/pages/gallery/faculty/5.jpg",
-            "/storage/pages/gallery/faculty/6.jpg",
-          ],
-        },
       ],
     };
   },

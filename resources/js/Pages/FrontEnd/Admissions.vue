@@ -28,27 +28,51 @@
       <h1 class="title">The A.D.U. Advantage</h1>
       <div class="advantages">
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-account-group-outline</v-icon>
+          </span>
           <p>Student centered institution – Student FIRST</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-book-education-outline</v-icon>
+          </span>
           <p>US style Highee Education Model - liberal arts education</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-school-outline</v-icon>
+          </span>
           <p>International opportunities and exchange programs for students</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-focus-field</v-icon>
+          </span>
           <p>Entrepreneurial Focused</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-chair-school</v-icon>
+          </span>
           <p>Student Development Trough Experiential Learning</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-cast-education</v-icon>
+          </span>
           <p>Blended learning - in-person and virtual modes</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-translate</v-icon>
+          </span>
           <p>Bilingual education - English and French</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-toolbox-outline</v-icon>
+          </span>
           <p>Effective career services and placement support</p>
         </div>
       </div>
@@ -94,7 +118,7 @@
     <section class="article__wrapper" id="AcademicProgramsSummary">
       <page-article
         title="Academic Programs Summary"
-        image="tour.jpg"
+        image="pages/admissions/programmes.jpeg"
         :imageRround="true"
       >
         <template #article>
@@ -132,8 +156,8 @@
       <h1 class="title">CONTACT ADMISSION TEAM</h1>
       <article>
         <p>
-          For additional questions and/or inquiry regarding the status of your
-          application, you can reach us through:
+          For additional questions and/or inquiry regarding application, you can
+          reach us through:
         </p>
         <ul style="list-style-type: disc; margin-left: 1.2rem">
           <li>

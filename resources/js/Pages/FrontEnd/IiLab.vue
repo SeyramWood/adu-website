@@ -45,36 +45,69 @@
       </p>
       <div class="advantages">
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-account-group-outline</v-icon>
+          </span>
           <p>Students’ Career Development</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-briefcase-check-outline</v-icon>
+          </span>
           <p>Career and Self-Assessments</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-coach-lamp</v-icon>
+          </span>
           <p>Career Counselling and Coaching</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-calendar-outline</v-icon>
+          </span>
           <p>Professional Week Series</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-card-account-details-outline</v-icon>
+          </span>
           <p>Mentorship Program</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-book-open-page-variant-outline</v-icon>
+          </span>
           <p>Work Study Opportunities</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-strategy</v-icon>
+          </span>
           <p>Seniors Exit Strategy</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-briefcase-outline</v-icon>
+          </span>
           <p>Internships and Job Opportunities</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-billboard</v-icon>
+          </span>
           <p>Practical and Technical Training Platforms</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-gantry-crane</v-icon>
+          </span>
           <p>Employer Engagement</p>
         </div>
         <div class="advantages__card">
+          <span>
+            <v-icon>mdi-cog-transfer-outline</v-icon>
+          </span>
           <p>Developing and supporting Alumni on a case by case basis</p>
         </div>
       </div>
@@ -279,8 +312,8 @@ export default {
   data() {
     return {
       eventModal: false,
-      showroomModal: false,
       currentEvent: null,
+      showroomModal: false,
       currentShowroom: null,
       events: [
         {

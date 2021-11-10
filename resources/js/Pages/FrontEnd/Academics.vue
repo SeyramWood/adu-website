@@ -49,7 +49,7 @@
       </div>
     </section>
     <section class="academics__major" id="BusinessManagement">
-      <h1 class="title">Business Administration Majors</h1>
+      <h1 class="title">Business Administration (Featured Majors)</h1>
       <div class="academics__major__links">
         <div class="link">
           <h3 class="title">Law</h3>
