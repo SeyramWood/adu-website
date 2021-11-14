@@ -372,8 +372,6 @@
     margin: 2rem 0;
     padding: 0 3rem;
     & > p {
-        font-size: 1.5rem;
-        font-weight: 200;
         &:not(:last-child) {
             margin-bottom: 1rem;
         }
@@ -499,6 +497,7 @@
     &.ArtificialIntelligence {
         padding-bottom: 5rem;
     }
+
     & .article {
         width: 100%;
         display: flex;
@@ -590,6 +589,9 @@
                 }
             }
         }
+        &__side__text {
+            width: 50%;
+        }
         &.ltr {
             flex-direction: row-reverse;
             & > .article__content {
@@ -597,6 +599,25 @@
             }
             & > .article__image {
                 padding-right: 3rem;
+            }
+        }
+    }
+
+    &--bg-image,
+    &--welcome {
+        & .article {
+            &__content {
+                width: 70%;
+            }
+            &__image {
+                width: 30%;
+            }
+            &__side__text {
+                align-self: stretch;
+                width: 30%;
+                & > p {
+                    padding-top: 3.5rem;
+                }
             }
         }
     }

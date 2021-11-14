@@ -1,25 +1,23 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="bg/banner.jpg" title="about">
+      <banner bg="bg/banner.jpg" :title="$t('pages.about.title.1')">
         <template #description>
-          A.D.U. is a rapidly growing non-profit organization and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you. 
+          {{ $t('pages.about.banner') }}
         </template>
         <template #links>
           <s-links>
-            <s-link href="#welcome">Welcome by Chancellor</s-link>
-            <s-link href="#why">Our Why</s-link>
-            <s-link href="#leadership">Leadership</s-link>
+            <s-link href="#welcome">{{ $t('pages.about.link.1') }}</s-link>
+            <s-link href="#why">{{ $t('pages.about.link.2') }}</s-link>
+            <s-link href="#leadership">{{ $t('pages.about.link.3') }}</s-link>
           </s-links>
         </template>
       </banner>
     </div>
 
-    <section class="article__wrapper" id="welcome">
+    <section class="article__wrapper article__wrapper--welcome" id="welcome">
       <page-article
-        title="Welcome to ilimi"
-        image='welcome.jpg'
-        :imageRround="true"
+        :title="$t('pages.about.title.2')"
         :video="true"
       >
         <template #video>
@@ -36,95 +34,49 @@
             />
           </vueper-slides>
         </template>
+        <template #sideText>
+          <p>
+            {{ $t('pages.about.welcome') }}
+          </p>
+        </template>
       </page-article>
     </section>
     <section class="article__wrapper article__wrapper--bg-image" id="why">
-      <page-article title="Our Why">
+      <page-article :title="$t('pages.about.title.3')">
         <template #article>
           <p>
-            African Development University (A.D.U.) is an innovative
-            not-for-profit university with a mission to prepare the most
-            talented young people in Niger and in Francophone Africa to design
-            and drive the development of their nations as ethical and effective
-            leaders in the public, private and not-for-profit sectors. A.D.U. is
-            the first not-for-profit university located in Niamey, Niger, and is
-            the first institution to offer world-class education for students
-            from the Sahel region.
+            {{ $t('pages.about.why.p1') }}
             <v-btn
               text
               class="color-primary"
               @click="showMore = true"
               v-show="!showMore"
-              >view more</v-btn
+              >{{ $t('pages.about.why.btnMore') }}</v-btn
             >
           </p>
           <article v-show="showMore">
             <p >
-            Founded in October 2017, A.D.U. currently offers undergraduate
-            programs accredited by the Ministry of Research, Higher Education
-            and Innovation, Niger, an MBA program, as well as Executive Courses.
-            Over the next decade, A.D.U. aspires to become the hub of innovation
-            and excellence in higher education in West Africa. A.D.U. was
-            established to address two of the most pressing problems facing the
-            region: 
+           {{ $t('pages.about.why.p2.content') }} 
             <ol style="margin-left:4rem">
-              <li>The dearth of quality tertiary educational institutions.
+              <li>{{ $t('pages.about.why.p2.l1') }}
             </li>
-              <li>The increasing cohort of young adults unprepared for participation and leadership in the 21st-century workforce.</li>
+              <li>{{ $t('pages.about.why.p2.l2') }}</li>
             </ol>
           </p>
           <p>
-              Niger is a rapidly growing country of 20 million people, and our desire is to
-              train a new generation of skilled, ethical leaders is motivated by
-              our commitment to advance Niger’s development and improve living
-              standards for all. Ultimately, through our work, we aim to advance
-              the quality of human capital of countries throughout the Sahel and
-              across the African continent. <v-btn text class="color-primary" @click="showMore = false"
-              >view less</v-btn
+              {{ $t('pages.about.why.p3') }} <v-btn text class="color-primary" @click="showMore = false"
+              >{{ $t('pages.about.why.btnLess') }}</v-btn
             >
             </p>
             
           </article>
           
         </template>
-        <!-- <template #links>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template>
-        <template #linksRight>
-          <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-            <s-link href="/kfdjklfdjhkl">I am a link</s-link>
-          </s-links>
-        </template> -->
       </page-article>
     </section>
     <section class="leadership" id="leadership">
-      <h1 class="title">leadership</h1>
+      <h1 class="title">{{$t('pages.about.title.4')}}</h1>
       <main class="leadership__container">
-        <!-- <article class="leadership__article">
-        <p>
-            A.D.U. is a rapidly growing organization, and we bring together the
-            most talented individuals from Niger and around the globe. If you
-            share our values, believe that higher education can transform the
-            Sahel region, and want to be part of that transformation and
-            adventure, we want to talk with you. Have a look below to get some
-            ideas as to ways to engage with A.D.U. If you are interested in one
-            of these opportunities—or something else—please send us your CV and
-            a cover note explaining your interest:
-            <a
-              href="mailto:talent@ilimi.edu.ne"
-              class="color-primary"
-              >talent@ilimi.edu.ne</a
-            >.
-          </p>
-      </article> -->
       <div class="leadership__avatar">
             <div
               class="leadership__avatar__card"
@@ -250,22 +202,17 @@ export default {
       ],
       slides: [
         {
-          title: "Blossoming flower",
+          title: "Chancellor’s Message",
           content:
             "This video is autoplayed, played in loop, has no controls and is not reacting to user interactions.",
-          image: `${process.env.BASE_URL}images/flower.jpg`,
+          image: "https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp",
           video: {
             url: "https://www.youtube.com/embed/2d_7v9bda24",
-            props: { autoplay: true, loop: true, controls: false, muted: true },
-          },
-        },
-        {
-          title: "Blossoming flower",
-          content:
-            "This video is played once, has controls and is reacting to user interactions.",
-          image: `${process.env.BASE_URL}images/flower.jpg`,
-          video: {
-            url: "https://www.youtube.com/embed/2d_7v9bda24",
+            // props: { autoplay: true, loop: true, controls: false, muted: true },
+            props: {
+              allow:
+                "accelerometer; autoplay; encrypted-media; picture-in-picture",
+            },
           },
         },
       ],

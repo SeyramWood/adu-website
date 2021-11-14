@@ -1,7 +1,7 @@
 <template>
   <section class="student__life">
     <div class="banner__wrapper">
-      <banner bg="stats.jpg" title="Student Life">
+      <banner bg="images/student-life-1.jpg" title="Student Life">
         <template #description>
           <p style="padding-bottom: 4rem">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
@@ -158,21 +158,41 @@
               <Link as="button" href="#">Load more</Link>
             </div>
           </div>
-          <!-- <div class="clubs-and-societies">
-            <div
-              class="clubs-and-societies__card"
-              v-for="(g, index) in gallery"
-              :key="index"
-            >
-            <div class="image">
-
-              <img :src="g" alt="" srcset="" />
-            </div>
-            <div class="content">
-
-            </div>
-            </div>
-          </div> -->
+        </section>
+        <section class="cntent" v-else-if="lifeType === 'guest-lecture-series'">
+          <h1 class="title">Guest Lecture Series</h1>
+          <p class="text">
+            As the learning experiences of our students is so important, we
+            being back in our program : Guest speaker series . A.D.U. regularly
+            invited guest speakers who have an incredible story , great
+            experience, good influence to come and interact with students and
+            lecture in fact to inspire , guide and give them energy to achieve
+            their goals .
+          </p>
+        </section>
+        <section
+          class="cntent"
+          v-else-if="lifeType === 'student-success-center'"
+        >
+          <h1 class="title">Student Success Center</h1>
+          <p class="text">
+            As part of the journey of a ILIMI YoungLeader , Student life is the
+            daily life of a student, typically involving social activities
+            within the educational campus, or the time spent with school-mates
+            and teachers within the classes and outside . The goal of student
+            life is to create a good environment where students will grow and
+            have a very good experience before and after getting theirs degree .
+          </p>
+        </section>
+        <section class="cntent" v-else-if="lifeType === 'alumni'">
+          <h1 class="title">Alumni</h1>
+          <p class="text">
+            Our Alumni community is getting hug and hug . At this point we have
+            two Cohort of graduated student , The Obama’s ( first cohort of
+            A.D.U. ) and the Kagame’s ( second cohort of A.D.U. ) . Alumni are
+            student that ended their 3 years Bachelor at A.D.U. some of them
+            already work in local companies , and some that their own startups .
+          </p>
         </section>
         <section v-else>
           <p>No data to load</p>

@@ -21,15 +21,15 @@
 
     <div class="home__values">
       <div class="home__values__link">
-        <Link>Leadership</Link>
+        <Link>{{ $t("pages.home.title.1") }}</Link>
       </div>
       <div class="home__values__line"></div>
       <div class="home__values__link">
-        <Link>Innovation</Link>
+        <Link>{{ $t("pages.home.title.2") }}</Link>
       </div>
       <div class="home__values__line"></div>
       <div class="home__values__link">
-        <Link>Excellence</Link>
+        <Link>{{ $t("pages.home.title.3") }}</Link>
       </div>
     </div>
     <div class="home__stats">
@@ -39,35 +39,37 @@
             <v-icon>mdi-chart-bar</v-icon>
           </div>
           <div class="percentage">100%</div>
-          <div class="title">Internships / Starting Own Companies</div>
+          <div class="title">{{ $t("pages.home.title.4") }}</div>
         </div>
         <div class="stat">
           <div class="icon">
             <v-icon>mdi-finance</v-icon>
           </div>
           <div class="percentage">70%</div>
-          <div class="title">Undergraduates Receive Financial Aid</div>
+          <div class="title">{{ $t("pages.home.title.5") }}</div>
         </div>
         <div class="stat">
           <div class="icon">
             <v-icon>mdi-account-supervisor</v-icon>
           </div>
           <div class="percentage">70%</div>
-          <div class="title">Women to Fulfil Gender Equality</div>
+          <div class="title">{{ $t("pages.home.title.6") }}</div>
         </div>
         <div class="stat">
           <div class="icon">
             <v-icon>mdi-currency-usd</v-icon>
           </div>
           <div class="percentage">$10 million</div>
-          <div class="title">Required For 1,000 leaders Over 10yrs</div>
+          <div class="title">
+            {{ $t("pages.home.title.7") }}Required For 1,000 leaders Over 10yrs
+          </div>
         </div>
       </div>
     </div>
     <div class="home__news">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">Academics</h4>
+        <h4 class="title">{{ $t("pages.home.title.8") }}</h4>
         <div class="line"></div>
       </div>
       <div class="s__row">
@@ -76,15 +78,12 @@
             <div class="image">
               <img src="/storage/pages/academics/law.jpg" alt="" srcset="" />
             </div>
-            <h1 class="title">Law</h1>
+            <h1 class="title">{{ $t("pages.home.title.9") }}</h1>
             <p class="text">
-              A.D.U. offers a three-year degree in Business Law that teaches
-              courses in many different aspects of legal work. Students entering
-              this program should have a strong commitment to justice and
-              equality and fighting corruption.
+              {{ $t("pages.home.p") }}
             </p>
             <div class="link">
-              <Link href="/academics">Law</Link>
+              <Link href="/academics">{{ $t("pages.home.title.9") }}</Link>
               <span>&rarr;</span>
             </div>
           </div>
@@ -94,16 +93,12 @@
             <div class="image">
               <img src="/storage/pages/academics/ai.jpg" alt="" srcset="" />
             </div>
-            <h1 class="title">Artificial Intelligence</h1>
+            <h1 class="title">{{ $t("pages.home.title.10") }}</h1>
             <p class="text">
-              The Bachelor of Science in Artificial Intelligence - BS(AI)
-              program provides learners the knowledge and skills to transform
-              complex inputs of text, vision, language and large databases into
-              intelligible and actionable decisions to enhance human
-              capabilities.
+              {{ $t("pages.home.p1") }}
             </p>
             <div class="link">
-              <Link href="/academics">Artificial Intelligence</Link>
+              <Link href="/academics">{{ $t("pages.home.title.10") }}</Link>
               <span>&rarr;</span>
             </div>
           </div>
@@ -117,28 +112,25 @@
                 srcset=""
               />
             </div>
-            <h1 class="title">English Programme</h1>
+            <h1 class="title">{{ $t("pages.home.title.11") }}</h1>
             <p class="text">
-              The ADU English program is an English Learning establishment of
-              the African Development University that is focused on building the
-              English language proficiency of professionals, businessmen and
-              businesswomen etc.
+              {{ $t("pages.home.p2") }}
             </p>
             <div class="link">
-              <Link href="/academics">English Programme</Link>
+              <Link href="/academics">{{ $t("pages.home.rm") }}</Link>
               <span>&rarr;</span>
             </div>
           </div>
         </div>
       </div>
       <div class="view__more">
-        <Link as="button" href="/academics">read more</Link>
+        <Link as="button" href="/academics">{{ $t("pages.home.rm") }}</Link>
       </div>
     </div>
     <div class="home__spotlight">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">IN THE SPOTLIGHT</h4>
+        <h4 class="title">{{ $t("pages.home.title.12") }}</h4>
         <div class="line"></div>
       </div>
       <div class="home__spotlight__container">
@@ -149,11 +141,11 @@
               <div class="overlay"></div>
             </Link>
             <figcaption class="image__footer">
-              <h5 class="title">SPIRIT OF GIVING CROWDFUNDING</h5>
+              <h5 class="title">{{ $t("pages.home.title.13") }}</h5>
               <div class="details">
                 <p>Give back and impact current and future generations</p>
               </div>
-              <Link> Read more </Link>
+              <Link> {{ $t("pages.home.rm") }} </Link>
             </figcaption>
           </figure>
         </div>
@@ -166,11 +158,11 @@
                 <div class="overlay"></div>
               </Link>
               <figcaption class="image__footer">
-                <h5 class="title">SPIRIT OF GIVING CROWDFUNDING</h5>
+                <h5 class="title">{{ $t("pages.home.title.13") }}</h5>
                 <div class="details">
                   <p>Give back and impact current and future generations</p>
                 </div>
-                <Link> Read more </Link>
+                <Link> {{ $t("pages.home.rm") }} </Link>
               </figcaption>
             </figure>
           </div>
@@ -181,11 +173,11 @@
                 <div class="overlay"></div>
               </Link>
               <figcaption class="image__footer">
-                <h5 class="title">SPIRIT OF GIVING CROWDFUNDING</h5>
+                <h5 class="title">{{ $t("pages.home.title.13") }}</h5>
                 <div class="details">
                   <p>Give back and impact current and future generations</p>
                 </div>
-                <Link> Read more </Link>
+                <Link> {{ $t("pages.home.rm") }} </Link>
               </figcaption>
             </figure>
           </div>
@@ -204,7 +196,7 @@
     <div class="home__news">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">Ilimi News</h4>
+        <h4 class="title">{{ $t("pages.home.title.14") }}</h4>
         <div class="line"></div>
       </div>
       <div class="s__row">
@@ -213,7 +205,7 @@
             <div class="image">
               <img src="/storage/images/news-1.jpg" alt="" srcset="" />
             </div>
-            <h1 class="title">The Best Reactions</h1>
+            <h1 class="title">{{ $t("pages.home.title.15") }}</h1>
             <p class="text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatum aut, quaerat fugiat tempora itaque esse, natus deleniti
@@ -221,7 +213,7 @@
               libero maxime ipsam minus officia.
             </p>
             <div class="link">
-              <Link>The Best Reactions</Link>
+              <Link>{{ $t("pages.home.title.16") }}</Link>
               <span>&rarr;</span>
             </div>
           </div>
@@ -231,7 +223,7 @@
             <div class="image">
               <img src="/storage/images/news.jpg" alt="" srcset="" />
             </div>
-            <h1 class="title">ADU Scholarships</h1>
+            <h1 class="title">{{ $t("pages.home.title.17") }}</h1>
             <p class="text">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
               a dolor sequi omnis dolore quia iure facilis suscipit, itaque
@@ -239,7 +231,7 @@
               fugit non odio. Accusantium!
             </p>
             <div class="link">
-              <Link>ADU Scholarships</Link>
+              <Link>{{ $t("pages.home.title.17") }}</Link>
               <span>&rarr;</span>
             </div>
           </div>
@@ -249,7 +241,7 @@
             <div class="image">
               <img src="/storage/slides/slide-1.jpg" alt="" srcset="" />
             </div>
-            <h1 class="title">Lorem ipsum, dolor sit amet</h1>
+            <h1 class="title">{{ $t("pages.home.title.17") }}</h1>
             <p class="text">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi,
               blanditiis! Distinctio minus, blanditiis, quos repellat dolore
@@ -257,26 +249,14 @@
               incidunt eius explicabo minus dolorum.
             </p>
             <div class="link">
-              <Link>Lorem ipsum, dolor sit amet</Link>
+              <Link>{{ $t("pages.home.title.17") }}</Link>
               <span>&rarr;</span>
             </div>
           </div>
         </div>
       </div>
       <div class="view__more">
-        <Link as="button">read more</Link>
-      </div>
-    </div>
-
-    <div class="home__donate">
-      <div class="home__donate__content">
-        <h3>ARE YOU READY TO CHANGE THE CONVERSATION ABOUT THE SAHEL?</h3>
-        <h1>Be part of the solution</h1>
-        <p>
-          A.D.U. is reshaping the future for the region by educating <br />
-          its most exceptional young women and men. We need your help.
-        </p>
-        <Link as="button" href="/donate">Donate Now</Link>
+        <Link as="button">{{ $t("pages.home.rm") }}</Link>
       </div>
     </div>
   </div>

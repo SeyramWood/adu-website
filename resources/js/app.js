@@ -15,6 +15,9 @@ import store from "./store";
 import axios from "axios";
 import Lightbox from "@morioh/v-lightbox";
 
+import VueLang from "@eli5/vue-lang-js";
+import translations from "./lang.js";
+
 InertiaProgress.init();
 Vue.use(Lightbox);
 Vue.use(VueMeta, {
@@ -26,6 +29,11 @@ Vue.use(VueSmoothScroll, {
     duration: 1000, // animation duration in ms
     offset: 0, // offset in px from scroll element, can be positive or negative
     updateHistory: true // whether to push hash to history
+});
+Vue.use(VueLang, {
+    messages: translations, // Provide locale file
+    locale: "en", // Set locale
+    fallback: "en" // Set fallback lacale
 });
 Object.defineProperty(Vue.prototype, "$axios", { value: axios });
 Object.defineProperty(Vue.prototype, "route", { value: window.route });

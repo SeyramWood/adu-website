@@ -3,26 +3,27 @@
     <div class="banner__wrapper">
       <banner bg="pages/academics/banner.jpeg" title="academics">
         <template #description>
-          A.D.U. offers 3-year liberal arts undergraduate programs; the only
-          university of its kind in the Sahel, and we hope to be a model that
-          other schools will follow. To further enhance the educational
-          experience, teaching at A.D.U. is split between on-the-ground faculty
-          who each have international education and experience, and top-tier
-          remote-based faculty from around the world.
+          {{ $t("pages.academics.banner") }}
         </template>
         <template #links>
           <s-links>
-            <s-link href="#BusinessManagement">Business Management</s-link>
-            <s-link href="#ArtificialIntelligence"
-              >Artificial Intelligence</s-link
-            >
-            <s-link href="#EnglishProgramme">English Programme</s-link>
+            <s-link href="#BusinessManagement">{{
+              $t("pages.academics.link.1")
+            }}</s-link>
+            <s-link href="#ArtificialIntelligence">{{
+              $t("pages.academics.link.2")
+            }}</s-link>
+            <s-link href="#EnglishProgramme">{{
+              $t("pages.academics.link.3")
+            }}</s-link>
           </s-links>
         </template>
       </banner>
     </div>
     <section class="academics__calenda">
-      <div class="academics__calenda__title">Academic Calendar</div>
+      <div class="academics__calenda__title">
+        {{ $t("pages.academics.ac") }}
+      </div>
       <div class="academics__calenda__slider">
         <vueper-slides
           class="no-shadow"
@@ -45,36 +46,40 @@
         </vueper-slides>
       </div>
       <div class="academics__calenda__btn">
-        <Link href="#">View full calendar</Link>
+        <Link href="#"> {{ $t("pages.academics.vfc") }}</Link>
       </div>
     </section>
     <section class="academics__major" id="BusinessManagement">
-      <h1 class="title">Business Administration (Featured Majors)</h1>
+      <h1 class="title">{{ $t("pages.academics.title.1") }}</h1>
       <div class="academics__major__links">
         <div class="link">
-          <h3 class="title">Law</h3>
+          <h3 class="title">{{ $t("pages.academics.title.2") }}</h3>
           <div class="link__box">
-            <a @click="lawModal = !lawModal"> View More</a>
+            <a @click="lawModal = !lawModal"> {{ $t("pages.academics.vm") }}</a>
           </div>
         </div>
         <div class="link">
-          <h3 class="title">Project Management</h3>
+          <h3 class="title">{{ $t("pages.academics.title.3") }}</h3>
           <div class="link__box">
-            <a @click="projectModal = !projectModal"> View More</a>
+            <a @click="projectModal = !projectModal">
+              {{ $t("pages.academics.vm") }}</a
+            >
           </div>
         </div>
       </div>
       <div class="academics__major__links">
         <div class="link">
-          <h3 class="title">Accounting</h3>
+          <h3 class="title">{{ $t("pages.academics.title.4") }}</h3>
           <div class="link__box">
-            <a @click="accountModal = !accountModal"> View More</a>
+            <a @click="accountModal = !accountModal">
+              {{ $t("pages.academics.vm") }}</a
+            >
           </div>
         </div>
         <div class="link">
-          <h3 class="title">Management Information System</h3>
+          <h3 class="title">{{ $t("pages.academics.title.5") }}</h3>
           <div class="link__box">
-            <a @click="misModal = !misModal"> View More</a>
+            <a @click="misModal = !misModal"> {{ $t("pages.academics.vm") }}</a>
           </div>
         </div>
       </div>
@@ -84,26 +89,20 @@
       id="ArtificialIntelligence"
     >
       <page-article
-        title="Artificial Intelligence"
+        :title="$t('pages.academics.title.6')"
         image="pages/academics/ai.jpg"
         :ltr="true"
         :btn="true"
-        btnText="Read more"
+        :btnText="$t('pages.academics.rm')"
       >
         <template #article>
           <p>
-            The Bachelor of Science in Artificial Intelligence - BS(AI) program
-            provides learners the knowledge and skills to transform complex
-            inputs of text, vision, language and large databases into
-            intelligible and actionable decisions to enhance human capabilities.
-            222The curriculum provides hands-on experience in various aspects of
-            Artificial Intelligence including data science, machine learning,
-            artificial neural networks, and developing data products. to address
-            societal and organisational issues in agriculture, commerce,
-            education, health, industry and governance etc.
+            {{ $t("pages.academics.ai") }}
           </p>
           <div class="article__content__btn">
-            <button @click="aiModal = !aiModal">read more</button>
+            <button @click="aiModal = !aiModal">
+              {{ $t("pages.academics.rm") }}
+            </button>
           </div>
         </template>
       </page-article>
@@ -113,22 +112,18 @@
       id="EnglishProgramme"
     >
       <page-article
-        title="English Programme"
+        :title="$t('pages.academics.title.7')"
         image="pages/academics/english.jpeg"
         :ltr="true"
       >
         <template #article>
           <p>
-            The ADU English program is an English Learning establishment of the
-            African Development University that is focused on building the
-            English language proficiency of professionals, businessmen and
-            businesswomen etc., especially in the francophone region and is
-            committed to taking learners through an exciting language learning
-            journey with courses tailored to give learners an all-round study of
-            the language.
+            {{ $t("pages.academics.ep") }}
           </p>
           <div class="article__content__btn">
-            <button @click="englishModal = !englishModal">read more</button>
+            <button @click="englishModal = !englishModal">
+              {{ $t("pages.academics.rm") }}
+            </button>
           </div>
         </template>
       </page-article>
@@ -137,226 +132,112 @@
     <s-modal v-model="englishModal" width="70rem">
       <div class="english-programme-details">
         <div class="section syllabus">
-          <h1>COURSE SYLLABUS (What You will learn)</h1>
+          <h1>{{ $t("pages.academics.epd.sh1") }}</h1>
           <p>
-            Our syllabus is comprised of topics in English grammar, vocabulary
-            and the four major language skills: listening, reading, writing,
-            speaking. Students will learn how to speak English with a higher
-            level of proficiency in both public speaking and normal English
-            conversations to help boost their communication skills.
+            {{ $t("pages.academics.epd.sp") }}
           </p>
         </div>
 
         <div class="section packages">
-          <h1>OUR PACKAGES</h1>
-          <p>
-            <strong>IN-CAMPUS PACKAGE:</strong> Classes on campus take place
-            every Tuesday and Thursday, 6:30pm.
-          </p>
-          <p>
-            <strong>ONLINE PACKAGE:</strong> Virtual classes are offered based
-            on client’s demand.
-          </p>
-          <p>
-            <strong>COMPANY PACKAGE:</strong> This is for organizations who want
-            their staff to learn English.
-          </p>
-          <p>
-            <strong>ENGLISH HUB PACKAGE:</strong>The English club holds every
-            Saturday by 4pm in our campus at Village de la Francophonie.
-          </p>
+          <h1>{{ $t("pages.academics.epd.ph1") }}</h1>
+          <p v-html="$t('pages.academics.epd.pp1')"></p>
+          <p v-html="$t('pages.academics.epd.pp2')"></p>
+          <p v-html="$t('pages.academics.epd.pp3')"></p>
+          <p v-html="$t('pages.academics.epd.pp4')"></p>
         </div>
         <div class="section certificate">
           <div>
-            <h1>CERTIFICATE</h1>
+            <h1>{{ $t("pages.academics.epd.ch1") }}</h1>
             <p>
-              A certificate of completion will be issued to students at the end
-              of every course taken in the English Program.
+              {{ $t("pages.academics.epd.cp") }}
             </p>
           </div>
         </div>
 
-        <p class="info">
-          For further information, please contact us via
-          <span>(+227)92 39 6868 /93 39 6868</span> or you can also visit our
-          campus.
-        </p>
+        <p class="info" v-html="$t('pages.academics.info')"></p>
       </div>
     </s-modal>
     <s-modal v-model="aiModal" width="70rem">
       <div class="english-programme-details">
         <div class="section syllabus">
-          <h1>Background</h1>
+          <h1>{{ $t("pages.academics.aid.sh1") }}</h1>
           <p>
-            Niger 2.0 Smart Villages program was launched in August 2018 by the
-            Government of Niger and its partners (ITU, FAO, UNESCO, WHO, WB), to
-            expand internet access to digitally enabled services in education
-            and other sectors (health, agriculture, commerce etc.). Yet, there
-            is a lack of quality technology education programs in Niger and
-            across the Sahel region. Thus, the Bachelor of Science in Artificial
-            Intelligence (BS-AI) program is designed to bridge the
-            Science-Technology-Innovation (STI) workforce gap and to drive the
-            digital transformation agenda of Niger and the Sahel region.
+            {{ $t("pages.academics.aid.sp") }}
           </p>
         </div>
         <div class="section">
-          <h1>Program Description</h1>
+          <h1>{{ $t("pages.academics.aid.sh2") }}</h1>
           <p>
-            The Bachelor of Science in Artificial Intelligence - BS(AI) program
-            provides learners the knowledge and skills to transform complex
-            inputs of text, vision, language and large databases into
-            intelligible and actionable decisions to enhance human capabilities.
-            222The curriculum provides hands-on experience in various aspects of
-            Artificial Intelligence including data science, machine learning,
-            artificial neural networks, and developing data products. to address
-            societal and organisational issues in agriculture, commerce,
-            education, health, industry and governance etc.
+            {{ $t("pages.academics.aid.sp1") }}
           </p>
         </div>
 
         <div class="section packages">
-          <h1>Competencies & Skills</h1>
-          <p>
-            <strong>Technology:</strong> Web and mobile software engineering,
-            computer architecture, databases, computer science theory.
-          </p>
-          <p>
-            <strong>Data/Analytics:</strong> Mathematics machine learning,
-            artificial neural networks, deep learning, and AI concepts and
-            software tools
-          </p>
-          <p>
-            <strong>Entrepreneurship:</strong> Innovation, strategy, problem
-            solving, management skills.
-          </p>
+          <h1>{{ $t("pages.academics.aid.sh3") }}</h1>
+          <p v-html="$t('pages.academics.aid.pp1')"></p>
+          <p v-html="$t('pages.academics.aid.pp2')"></p>
+          <p v-html="$t('pages.academics.aid.pp3')"></p>
         </div>
-        <p class="info">
-          For further information, please contact us via
-          <span>(+227)92 39 6868 /93 39 6868</span> or you can also visit our
-          campus.
-        </p>
+        <p class="info" v-html="$t('pages.academics.info')"></p>
       </div>
     </s-modal>
     <s-modal v-model="lawModal" width="70rem">
       <div class="english-programme-details">
         <div class="section syllabus">
-          <h1>Law</h1>
+          <h1>{{ $t("pages.academics.law.h1") }}</h1>
           <p>
-            A.D.U. offers a three-year degree in Business Law that teaches
-            courses in many different aspects of legal work. Students entering
-            this program should have a strong commitment to justice and equality
-            and fighting corruption. The types of careers that graduates can
-            expect are Jurist of Enterprises, Magistrate in Public
-            Jurisdictions, Legal Consultant, Notary Public.
+            {{ $t("pages.academics.law.p") }}
           </p>
         </div>
-        <p class="info">
-          For further information, please contact us via
-          <span>(+227)92 39 6868 /93 39 6868</span> or you can also visit our
-          campus.
-        </p>
+        <p class="info" v-html="$t('pages.academics.info')"></p>
       </div>
     </s-modal>
     <s-modal v-model="projectModal" width="70rem">
       <div class="english-programme-details">
         <div class="section syllabus">
-          <h1>Project Management</h1>
+          <h1>{{ $t("pages.academics.pm.h1") }}</h1>
           <p>
-            Project Managers are trained to make certain that complex projects
-            go according to schedule. Project management positions are essential
-            in construction and civil engineering etc. These types of projects
-            include building new infrastructures such as bridges and office
-            buildings, as well as repairing old infrastructures, such as homes
-            or businesses.
+            {{ $t("pages.academics.pm.p1") }}
           </p>
           <p>
-            In keeping with the Ilimi concept, each course is designed and
-            taught with a thread of ethical conduct woven through it to
-            reinforce the responsibility of graduates to press ethical practice
-            in their work-places. Courses also stress a commitment to combat
-            social injustice and to make the world a better place for the less
-            fortunate.
+            {{ $t("pages.academics.pm.p2") }}
           </p>
         </div>
-        <p class="info">
-          For further information, please contact us via
-          <span>(+227)92 39 6868 /93 39 6868</span> or you can also visit our
-          campus.
-        </p>
+        <p class="info" v-html="$t('pages.academics.info')"></p>
       </div>
     </s-modal>
     <s-modal v-model="accountModal" width="70rem">
       <div class="english-programme-details">
         <div class="section">
-          <h1>Bachelor of Accounting</h1>
+          <h1>{{ $t("pages.academics.accounting.h1") }}</h1>
           <p>
-            A degree in Accounting and Finance will train you to work as a
-            financial examiner, or a financial analyst, or a finance manager or
-            as a business consultant who helps guide small entrepreneurs. It is
-            a very exacting work…it requires a high level of attention to
-            detail.
+            {{ $t("pages.academics.accounting.p1") }}
           </p>
           <div class="section packages">
-            <p>
-              <strong>Financial Examiner:</strong> With a career as a financial
-              examiner, you’ll help ensure compliance with laws governing banks
-              and how they lend money, Or, you could be responsible for
-              analyzing the financial strength of a business that is looking to
-              expand.
-            </p>
-            <p>
-              <strong>Financial Analyst:</strong> You can expect to work with
-              individuals and organizations to make strategic decisions based on
-              investments
-            </p>
-            <p>
-              <strong>Business and Financial Consultant:</strong> As a business
-              consultant, you can help other business owners manage start-up
-              costs and investments, create a financial plan for their business
-              and monitor day-to-day bookkeeping.
-            </p>
+            <p v-html="$t(`pages.academics.accounting.p2`)"></p>
+            <p v-html="$t(`pages.academics.accounting.p3`)"></p>
+            <p v-html="$t(`pages.academics.accounting.p4`)"></p>
           </div>
         </div>
-        <p class="info">
-          For further information, please contact us via
-          <span>(+227)92 39 6868 /93 39 6868</span> or you can also visit our
-          campus.
-        </p>
+        <p class="info" v-html="$t('pages.academics.info')"></p>
       </div>
     </s-modal>
     <s-modal v-model="misModal" width="70rem">
       <div class="english-programme-details">
         <div class="section syllabus">
-          <h1>Bachelor of Management Information System:</h1>
+          <h1>{{ $t(`pages.academics.mis.h1`) }}</h1>
           <p>
-            Information Technology is diverse. It will allow you to take your
-            profession in several different directions. It is practical. You
-            will not only learn the theory but also get the opportunity to make
-            things.
+            {{ $t(`pages.academics.mis.p1`) }}
           </p>
           <p>
-            There are many careers to follow when studying IT. As technology
-            progresses, the need for IT graduates will only increase. Moreover,
-            the better your skillset, the more in demand you will be.
+            {{ $t(`pages.academics.mis.p2`) }}
           </p>
           <p>
-            Technology positions available in IT often include jobs such as
-            creating software, analyzing new forms of data, and developing
-            solutions for today's highly technological world. In the next
-            ten-years Niger will be fully digital and nearly every company and
-            organization will be using digital technology. A.D.U.’s program will
-            place you into the center of that exciting field by training you to
-            create new technologies. Security will also be in large demand,
-            people will want their mobiles and laptops to be secure from hackers
-            and from people trying to steal their personal information.
+            {{ $t(`pages.academics.mis.p3`) }}
           </p>
         </div>
 
-        <p class="info">
-          For further information, please contact us via
-          <span>(+227)92 39 6868 /93 39 6868</span> or you can also visit our
-          campus.
-        </p>
+        <p class="info" v-html="$t('pages.academics.info')"></p>
       </div>
     </s-modal>
     <s-modal v-model="calendarModal" width="70rem">

@@ -1,132 +1,125 @@
 <template>
   <section class="admissions">
     <div class="banner__wrapper">
-      <banner bg="bg/banner.jpg" title="admissions">
+      <banner bg="bg/banner.jpg" :title="$t('pages.admission.title.1')">
         <template #description>
-          African Development University (A.D.U) is a university of excellence
-          based in Niamey (Niger). Our mission is to prepare the most talented
-          young people in Niger and Francophone Africa to design and drive the
-          development of their nations as ethical and effective leaders in
-          public, private and not for profit sectors.
+          {{ $t("pages.admission.banner") }}
         </template>
         <template #links>
           <s-links>
-            <s-link href="#TheADUAdvantage">The A.D.U Advantage</s-link>
-            <s-link href="#ScholarshipInformation"
-              >Scholarship Information</s-link
-            >
-            <s-link href="#AcademicProgramsSummary"
-              >Academic Programs Summary</s-link
-            >
-            <s-link href="#ContactAdmissionTeam">Contact Admission Team</s-link>
+            <s-link href="#TheADUAdvantage">{{
+              $t("pages.admission.link.1")
+            }}</s-link>
+            <s-link href="#ScholarshipInformation">{{
+              $t("pages.admission.link.2")
+            }}</s-link>
+            <s-link href="#AcademicProgramsSummary">{{
+              $t("pages.admission.link.3")
+            }}</s-link>
+            <s-link href="#ContactAdmissionTeam">{{
+              $t("pages.admission.link.4")
+            }}</s-link>
           </s-links>
         </template>
       </banner>
     </div>
 
     <section class="admissions__advantage" id="TheADUAdvantage">
-      <h1 class="title">The A.D.U. Advantage</h1>
+      <h1 class="title">{{ $t("pages.admission.title.2") }}</h1>
       <div class="advantages">
         <div class="advantages__card">
           <span>
             <v-icon>mdi-account-group-outline</v-icon>
           </span>
-          <p>Student centered institution – Student FIRST</p>
+          <p>{{ $t("pages.admission.advantage.1") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-book-education-outline</v-icon>
           </span>
-          <p>US style Highee Education Model - liberal arts education</p>
+          <p>{{ $t("pages.admission.advantage.2") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-school-outline</v-icon>
           </span>
-          <p>International opportunities and exchange programs for students</p>
+          <p>{{ $t("pages.admission.advantage.3") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-focus-field</v-icon>
           </span>
-          <p>Entrepreneurial Focused</p>
+          <p>{{ $t("pages.admission.advantage.4") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-chair-school</v-icon>
           </span>
-          <p>Student Development Trough Experiential Learning</p>
+          <p>{{ $t("pages.admission.advantage.5") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-cast-education</v-icon>
           </span>
-          <p>Blended learning - in-person and virtual modes</p>
+          <p>{{ $t("pages.admission.advantage.6") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-translate</v-icon>
           </span>
-          <p>Bilingual education - English and French</p>
+          <p>{{ $t("pages.admission.advantage.7") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-toolbox-outline</v-icon>
           </span>
-          <p>Effective career services and placement support</p>
+          <p>{{ $t("pages.admission.advantage.8") }}</p>
         </div>
       </div>
     </section>
     <section class="article__wrapper" id="ScholarshipInformation">
       <page-article
-        title="Scholarship Information"
+        :title="$t('pages.admission.title.3')"
         image="pages/admissions/scholarship.jpg"
         :imageRround="true"
         :ltr="true"
       >
         <template #article>
           <strong class="" style="font-style: italic">
-            "The mission of A.D.U. is to prepare the most talented young people
-            in Niger and in Francophone Africa to design and drive the
-            development of their nations as ethical and effective leaders in the
-            public, private and not-for-profit sectors."
+            <q> {{ $t("pages.admission.si.p1") }} </q>
           </strong>
           <p>
-            Therefore, A.D.U. offers Scholarship for talented student who are
-            experiencing economic and social hardship so that they will be able
-            to achieve their goals and impact their community. You can apply for
-            a scholarship by filling this form
+            {{ $t("pages.admission.si.p2") }}
             <a
               href="https://aduilimi-my.sharepoint.com/:b:/g/personal/fafagnibo_ilimi_edu_ne/Efz0yLO5bV1AkPv22eCnkKsBn13Yy1sUJkBTASqsSC2sGw?e=7vG1V8"
               target="_blank"
               rel="noopener noreferrer"
               class="color-primary"
-              >Apply Now</a
+              >{{ $t("pages.admission.si.apply") }}</a
             >
           </p>
         </template>
         <template #links>
           <s-links type="article">
-            <s-link href="/kfdjklfdjhkl">A.D.U. Scholarship</s-link>
-            <s-link href="/kfdjklfdjhkl"
-              >MasterCard Foundation Scholarships</s-link
-            >
+            <s-link href="/kfdjklfdjhkl">{{
+              $t("pages.admission.si.link.1")
+            }}</s-link>
+            <s-link href="/kfdjklfdjhkl">{{
+              $t("pages.admission.si.link.2")
+            }}</s-link>
           </s-links>
         </template>
       </page-article>
     </section>
     <section class="article__wrapper" id="AcademicProgramsSummary">
       <page-article
-        title="Academic Programs Summary"
+        :title="$t('pages.admission.title.4')"
         image="pages/admissions/programmes.jpeg"
         :imageRround="true"
       >
         <template #article>
           <p style="margin-bottom: 2rem">
-            Our 3-year bachelor program is both nationally and internationally
-            recognized. Our degree programs are all accredited by Ministry of
-            Higher Education, Research and Innovation, Niger. We offer two
-            Bachelors: Business Administration & Artificial Intelligence.
+            {{ $t("pages.admission.ap.p") }}
           </p>
         </template>
         <template #links>
@@ -135,7 +128,7 @@
             href="/academics"
             class="read-more-btn"
             style="margin-left: -1.5rem"
-            >Read More</Link
+            >{{ $t("pages.admission.ap.link.readMore") }}</Link
           >
         </template>
         <template #linksRight>
@@ -143,21 +136,20 @@
             <s-link
               href="https://aduilimi-my.sharepoint.com/:b:/g/personal/fafagnibo_ilimi_edu_ne/Efz0yLO5bV1AkPv22eCnkKsBn13Yy1sUJkBTASqsSC2sGw?e=7vG1V8"
               :external="true"
-              >How to Apply</s-link
+              >{{ $t("pages.admission.ap.link.hta") }}</s-link
             >
-            <s-link href="https://applications.eduappgh.com" :external="true"
-              >Click to Apply</s-link
-            >
+            <s-link href="https://applications.eduappgh.com" :external="true">{{
+              $t("pages.admission.ap.link.cta")
+            }}</s-link>
           </s-links>
         </template>
       </page-article>
     </section>
     <section class="contact" id="ContactAdmissionTeam">
-      <h1 class="title">CONTACT ADMISSION TEAM</h1>
+      <h1 class="title">{{ $t("pages.admission.title.5") }}</h1>
       <article>
         <p>
-          For additional questions and/or inquiry regarding application, you can
-          reach us through:
+          {{ $t("pages.admission.cat.p") }}
         </p>
         <ul style="list-style-type: disc; margin-left: 1.2rem">
           <li>

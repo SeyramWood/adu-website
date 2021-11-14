@@ -24,6 +24,10 @@ Route::get('/config', function () {
 });
 
 
+Route::get('/locale/{locale}', function ($locale) {
+  Session()->put('locale', $locale);
+  return redirect()->back();
+})->name('locale');
 
 Route::get('/', 'FrontEnd\PageController@index')->name('home');
 Route::get('/about', 'FrontEnd\PageController@about')->name('about');

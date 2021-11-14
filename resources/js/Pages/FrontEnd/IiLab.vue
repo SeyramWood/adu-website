@@ -1,121 +1,116 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="images/library-2.jpeg" title="iiLab">
+      <banner bg="images/library-2.jpeg" :title="$t('pages.iilab.title.1')">
         <template #description>
           <p>
-            The iiLab (ilimi Innovation Lab) is A.D.U’s innovation and
-            entrepreneurship hub committed to empowering our Young Leaders by
-            providing and connecting them with tools, resources, networks and
-            support to scale their innovative and entrepreneurial ideas.
+            {{ $t("pages.iilab.welcome") }}
           </p>
         </template>
         <template #links>
           <s-links>
-            <s-link href="#welcome">About iiLab</s-link>
-            <s-link href="#services">Services</s-link>
-            <s-link href="#events">Events</s-link>
-            <s-link href="#entrepreneures">Our Entrepreneures</s-link>
-            <s-link href="#spotlight ">Spotlight</s-link>
+            <s-link href="#welcome">{{ $t("pages.iilab.link.1") }}</s-link>
+            <s-link href="#services">{{ $t("pages.iilab.link.2") }}</s-link>
+            <s-link href="#events">{{ $t("pages.iilab.link.3") }}</s-link>
+            <s-link href="#entrepreneures">{{
+              $t("pages.iilab.link.4")
+            }}</s-link>
+            <s-link href="#spotlight ">{{ $t("pages.iilab.link.5") }}</s-link>
           </s-links>
         </template>
       </banner>
     </div>
 
     <section class="article__wrapper" id="welcome">
-      <page-article title="Welcome to IILab" image="pages/iilab/about.jpg">
+      <page-article
+        :title="$t('pages.iilab.title.2')"
+        image="pages/iilab/about.jpg"
+      >
         <template #article>
           <p>
-            The iiLab (ilimi Innovation Lab) is A.D.U’s innovation and
-            entrepreneurship hub committed to empowering our Young Leaders by
-            providing and connecting them with tools, resources, networks and
-            support to scale their innovative and entrepreneurial ideas.
+            {{ $t("pages.iilab.welcome") }}
           </p>
         </template>
       </page-article>
     </section>
     <section class="admissions__advantage" id="services">
-      <h1 class="title">Services</h1>
+      <h1 class="title">{{ $t("pages.iilab.services.title") }}</h1>
       <p class="text">
-        Career Services – is a unit within Student and Community Affairs, which
-        provides career readiness and preparation to our young leaders. The goal
-        of career services is to provide career assistance for students in their
-        career choices and help them to find work-study positions, internships
-        and full-time positions upon graduation.
+        {{ $t("pages.iilab.services.text") }}
       </p>
       <div class="advantages">
         <div class="advantages__card">
           <span>
             <v-icon>mdi-account-group-outline</v-icon>
           </span>
-          <p>Students’ Career Development</p>
+          <p>{{ $t("pages.iilab.services.card.1") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-briefcase-check-outline</v-icon>
           </span>
-          <p>Career and Self-Assessments</p>
+          <p>{{ $t("pages.iilab.services.card.2") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-coach-lamp</v-icon>
           </span>
-          <p>Career Counselling and Coaching</p>
+          <p>{{ $t("pages.iilab.services.card.3") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-calendar-outline</v-icon>
           </span>
-          <p>Professional Week Series</p>
+          <p>{{ $t("pages.iilab.services.card.4") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-card-account-details-outline</v-icon>
           </span>
-          <p>Mentorship Program</p>
+          <p>{{ $t("pages.iilab.services.card.5") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-book-open-page-variant-outline</v-icon>
           </span>
-          <p>Work Study Opportunities</p>
+          <p>{{ $t("pages.iilab.services.card.6") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-strategy</v-icon>
           </span>
-          <p>Seniors Exit Strategy</p>
+          <p>{{ $t("pages.iilab.services.card.7") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-briefcase-outline</v-icon>
           </span>
-          <p>Internships and Job Opportunities</p>
+          <p>{{ $t("pages.iilab.services.card.8") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-billboard</v-icon>
           </span>
-          <p>Practical and Technical Training Platforms</p>
+          <p>{{ $t("pages.iilab.services.card.9") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-gantry-crane</v-icon>
           </span>
-          <p>Employer Engagement</p>
+          <p>{{ $t("pages.iilab.services.card.10") }}</p>
         </div>
         <div class="advantages__card">
           <span>
             <v-icon>mdi-cog-transfer-outline</v-icon>
           </span>
-          <p>Developing and supporting Alumni on a case by case basis</p>
+          <p>{{ $t("pages.iilab.services.card.11") }}</p>
         </div>
       </div>
     </section>
     <div class="home__news" id="events">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">events</h4>
+        <h4 class="title">{{ $t("pages.iilab.link.3") }}</h4>
         <div class="line"></div>
       </div>
       <div class="s__row">
@@ -130,7 +125,7 @@
             }}</a>
           </div>
           <div class="iilab__events__link__more">
-            <Link href="/iilab/events">More events</Link>
+            <Link href="/iilab/events">{{ $t("pages.iilab.me") }}</Link>
             <span>&rarr;</span>
           </div>
         </div>
@@ -170,7 +165,7 @@
     <div class="home__news" id="entrepreneures">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">Our Entrepreneures</h4>
+        <h4 class="title">{{ $t("pages.iilab.link.4") }}</h4>
         <div class="line"></div>
       </div>
       <div class="s__row">
@@ -194,14 +189,16 @@
               }}
             </p>
             <div class="link" @click="getShowroomData(show)" role="button">
-              <a ref="javascript:">Read more</a>
+              <a ref="javascript:">{{ $t("pages.iilab.rm") }}</a>
               <span>&rarr;</span>
             </div>
           </div>
         </div>
       </div>
       <div class="view__more">
-        <Link as="button" href="/iilab/entrepreneures">View all</Link>
+        <Link as="button" href="/iilab/entrepreneures">{{
+          $t("pages.iilab.va")
+        }}</Link>
       </div>
     </div>
     <section class="feed__wrapper" id="spotlight">
@@ -309,6 +306,16 @@ export default {
     PageArticle,
     SModal,
   },
+  mounted() {
+    this.$watch(
+      () => this.$lang.locale,
+      (locale) => {
+        this.events = this.$lang.messages[`${locale}.pages`].iilab.events;
+        this.showrooms = this.$lang.messages[`${locale}.pages`].iilab.showrooms;
+      },
+      { immediate: true }
+    );
+  },
   data() {
     return {
       eventModal: false,
@@ -372,8 +379,6 @@ Note: The iiLab also has exciting plans for the Wangari, Johnson and Jean cohort
           image: `/storage/ADU_picture.png`,
           video: {
             url: "https://www.youtube.com/embed/2d_7v9bda24",
-            // webm: `${process.env.BASE_URL}images/flower.webm`,
-            // mp4: `${process.env.BASE_URL}images/flower.mp4`,
             props: {
               autoplay: true,
               loop: true,

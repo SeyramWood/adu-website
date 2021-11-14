@@ -1,92 +1,96 @@
 <template>
   <section class="about">
     <div class="banner__wrapper">
-      <banner bg="images/student-life-1.jpg" title="Student Life">
+      <banner
+        bg="images/student-life-1.jpg"
+        :title="$t('pages.studentLife.title.1')"
+      >
         <template #description>
-          <p style="padding-bottom: 4rem">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-            recusandae officia, similique quam, accusamus tempore consequuntur
-            dolores sapiente non, omnis blanditiis molestiae tempora aspernatur
-            distinctio a debitis qui quas necessitatibus!
+          <p>
+            {{ $t("pages.studentLife.banner") }}
           </p>
         </template>
         <template #links>
           <s-links>
-            <s-link href="#lifeOnCampus">Life on Campus</s-link>
-            <s-link href="#spotlight">Spotlight</s-link>
+            <s-link href="#lifeOnCampus">{{
+              $t("pages.studentLife.link.1")
+            }}</s-link>
+            <s-link href="#spotlight">{{
+              $t("pages.studentLife.link.2")
+            }}</s-link>
           </s-links>
         </template>
       </banner>
     </div>
 
     <section class="academics__major" id="lifeOnCampus">
-      <h1 class="title">LIFE ON CAMPUS</h1>
+      <h1 class="title">{{ $t("pages.studentLife.title.2") }}</h1>
       <div class="academics__major__links">
         <div class="link">
-          <h3 class="title">ilimi Student Government</h3>
+          <h3 class="title">{{ $t("pages.studentLife.title.3") }}</h3>
           <div class="link__box">
             <Link
               :href="`/student-life/life-on-campuse/ilimi-student-government`"
             >
-              View More</Link
+              {{ $t("pages.studentLife.rm") }}</Link
             >
           </div>
         </div>
         <div class="link">
-          <h3 class="title">Internship and Career Services</h3>
+          <h3 class="title">{{ $t("pages.studentLife.title.4") }}</h3>
           <div class="link__box">
             <Link
               :href="`/student-life/life-on-campuse/internship-and-career-services`"
             >
-              View More</Link
+              {{ $t("pages.studentLife.rm") }}</Link
             >
           </div>
         </div>
       </div>
       <div class="academics__major__links">
         <div class="link">
-          <h3 class="title">Clubs and Societies</h3>
+          <h3 class="title">{{ $t("pages.studentLife.title.5") }}</h3>
           <div class="link__box">
             <Link :href="`/student-life/life-on-campuse/clubs-and-societies`">
-              View More</Link
+              {{ $t("pages.studentLife.rm") }}</Link
             >
           </div>
         </div>
         <div class="link">
-          <h3 class="title">Guest Lecture Series</h3>
+          <h3 class="title">{{ $t("pages.studentLife.title.6") }}</h3>
           <div class="link__box">
             <Link :href="`/student-life/life-on-campuse/guest-lecture-series`">
-              View More</Link
+              {{ $t("pages.studentLife.rm") }}</Link
             >
           </div>
         </div>
       </div>
       <div class="academics__major__links">
         <div class="link">
-          <h3 class="title">Health and Well-being</h3>
+          <h3 class="title">{{ $t("pages.studentLife.title.7") }}</h3>
           <div class="link__box">
             <Link :href="`/student-life/life-on-campuse/health-and-well-being`">
-              View More</Link
+              {{ $t("pages.studentLife.rm") }}</Link
             >
           </div>
         </div>
         <div class="link">
-          <h3 class="title">Student Success Center</h3>
+          <h3 class="title">{{ $t("pages.studentLife.title.8") }}</h3>
           <div class="link__box">
             <Link
               :href="`/student-life/life-on-campuse/student-success-center`"
             >
-              View More</Link
+              {{ $t("pages.studentLife.rm") }}</Link
             >
           </div>
         </div>
       </div>
       <div class="academics__major__links">
         <div class="link">
-          <h3 class="title">Alumni</h3>
+          <h3 class="title">{{ $t("pages.studentLife.title.9") }}</h3>
           <div class="link__box">
             <Link :href="`/student-life/life-on-campuse/alumni`">
-              View More</Link
+              {{ $t("pages.studentLife.rm") }}</Link
             >
           </div>
         </div>
@@ -96,7 +100,7 @@
     <div class="home__spotlight" id="spotlight">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">STUDENT SPOTLIGHT</h4>
+        <h4 class="title">{{ $t("pages.studentLife.title.10") }}</h4>
         <div class="line"></div>
       </div>
       <div class="home__spotlight__container">
@@ -107,11 +111,11 @@
               <div class="overlay"></div>
             </Link>
             <figcaption class="image__footer">
-              <h5 class="title">SPIRIT OF GIVING CROWDFUNDING</h5>
+              <h5 class="title">{{ $t("pages.studentLife.title.11") }}</h5>
               <div class="details">
                 <p>Give back and impact current and future generations</p>
               </div>
-              <Link> Read more </Link>
+              <Link> {{ $t("pages.studentLife.rm") }} </Link>
             </figcaption>
           </figure>
         </div>

@@ -10,11 +10,11 @@
             href=" https://myilimilms.net/moodle"
             target="_blank"
             rel="noopener noreferrer"
-            >My Ilimi</a
+            >{{ $t("pages.navigation.8") }}</a
           >
         </li>
         <li class="page__header__top__navigation__link">
-          <Link href="/donate">Donate</Link>
+          <Link href="/donate">{{ $t("pages.navigation.6") }}</Link>
         </li>
         <li class="page__header__top__navigation__link">
           <a
@@ -22,7 +22,7 @@
             class="button"
             target="_blank"
             rel="noopener noreferrer"
-            >Apply</a
+            >{{ $t("pages.navigation.4") }}</a
           >
         </li>
       </ul>
@@ -39,7 +39,7 @@
               route().current('about') && 'active',
             ]"
           >
-            <Link href="/about">About</Link>
+            <Link href="/about">{{ $t("pages.navigation.1") }}</Link>
           </li>
           <li
             :class="[
@@ -47,7 +47,7 @@
               route().current('admissions') && 'active',
             ]"
           >
-            <Link href="/admissions">Admissions</Link>
+            <Link href="/admissions">{{ $t("pages.navigation.2") }}</Link>
           </li>
           <li
             :class="[
@@ -55,7 +55,7 @@
               route().current('academics') && 'active',
             ]"
           >
-            <Link href="/academics">Academics</Link>
+            <Link href="/academics">{{ $t("pages.navigation.3") }}</Link>
           </li>
         </ul>
       </div>
@@ -75,7 +75,7 @@
               route().current('studentLife*') && 'active',
             ]"
           >
-            <Link href="/student-life">Student Life</Link>
+            <Link href="/student-life">{{ $t("pages.navigation.7") }}</Link>
           </li>
           <li
             :class="[
@@ -83,7 +83,7 @@
               route().current('gallery') && 'active',
             ]"
           >
-            <Link href="/gallery">Gallery</Link>
+            <Link href="/gallery">{{ $t("pages.navigation.5") }}</Link>
           </li>
         </ul>
       </div>
@@ -96,7 +96,7 @@
               <img src="/storage/logo-2.png" alt="A.D.U LOGO" srcset="" />
             </Link>
           </div>
-          <Link href="#" as="button">Apply</Link>
+          <Link href="#" as="button">{{ $t("pages.navigation.4") }}</Link>
         </div>
         <div
           class="page__mobile__nav__content__icon"
@@ -278,16 +278,17 @@
           </div>
         </div>
         <div class="page__footer__bottom__links">
-          <h3 class="title">Bachelor Admissions</h3>
+          <h3 class="title">{{ $t("pages.footer.ba") }}</h3>
           <div class="address">
             <p>
-              Email:
+              {{ $t("pages.footer.email") }}:
               <a href="mailto:admissions@ilimi.edu.ne"
                 >admissions@ilimi.edu.ne</a
               >
             </p>
             <p>
-              Phone: <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+              {{ $t("pages.footer.phone") }}:
+              <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
                 href="tel:+22793396868"
                 >(+227) 93-39-68-68</a
               >
@@ -295,16 +296,17 @@
           </div>
         </div>
         <div class="page__footer__bottom__links">
-          <h3 class="title">Artificial Intelligence</h3>
+          <h3 class="title">{{ $t("pages.footer.ai") }}</h3>
           <div class="address">
             <p>
-              Email:
+              {{ $t("pages.footer.email") }}:
               <a href="mailto:admissions@ilimi.edu.ne"
                 >admissions@ilimi.edu.ne</a
               >
             </p>
             <p>
-              Phone: <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+              {{ $t("pages.footer.phone") }}:
+              <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
                 href="tel:+22793396868"
                 >(+227) 93-39-68-68</a
               >
@@ -312,16 +314,17 @@
           </div>
         </div>
         <div class="page__footer__bottom__links">
-          <h3 class="title">English Program</h3>
+          <h3 class="title">{{ $t("pages.footer.ep") }}</h3>
           <div class="address">
             <p>
-              Email:
+              {{ $t("pages.footer.email") }}:
               <a href="mailto:admissions@ilimi.edu.ne"
                 >admissions@ilimi.edu.ne</a
               >
             </p>
             <p>
-              Phone: <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+              {{ $t("pages.footer.phone") }}:
+              <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
                 href="tel:+22793396868"
                 >(+227) 93-39-68-68</a
               >
@@ -334,13 +337,28 @@
           >&copy;{{ new Date().getUTCFullYear() }} A.D.U, All Right
           Reserved</span
         >
+        <!-- {{ $t("attribute-name") }} -->
       </section>
+      <div
+        class="page__footer__locale-btn"
+        title="Translate"
+        v-show="isTranslateButton"
+      >
+        <span>
+          <v-icon>mdi-translate</v-icon>
+        </span>
+        <div class="btns">
+          <button type="button" @click="changeLocale('en')">EN</button>
+          <button type="button" @click="changeLocale('fr')">FR</button>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue";
+import { Inertia } from "@inertiajs/inertia";
 export default {
   name: "FrontEndLayout",
   components: {
@@ -351,6 +369,9 @@ export default {
       return this.logoClass;
     },
   },
+  beforeMount() {
+    this.setLocale();
+  },
   mounted() {
     const el = this.$refs.mainNav;
     window.addEventListener("scroll", () => {
@@ -359,13 +380,50 @@ export default {
       } else {
         this.logoClass = "big";
       }
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        this.isTranslateButton = true;
+      } else {
+        this.isTranslateButton = false;
+      }
     });
   },
   data() {
     return {
       logoClass: "big",
       toggleMobileNav: false,
+      isTranslateButton: false,
     };
+  },
+
+  methods: {
+    changeLocale(locale) {
+      Inertia.visit(`/locale/${locale}`, {
+        preserveScroll: true,
+        onSuccess: (page) => {
+          const now = new Date();
+          now.setDate(now.getDate() + 7);
+          document.cookie = `locale=${locale}; expires=${now.toUTCString()}; SameSite=Lax; Secure`;
+          this.$lang.setLocale(locale);
+        },
+      });
+    },
+
+    setLocale() {
+      if (
+        document.cookie
+          .split(";")
+          .some((item) => item.trim().startsWith("locale="))
+      ) {
+        this.$lang.setLocale(
+          document.cookie
+            .split(";")
+            .find((item) => item.startsWith("locale="))
+            .split("=")[1]
+        );
+      } else {
+        this.$lang.setLocale(navigator.language.split("-")[0]);
+      }
+    },
   },
 };
 </script>

@@ -29,6 +29,9 @@
         <img :src="`/storage/${image}`" alt="article image" srcset="" />
       </div>
     </div>
+    <div class="article__side__text" v-else>
+      <slot name="sideText"></slot>
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,7 @@
 const mix = require("laravel-mix");
-const path = require("path");
+const WebpackShellPluginNext = require("webpack-shell-plugin-next");
 const VuetifyLoaderPlugin = require("vuetify-loader/lib/plugin");
+const path = require("path");
 
 /*
  |--------------------------------------------------------------------------
@@ -24,9 +25,22 @@ mix.js("resources/js/app.js", "public/js")
         output: {
             chunkFilename: "js/[name].js?id=[chunkhash]"
         },
-        plugins: [new VuetifyLoaderPlugin()]
-    })
-    .sourceMaps();
+        plugins: [
+            new VuetifyLoaderPlugin(),
+            new WebpackShellPluginNext({
+                onBuildStart: {
+                    scripts: [
+                        "php artisan lang:js -c resources/js/lang.js --no-lib --quiet"
+                    ]
+                },
+                onBuildEnd: []
+            })
+        ]
+    });
+
+if (!mix.inProduction()) {
+    mix.sourceMaps();
+}
 if (mix.inProduction()) {
     mix.version();
 }
