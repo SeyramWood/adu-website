@@ -26,6 +26,16 @@
           >
         </li>
       </ul>
+      <div class="page__header__top__locale-btn" title="Translate">
+        <span>
+          <!-- <v-icon>mdi-translate</v-icon> -->
+          Language
+        </span>
+        <div class="btns">
+          <button type="button" @click="changeLocale('en')">English</button>
+          <button type="button" @click="changeLocale('fr')">French</button>
+        </div>
+      </div>
     </nav>
     <nav class="page__header__main" ref="mainNav">
       <div :class="['page__header__logo', getLogoClass]">
@@ -117,30 +127,74 @@
               'mobile__navigation__link',
               route().current('about') && 'active',
             ]"
+            @click="toggleMobileNav = !toggleMobileNav"
           >
-            <Link href="/about">About</Link>
+            <Link href="/about">{{ $t("pages.navigation.1") }}</Link>
           </li>
           <li
             :class="[
               'mobile__navigation__link',
               route().current('admissions') && 'active',
             ]"
+            @click="toggleMobileNav = !toggleMobileNav"
           >
-            <Link href="/admissions">Admissions</Link>
+            <Link href="/admissions">{{ $t("pages.navigation.2") }}</Link>
           </li>
           <li
             :class="[
               'mobile__navigation__link',
               route().current('academics') && 'active',
             ]"
+            @click="toggleMobileNav = !toggleMobileNav"
           >
-            <Link href="/academics">Academics</Link>
+            <Link href="/academics">{{ $t("pages.navigation.3") }}</Link>
           </li>
-          <li class="mobile__navigation__link">
-            <Link href="#">My Ilimi</Link>
+          <li
+            class="mobile__navigation__link"
+            @click="toggleMobileNav = !toggleMobileNav"
+          >
+            <a
+              href=" https://myilimilms.net/moodle"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ $t("pages.navigation.8") }}</a
+            >
           </li>
-          <li class="mobile__navigation__link">
-            <Link href="#">Donate</Link>
+          <li
+            :class="[
+              'mobile__navigation__link',
+              route().current('academics') && 'active',
+            ]"
+            @click="toggleMobileNav = !toggleMobileNav"
+          >
+            <Link href="/iilab">IILab</Link>
+          </li>
+          <li
+            :class="[
+              'mobile__navigation__link',
+              route().current('academics') && 'active',
+            ]"
+            @click="toggleMobileNav = !toggleMobileNav"
+          >
+            <Link href="/student-life">{{ $t("pages.navigation.7") }}</Link>
+          </li>
+          <li
+            :class="[
+              'mobile__navigation__link',
+              route().current('academics') && 'active',
+            ]"
+            @click="toggleMobileNav = !toggleMobileNav"
+          >
+            <Link href="/gallery">{{ $t("pages.navigation.5") }}</Link>
+          </li>
+          <li
+            :class="[
+              'mobile__navigation__link',
+              route().current('academics') && 'active',
+            ]"
+            @click="toggleMobileNav = !toggleMobileNav"
+          >
+            <Link href="/donate">{{ $t("pages.navigation.6") }}</Link>
           </li>
         </ul>
       </div>
@@ -151,11 +205,30 @@
     <section class="page__footer__social">
       <div class="page__footer__social__line"></div>
       <div class="page__footer__social__icons">
-        <v-icon>mdi-facebook</v-icon>
-        <v-icon>mdi-twitter</v-icon>
-        <v-icon>mdi-whatsapp</v-icon>
-        <v-icon>mdi-instagram</v-icon>
-        <v-icon>mdi-snpchat</v-icon>
+        <a
+          href="https://www.facebook.com/pg/aduniversalis/about/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><v-icon>mdi-facebook</v-icon></a
+        >
+        <a
+          href="https://twitter.com/ADULeads?s=20"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><v-icon>mdi-twitter</v-icon></a
+        >
+        <a
+          href="instagram.com/africandevelopmentuniversalis"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><v-icon>mdi-instagram</v-icon></a
+        >
+        <a
+          href="https://www.linkedin.com/school/african-development-university"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><v-icon>mdi-linkedin</v-icon></a
+        >
       </div>
       <div class="page__footer__social__line"></div>
     </section>
@@ -339,19 +412,6 @@
         >
         <!-- {{ $t("attribute-name") }} -->
       </section>
-      <div
-        class="page__footer__locale-btn"
-        title="Translate"
-        v-show="isTranslateButton"
-      >
-        <span>
-          <v-icon>mdi-translate</v-icon>
-        </span>
-        <div class="btns">
-          <button type="button" @click="changeLocale('en')">EN</button>
-          <button type="button" @click="changeLocale('fr')">FR</button>
-        </div>
-      </div>
     </footer>
   </div>
 </template>

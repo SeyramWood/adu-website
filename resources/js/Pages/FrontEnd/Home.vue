@@ -134,50 +134,77 @@
         <div class="line"></div>
       </div>
       <div class="home__spotlight__container">
-        <div class="image__wrapper content--1">
+        <div class="image__wrapper content--1" v-if="getSpotlight[0]">
           <figure class="image">
-            <Link class="image__link">
-              <img src="/storage/images/news-2.jpg" alt="" srcset="" />
+            <Link
+              class="image__link"
+              href="javascript::"
+              @click.prevent="readSpotlight(getSpotlight[0])"
+            >
+              <img :src="getSpotlight[0].image" alt="" srcset="" />
               <div class="overlay"></div>
             </Link>
             <figcaption class="image__footer">
-              <h5 class="title">{{ $t("pages.home.title.13") }}</h5>
+              <h5 class="title">{{ getSpotlight[0].title }}</h5>
               <div class="details">
-                <p>Give back and impact current and future generations</p>
+                <p>{{ getSpotlight[0].text.substr(0, 40) }}</p>
               </div>
-              <Link> {{ $t("pages.home.rm") }} </Link>
+              <Link
+                href="javascript::"
+                @click.prevent="readSpotlight(getSpotlight[0])"
+              >
+                {{ $t("pages.home.rm") }}
+              </Link>
             </figcaption>
           </figure>
         </div>
 
         <div class="image__wrapper content--2">
-          <div class="wrapper--1">
+          <div class="wrapper--1" v-if="getSpotlight[1]">
             <figure class="image">
-              <Link class="image__link">
-                <img src="/storage/images/business.jpg" alt="" srcset="" />
+              <Link
+                class="image__link"
+                href="javascript::"
+                @click.prevent="readSpotlight(getSpotlight[1])"
+              >
+                <img :src="getSpotlight[1].image" alt="" srcset="" />
                 <div class="overlay"></div>
               </Link>
               <figcaption class="image__footer">
-                <h5 class="title">{{ $t("pages.home.title.13") }}</h5>
+                <h5 class="title">{{ getSpotlight[1].title }}</h5>
                 <div class="details">
-                  <p>Give back and impact current and future generations</p>
+                  <p>{{ getSpotlight[1].text.substr(0, 40) }}</p>
                 </div>
-                <Link> {{ $t("pages.home.rm") }} </Link>
+                <Link
+                  href="javascript::"
+                  @click.prevent="readSpotlight(getSpotlight[1])"
+                >
+                  {{ $t("pages.home.rm") }}
+                </Link>
               </figcaption>
             </figure>
           </div>
-          <div class="wrapper--1">
+          <div class="wrapper--1" v-if="getSpotlight[2]">
             <figure class="image">
-              <Link class="image__link">
-                <img src="/storage/slides/slide-1.jpg" alt="" srcset="" />
+              <Link
+                class="image__link"
+                href="javascript::"
+                @click.prevent="readSpotlight(getSpotlight[2])"
+              >
+                <img :src="getSpotlight[2].image" alt="" srcset="" />
                 <div class="overlay"></div>
               </Link>
               <figcaption class="image__footer">
-                <h5 class="title">{{ $t("pages.home.title.13") }}</h5>
+                <h5 class="title">{{ getSpotlight[2].title }}</h5>
                 <div class="details">
-                  <p>Give back and impact current and future generations</p>
+                  <p>{{ getSpotlight[2].text.substr(0, 40) }}</p>
                 </div>
-                <Link> {{ $t("pages.home.rm") }} </Link>
+                <Link
+                  href="javascript::"
+                  @click.prevent="readSpotlight(getSpotlight[2])"
+                >
+                  {{ $t("pages.home.rm") }}
+                </Link>
               </figcaption>
             </figure>
           </div>
@@ -200,56 +227,17 @@
         <div class="line"></div>
       </div>
       <div class="s__row">
-        <div class="s__col c--4">
+        <div class="s__col c--4" v-for="(news, index) in getNews" :key="index">
           <div class="news__container">
             <div class="image">
-              <img src="/storage/images/news-1.jpg" alt="" srcset="" />
+              <img :src="news.image[index]" alt="" srcset="" />
             </div>
-            <h1 class="title">{{ $t("pages.home.title.15") }}</h1>
-            <p class="text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum aut, quaerat fugiat tempora itaque esse, natus deleniti
-              pariatur temporibus doloribus at maiores autem minima mollitia
-              libero maxime ipsam minus officia.
-            </p>
+            <h1 class="title">{{ news.title }}</h1>
+            <div class="text" v-html="news.text.substr(0, 200)"></div>
             <div class="link">
-              <Link>{{ $t("pages.home.title.16") }}</Link>
-              <span>&rarr;</span>
-            </div>
-          </div>
-        </div>
-        <div class="s__col c--4">
-          <div class="news__container">
-            <div class="image">
-              <img src="/storage/images/news.jpg" alt="" srcset="" />
-            </div>
-            <h1 class="title">{{ $t("pages.home.title.17") }}</h1>
-            <p class="text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-              a dolor sequi omnis dolore quia iure facilis suscipit, itaque
-              ipsam quis repudiandae exercitationem quidem magnam explicabo
-              fugit non odio. Accusantium!
-            </p>
-            <div class="link">
-              <Link>{{ $t("pages.home.title.17") }}</Link>
-              <span>&rarr;</span>
-            </div>
-          </div>
-        </div>
-        <div class="s__col c--4">
-          <div class="news__container">
-            <div class="image">
-              <img src="/storage/slides/slide-1.jpg" alt="" srcset="" />
-            </div>
-            <h1 class="title">{{ $t("pages.home.title.17") }}</h1>
-            <p class="text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi,
-              blanditiis! Distinctio minus, blanditiis, quos repellat dolore
-              sint at eveniet aut, cum dignissimos tempora! Omnis praesentium
-              incidunt eius explicabo minus dolorum.
-            </p>
-            <div class="link">
-              <Link>{{ $t("pages.home.title.17") }}</Link>
+              <Link href="javascript::" @click.prevent="readNews(news)">{{
+                $t("pages.home.title.16")
+              }}</Link>
               <span>&rarr;</span>
             </div>
           </div>
@@ -259,6 +247,38 @@
         <Link as="button">{{ $t("pages.home.rm") }}</Link>
       </div>
     </div>
+
+    <s-modal v-model="newsModal" width="70rem">
+      <div class="english-programme-details" v-if="currentNews">
+        <div class="section syllabus">
+          <div style="width: 70%; margin: 0 auto 2rem auto">
+            <vueper-slides
+              fade
+              autoplay
+              :touchable="false"
+              fixed-height="40rem"
+            >
+              <vueper-slide
+                v-for="(image, i) in currentNews.image"
+                :key="i"
+                :image="image"
+                style="height: 100%"
+              />
+            </vueper-slides>
+          </div>
+          <h1>{{ currentNews.title }}</h1>
+          <div v-html="currentNews.text"></div>
+        </div>
+      </div>
+    </s-modal>
+    <s-modal v-model="spotlightModal" width="70rem">
+      <div class="english-programme-details" v-if="currentSpotlight">
+        <div class="section syllabus">
+          <h1>{{ currentSpotlight.title }}</h1>
+          <p v-html="currentSpotlight.text"></p>
+        </div>
+      </div>
+    </s-modal>
   </div>
 </template>
 
@@ -267,6 +287,7 @@ import FrontEndLayout from "../../components/FrontEndLayout";
 import { Link } from "@inertiajs/inertia-vue";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
+import SModal from "../../components/SModal";
 export default {
   name: "Home",
   layout: FrontEndLayout,
@@ -274,10 +295,34 @@ export default {
     Link,
     VueperSlides,
     VueperSlide,
+    SModal,
   },
-
+  computed: {
+    getNews() {
+      return this.news;
+    },
+    getSpotlight() {
+      return this.spotlight;
+    },
+  },
+  mounted() {
+    this.$watch(
+      () => this.$lang.locale,
+      (locale) => {
+        this.news = this.$lang.messages[`${locale}.pages`].home.news;
+        this.spotlight = this.$lang.messages[`${locale}.pages`].home.spotlight;
+      },
+      { immediate: true }
+    );
+  },
   data() {
     return {
+      newsModal: false,
+      currentNews: null,
+      spotlightModal: false,
+      currentSpotlight: null,
+      news: [],
+      spotlight: [],
       slides: [
         {
           image: "/storage/pages/home/slides/3.jpg",
@@ -297,6 +342,20 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    readNews(data) {
+      this.currentNews = data;
+      this.$nextTick(() => {
+        this.newsModal = true;
+      });
+    },
+    readSpotlight(data) {
+      this.currentSpotlight = data;
+      this.$nextTick(() => {
+        this.spotlightModal = true;
+      });
+    },
   },
 };
 </script>

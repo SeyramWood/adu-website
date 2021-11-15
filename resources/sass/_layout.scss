@@ -2,6 +2,7 @@
     width: 100%;
     &__header__top {
         width: 100%;
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -74,6 +75,68 @@
 
                 &:hover > a {
                     color: $primary-dark;
+                }
+            }
+        }
+        &__locale-btn {
+            position: absolute;
+            right: 2.5rem;
+            // top: 2.5rem;
+            width: 7rem;
+            height: 3rem;
+            background-color: $primary;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            & > .btns {
+                visibility: hidden;
+                position: absolute;
+                top: 4rem;
+                right: 0.1rem;
+                // background-color: blue;
+                z-index: 999;
+
+                & > button {
+                    width: 7rem;
+                    height: 3rem;
+                    background-color: $white;
+                    color: $secondary;
+                    opacity: 0;
+                    transition: all 0.2s ease-in;
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+                    &:hover {
+                        background-color: $secondary;
+                        color: $white;
+                    }
+                }
+            }
+            & > span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;
+                & > i {
+                    color: $white !important;
+                }
+            }
+            &:hover > .btns {
+                visibility: visible;
+                & > button {
+                    &:first-child {
+                        opacity: 1;
+                        transition: all 0.2s ease-in;
+                    }
+                    &:last-child {
+                        opacity: 1;
+                        transition: all 0.2s ease-in 0.3s;
+                    }
                 }
             }
         }
@@ -292,7 +355,38 @@
             background: $white;
             transition: width 0.3s cubic-bezier(0, 0, 0.55, 0.54);
             &.open {
-                width: 90%;
+                width: 100%;
+            }
+
+            & > .mobile__navigation {
+                width: 100%;
+                & > .mobile__navigation__link {
+                    padding: 1rem 2rem;
+                    background-image: linear-gradient(
+                        to right,
+                        rgba(193, 193, 193, 0) 0%,
+                        rgba(193, 193, 193, 0.49) 21%,
+                        rgba(193, 193, 193, 0.74) 51%,
+                        rgba(193, 193, 193, 0.49) 80%,
+                        rgba(193, 193, 193, 0) 100%
+                    );
+                    -moz-background-size: 100% 2px;
+                    background-size: 100% 2px;
+                    background-position: 0 0, 0 0;
+                    background-repeat: no-repeat;
+                    & > a {
+                        display: block;
+                        font-size: 1.8rem;
+                        text-transform: capitalize;
+                    }
+                    &:hover,
+                    .active {
+                        background: rgba(193, 193, 193, 0.49);
+                    }
+                    &:hover a {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
@@ -312,14 +406,16 @@
             }
             &__icons {
                 padding: 0 1rem;
-                & > i {
-                    color: $primary !important;
-                    cursor: pointer;
-                    &:not(:last-child) {
-                        margin-right: 0.5rem;
-                    }
-                    &:hover {
-                        color: $primary-dark !important;
+                & > a {
+                    & > i {
+                        color: $primary !important;
+                        cursor: pointer;
+                        &:not(:last-child) {
+                            margin-right: 0.5rem;
+                        }
+                        &:hover {
+                            color: $primary-dark !important;
+                        }
                     }
                 }
             }
@@ -468,63 +564,6 @@
             // color: $white;
             font-size: 1.1rem;
             letter-spacing: 1.5px;
-        }
-
-        &__locale-btn {
-            position: absolute;
-            right: 2.5rem;
-            bottom: 2.5rem;
-            width: 3rem;
-            height: 3rem;
-            border-radius: 99999px;
-            background-color: $primary;
-            & > .btns {
-                visibility: hidden;
-                position: absolute;
-                top: -8rem;
-                // right: 2.5rem;
-                // background-color: blue;
-
-                & > button {
-                    width: 3rem;
-                    height: 3rem;
-                    border-radius: 99999px;
-                    background-color: $primary;
-                    color: $white;
-                    opacity: 0;
-                    transition: all 0.2s ease-in;
-                    &:not(:last-child) {
-                        margin-bottom: 1rem;
-                    }
-                    &:hover {
-                        background-color: $white;
-                        color: $primary;
-                    }
-                }
-            }
-            & > span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 3rem;
-                height: 3rem;
-                & > i {
-                    color: $white !important;
-                }
-            }
-            &:hover > .btns {
-                visibility: visible;
-                & > button {
-                    &:first-child {
-                        opacity: 1;
-                        transition: all 0.2s ease-in 0.3s;
-                    }
-                    &:last-child {
-                        opacity: 1;
-                        transition: all 0.2s ease-in;
-                    }
-                }
-            }
         }
     }
 }

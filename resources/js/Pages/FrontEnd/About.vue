@@ -171,7 +171,7 @@ export default {
           name: `KHADIJAH DIALLO`,
           faculty: "",
           position: `CEO, High Authority of Waqf Is DB Senior Officer in Niger`,
-          image: "/storage/pages/about/KhadijahDiallo.jpeg",
+          image: "/storage/pages/about/KhadijahDiallo.jpg",
         },
         {
           name: `ROSE A. DODD`,
@@ -184,7 +184,7 @@ export default {
           faculty: "",
           position: `Head of Human Capital and Institutions Development, African Union Development
                     Agency (AUDA-NEPAD)`,
-          image: "/storage/pages/about/FatiNzi-Hassane.jpg",
+          image: "/storage/pages/about/FatiNzi-Hassane.png",
         },
 
         {

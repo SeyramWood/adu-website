@@ -114,7 +114,6 @@
       <page-article
         :title="$t('pages.academics.title.7')"
         image="pages/academics/english.jpeg"
-        :ltr="true"
       >
         <template #article>
           <p>

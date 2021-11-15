@@ -35,9 +35,9 @@
     </section>
     <section class="admissions__advantage" id="services">
       <h1 class="title">{{ $t("pages.iilab.services.title") }}</h1>
-      <p class="text">
+      <!-- <p class="text">
         {{ $t("pages.iilab.services.text") }}
-      </p>
+      </p> -->
       <div class="advantages">
         <div class="advantages__card">
           <span>
@@ -83,27 +83,9 @@
         </div>
         <div class="advantages__card">
           <span>
-            <v-icon>mdi-briefcase-outline</v-icon>
-          </span>
-          <p>{{ $t("pages.iilab.services.card.8") }}</p>
-        </div>
-        <div class="advantages__card">
-          <span>
             <v-icon>mdi-billboard</v-icon>
           </span>
-          <p>{{ $t("pages.iilab.services.card.9") }}</p>
-        </div>
-        <div class="advantages__card">
-          <span>
-            <v-icon>mdi-gantry-crane</v-icon>
-          </span>
-          <p>{{ $t("pages.iilab.services.card.10") }}</p>
-        </div>
-        <div class="advantages__card">
-          <span>
-            <v-icon>mdi-cog-transfer-outline</v-icon>
-          </span>
-          <p>{{ $t("pages.iilab.services.card.11") }}</p>
+          <p>{{ $t("pages.iilab.services.card.8") }}</p>
         </div>
       </div>
     </section>

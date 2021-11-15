@@ -34,13 +34,75 @@ return [
               the African Development University that is focused on building the
               English language proficiency of professionals, businessmen and
               businesswomen etc.",
+    'news' => [
+      [
+        'title' => "Alkalami d’Or 2021",
+        'text' => "<p>A.D.U. was nominated, along with 3 other universities, as one of the best schools in the 8 regions of Niger.
+The announcement was made at a grand gala held at the Mahatma Gandhi Conference Center on November 7, 2021
+</p><p>The Alkalami d'Or are trophies that reward public and private schools as well as universities and institutes in the eight regions of Niger for their willingness to make academic and extracurricular excellence their battle horse. At A.D.U. academic excellence reigns as evidenced by the 100% success rate in the Brevet de Techniciens Supérieur d'Etat in June 2021.</p>",
+        'image' => [
+          '/storage/pages/home/news/news-a-1.jpg',
+          '/storage/pages/home/news/news-a-2.jpg',
+          '/storage/pages/home/news/news-a-3.jpg',
+          '/storage/pages/home/news/news-a-4.jpg',
+        ]
+      ],
+      [
+        'title' => "Oualas at A.D.U.",
+        'text' => "
+        <p>On Friday, November 8 we received one of the funniest but also most inspiring visits. It was Oualas, one of the greatest African comedians, holder of the Best Comedian Award at the 1st edition of the Awards du Rire 2018.</p>
+        <p>Oualas, whose real name is Tahar Lazrak, came to visit us after his show at the Hotel Noom in Niamey, where A.D.U. was a partner. The joy and happiness of meeting the world star could be seen on the faces of the YoungLeaders who did not hesitate to take as many pictures as possible with Oualas, a.k.a the most Moroccan Ivorian of them all!</p>
+        ",
+        'image' => [
+          '/storage/pages/home/news/news-b-1.jpg',
+          '/storage/pages/home/news/news-b-2.png',
+          '/storage/pages/home/news/news-b-3.png',
+          '/storage/pages/home/news/news-b-4.png',
+          '/storage/pages/home/news/news-b-5.png',
+        ]
+      ],
+      [
+        'title' => "Global Entrepreneurship Week",
+        'text' => "
+        <p>On November 9th, during the Global Entrepreneurship Week, the iiLab, A.D.U.'s startup incubator, and the CIPMEN co-organized a training session called <q>Osez Entreprendre</q> (Dare to be entrepreneurial) for A.D.U.'s #YoungLeaders under the theme <q>Moringa Our Green Gold</q>.</p>
+        <p>During this training, they were given different notions to reinforce what they are already learning with iiLab. Right after the training, a visit to the CIPMEN premises took place with entrepreneurs coming from all over Niamey to exhibit products derived from Moringa. This was followed by a pitch competition where the candidate, Khadija Ibrahim, a 3rd year student at A.D.U. won first place!</p>
+        <p>The evening ended with a networking session around a buffet offered by the CIPMEN. A great way to celebrate the Global Entrepreneurship Week which starts on November 8th and ends on November 13th.</p>
+        ",
+        'image' => [
+          '/storage/pages/home/news/news-c-1.jpg',
+          '/storage/pages/home/news/news-c-2.jpg',
+          '/storage/pages/home/news/news-c-3.jpg',
+          '/storage/pages/home/news/news-c-4.jpg',
+        ]
+      ],
+    ],
+    'spotlight' => [
+      [
+        'title' => 'Guimbia means "Queen" in Haussa',
+        'text' => "Guimbia means Queen in Haussa, the second most spoken language in Africa. It is in honor of women that Hawa Hassane Gado, alias Hawa Guimbia, gave her company this evocative name. Hawa Guimbia created the first luxury cosmetics brand in Niger, Guimbia Beauty, with her 4 friends and partners, Adama Souley, Roumanatou Lamine and Ramatou Saley.",
+        'image' => '/storage/pages/home/spotlight/sl-1.jpg',
+      ],
+      [
+        'title' => 'Ramatou Saley Farka',
+        'text' => "Ramatou Saley Farka, nicknamed Boss Rama for her rigor when it comes to work, is one of the most promising students at A.D.U.
+Recently she was selected for the UGRAD scholarship which makes her the very first from Niger to access this opportunity. Rama is full of life and we are proud of her!
+About Guimbia
+",
+        'image' => '/storage/pages/home/spotlight/sl-2.jpg',
+      ],
+
+      [
+        'title' => 'Ramatou Saley Farka',
+        'text' => '',
+        'image' => '/storage/pages/home/spotlight/sl-3.jpg',
+      ],
+    ],
     'vm' => 'View More',
     'rm' => 'Read More',
     'me' => 'More Events',
     'va' => 'View all',
   ],
   'about' => [
-
     'banner' => 'A.D.U. is a rapidly growing non-profit organization and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you.',
     'link' => [
       '1' => 'Welcome by Chancellor',
@@ -53,7 +115,7 @@ return [
       '3' => 'Our Why',
       '4' => 'leadership',
     ],
-    'welcome' => 'We bring together the most talented individuals from Niger and around the globe.',
+    'welcome' => 'The mission of A.D.U. is to prepare the most talented young people in Francophone Africa to design and develop the development of their nations as ethical and effective leaders in the public, private and not-for-profit sectors.',
     'why' => [
       'p1' => 'African Development University (A.D.U.) is an innovative
             not-for-profit university with a mission to prepare the most
@@ -327,22 +389,19 @@ return [
             providing and connecting them with tools, resources, networks and
             support to scale their innovative and entrepreneurial ideas.",
     'services' => [
-      'title' => "CAREER SERVICES",
+      'title' => "SERVICES",
       'text' => "Career Services – is a unit within Student and Community Affairs, which provides career readiness and preparation to our young leaders. The goal of career services is to provide career assistance for students in their career choices and help them to find work-study positions, internships and full-time positions upon graduation. The Career Services organizes workshops, provides career counseling and assists students with a variety of career development needs. 
 This office focuses on employer relations at the national and international level to provide employment opportunities for current students and alumni.
 ",
       'card' => [
-        '1' => "Students’ Career Development",
-        '2' => "Career and Self-Assessments",
-        '3' => "Career Counselling and Coaching",
-        '4' => "Professional Week Series",
-        '5' => "Mentorship Program",
-        '6' => "Work Study Opportunities",
-        '7' => "Seniors Exit Strategy",
-        '8' => "Internships and Job Opportunities",
-        '9' => "Practical and Technical Training Platforms",
-        '10' => "Employer Engagement",
-        '11' => "Developing and supporting Alumni on a case by case basis",
+        '1' => "A.D.U. Young Leader support services",
+        '2' => "Business/ Professional development",
+        '3' => "Coaching",
+        '4' => "Funding",
+        '5' => "Mentorship",
+        '6' => "Exposure to external opportunities for our Young Leaders",
+        '7' => "Research ",
+        '8' => "Entrepreneurship incubator ",
       ]
     ],
     'events' => [

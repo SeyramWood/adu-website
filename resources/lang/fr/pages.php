@@ -24,6 +24,68 @@ return [
     'p' => "A.D.U. offre un diplôme de trois ans en droit des affaires qui enseigne des cours sur de nombreux aspects différents du travail juridique. Les étudiants entrant dans ce programme doivent avoir un engagement fort en faveur de la justice et de l'égalité et de la lutte contre la corruption.",
     'p1' => "Le programme de baccalauréat ès sciences en intelligence artificielle - BS (IA) fournit aux apprenants les connaissances et les compétences nécessaires pour transformer des entrées complexes de texte, de vision, de langage et de grandes bases de données en décisions intelligibles et exploitables pour améliorer les capacités humaines.",
     'p2' => "Le programme d'anglais ADU est un établissement d'apprentissage de l'anglais de l'Université africaine de développement qui se concentre sur le renforcement des compétences en anglais des professionnels, des hommes d'affaires et des femmes d'affaires, etc.",
+    'news' => [
+      [
+        'title' => "Alkalami d’Or 2021",
+        'text' => "<p>A.D.U. a été désigné, avec 3 autres universités, comme l'une des meilleures écoles des 8 régions du Niger.
+L'annonce a été faite lors d'un grand gala organisé au centre de conférence Mahatma Gandhi le 7 novembre 2021.
+</p><p>Les Alkalami d'Or sont des trophées qui récompensent les écoles publiques et privées ainsi que les universités et instituts des huit régions du Niger pour leur volonté de faire de l'excellence académique et parascolaire leur cheval de bataille. À 'A.D.U. l'excellence académique règne comme en témoigne le taux de réussite de 100% au Brevet de Techniciens Supérieur d'Etat en juin 2021.</p>",
+        'image' => [
+          '/storage/pages/home/news/news-a-1.jpg',
+          '/storage/pages/home/news/news-a-2.jpg',
+          '/storage/pages/home/news/news-a-3.jpg',
+          '/storage/pages/home/news/news-a-4.jpg',
+        ]
+      ],
+      [
+        'title' => "Oualas at A.D.U.",
+        'text' => "
+        <p>Vendredi 8 novembre, nous avons reçu l'une des visites les plus drôles mais aussi les plus inspirantes. Il s'agissait de Oualas, l'un des plus grands humoristes africains, détenteur du prix du meilleur humoriste lors de la 1ère édition des Awards du Rire 2018.</p>
+        <p>Oualas, de son vrai nom Tahar Lazrak, est venu nous rendre visite après son spectacle à l'hôtel Noom de Niamey, où A.D.U. était partenaire. La joie et le bonheur de rencontrer la star mondiale se lisaient sur les visages des YoungLeaders qui n'ont pas hésité à prendre un maximum de photos avec Oualas, alias le plus marocain des Ivoiriens !</p>
+        ",
+        'image' => [
+          '/storage/pages/home/news/news-b-1.jpg',
+          '/storage/pages/home/news/news-b-2.png',
+          '/storage/pages/home/news/news-b-3.png',
+          '/storage/pages/home/news/news-b-4.png',
+          '/storage/pages/home/news/news-b-5.png',
+        ]
+      ],
+      [
+        'title' => "Global Entrepreneurship Week",
+        'text' => "
+        <p>Le 9 novembre, pendant la semaine mondiale de l'entrepreneuriat, l'iiLab, l'incubateur de startups de l'A.D.U., et le CIPMEN ont co-organisé une session de formation intitulée <q>Osez Entreprendre</q> pour les #YoungLeaders de l'A.D.U. sous le thème <q>Moringa Our Green Gold</q>.</p>
+        <p>Pendant cette formation, différentes notions leur ont été données pour renforcer ce qu'ils apprennent déjà avec iiLab. Juste après la formation, une visite des locaux du CIPMEN a eu lieu avec des entrepreneurs venus de tout Niamey pour exposer des produits dérivés du Moringa. Cette visite a été suivie d'un concours de pitch où la candidate, Khadija Ibrahim, étudiante en 3ème année à l'A.D.U. a remporté la première place !</p>
+        <p>La soirée s'est terminée par une session de networking autour d'un buffet offert par le CIPMEN. Une belle façon de célébrer la Semaine mondiale de l'entrepreneuriat qui débute le 8 novembre et se termine le 13 novembre.</p>
+        ",
+        'image' => [
+          '/storage/pages/home/news/news-c-1.jpg',
+          '/storage/pages/home/news/news-c-2.jpg',
+          '/storage/pages/home/news/news-c-3.jpg',
+          '/storage/pages/home/news/news-c-4.jpg',
+        ]
+      ],
+    ],
+    'spotlight' => [
+      [
+        'title' => 'Guimbia means "Queen" in Haussa',
+        'text' => "Guimbia veut dire « Reine » en Haussa, la deuxième langue la plus parlée en Afrique. C’est à l’honneur des femmes que Hawa Hassane Gado, alias Hawa Guimbia, a donné à son entreprise ce nom tant évocateur. Hawa Guimbia a crée la première marque de cosmétique de luxe du Niger, Guimbia Beauty, avec ses 4 amies et partenaires, Adama Souley, Roumanatou Lamine et Ramatou Saley.",
+        'image' => '/storage/pages/home/spotlight/sl-1.jpg',
+      ],
+      [
+        'title' => 'Ramatou Saley Farka',
+        'text' => "Ramatou Saley Farka, surnommée Boss Rama pour sa rigueur lorsqu’il faut travailler, est une des étudiantes les plus prometteuses de A.D.U. 
+Récemment elle a été sélectionnée pour la bourse UGRAD qui fait d’elle la toute première du Niger à accéder à cet opportunité. Rama est pleine de vie et nous somme fier d’elle!
+",
+        'image' => '/storage/pages/home/spotlight/sl-2.jpg',
+      ],
+
+      [
+        'title' => 'Ramatou Saley Farka',
+        'text' => '',
+        'image' => '/storage/pages/home/spotlight/sl-3.jpg',
+      ],
+    ],
     'vm' => 'Voir plus',
     'rm' => 'Lire la suite',
     'me' => "Plus d'événements",
@@ -42,7 +104,7 @@ return [
       '3' => 'Notre Pourquoi',
       '4' => 'Direction',
     ],
-    'welcome' => "Nous rassemblons les individus les plus talentueux du Niger et du monde entier.",
+    'welcome' => "La mission d'A.D.U. est de préparer les jeunes les plus talentueux d'Afrique francophone à concevoir et à développer le développement de leurs nations en tant que leaders éthiques et efficaces dans les secteurs public, privé et à but non lucratif.",
     'why' => [
       'p1' => "L'Université Africaine de Développement (ADU) est une université innovante à but non lucratif dont la mission est de préparer les jeunes les plus talentueux du Niger et d'Afrique francophone à concevoir et conduire le développement de leurs nations en tant que leaders éthiques et efficaces dans les secteurs public, privé et les secteurs à but non lucratif. A.D.U. est la première université à but non lucratif située à Niamey, au Niger, et est la première institution à offrir une éducation de classe mondiale aux étudiants de la région du Sahel.",
       'p2' => [
@@ -196,22 +258,19 @@ Le programme donnera aux étudiants des compétences en matière de pensée info
     'banner' => "Le iiLab (ilimi Innovation Lab) est le pôle d'innovation et d'entrepreneuriat d'A.D.U qui s'engage à responsabiliser nos jeunes leaders en leur fournissant et en leur fournissant des outils, des ressources, des réseaux et un soutien pour développer leurs idées innovantes et entrepreneuriales.",
     'welcome' => "Le iiLab (ilimi Innovation Lab) est le pôle d'innovation et d'entrepreneuriat d'A.D.U qui s'engage à responsabiliser nos jeunes leaders en leur fournissant et en leur fournissant des outils, des ressources, des réseaux et un soutien pour développer leurs idées innovantes et entrepreneuriales.",
     'services' => [
-      'title' => "SERVICES D'ORIENTATION PROFESSIONNELLE",
+      'title' => "PRESTATIONS DE SERVICE",
       'text' => "Les services d'orientation professionnelle sont une unité des affaires étudiantes et communautaires qui prépare et prépare nos jeunes leaders à la carrière. L'objectif des services de carrière est de fournir une assistance aux étudiants dans leur choix de carrière et de les aider à trouver des postes en alternance, des stages et des postes à temps plein après l'obtention de leur diplôme. Le service des carrières organise des ateliers, fournit des conseils en matière de carrière et aide les étudiants à répondre à divers besoins en matière de développement de carrière. 
 Ce bureau se concentre sur les relations avec les employeurs au niveau national et international afin d'offrir des opportunités d'emploi aux étudiants actuels et aux anciens étudiants.
 ",
       'card' => [
-        '1' => "Développement de carrière des étudiants",
-        '2' => "Carrière et auto-évaluations",
-        '3' => "Conseil et coaching de carrière",
-        '4' => "Série Semaine Professionnelle",
-        '5' => "Programme de mentorat",
-        '6' => "Travail Études Opportunités",
-        '7' => "Stratégie de sortie des aînés",
-        '8' => "Stages et offres d'emploi",
-        '9' => "Plateformes de Formation Pratique et Technique",
-        '10' => "Engagement des employeurs",
-        '11' => "Développer et accompagner les Alumni au cas par cas",
+        '1' => "A.D.U. Services d'accompagnement des jeunes leaders",
+        '2' => "Développement commercial/professionnel",
+        '3' => "Encadrement",
+        '4' => "Le financement",
+        '5' => "Mentorat",
+        '6' => "Exposition à des opportunités externes pour nos jeunes leaders",
+        '7' => "Recherche",
+        '8' => "Incubateur d'entrepreneuriat",
       ]
     ],
     'events' => [
