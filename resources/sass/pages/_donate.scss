@@ -3,6 +3,9 @@
 
     &__cta {
         padding: 8rem $container-padding;
+        @include respond-down(md) {
+            padding: 8rem 2rem;
+        }
     }
     &__wrapper {
         width: 100%;
@@ -11,6 +14,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include respond-down(md) {
+            padding: 10rem 2rem;
+        }
         &__content {
             width: 100%;
             display: flex;
@@ -54,6 +60,9 @@
     }
     &__info {
         padding: 8rem $container-padding;
+        @include respond-down(md) {
+            padding: 8rem 2rem;
+        }
         @include grid-row;
         & > .donate__info__card {
             background-color: $white;
@@ -62,14 +71,12 @@
                 0px 1px 5px 0px rgb(0 0 0 / 12%);
             @include grid-column($width: 100%, $height: 100%, $gutter: 2rem);
             @include respond-only(xs) {
-                width: column-width(50%, 2rem);
+                @include grid-column(
+                    $width: 100%,
+                    $height: 100%,
+                    $gutter: 1rem
+                );
             }
-
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: center;
-            // align-items: center;
-            // transition: all 0.3s ease-in;
             padding: 1rem;
             border: 1px solid $text;
             text-align: center;

@@ -26,7 +26,7 @@
             $gutter: $column-gutter-1
         );
         @include respond-only(xs) {
-            width: column-width(50%, $column-gutter-1);
+            // width: column-width(50%, $column-gutter-1);
         }
         padding: 2rem 0.5rem;
         // display: flex;

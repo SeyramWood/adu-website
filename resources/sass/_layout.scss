@@ -78,68 +78,6 @@
                 }
             }
         }
-        &__locale-btn {
-            position: absolute;
-            right: 2.5rem;
-            // top: 2.5rem;
-            width: 7rem;
-            height: 3rem;
-            background-color: $primary;
-            display: flex;
-            flex-direction: column-reverse;
-            justify-content: center;
-            align-items: center;
-            color: $white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            & > .btns {
-                visibility: hidden;
-                position: absolute;
-                top: 4rem;
-                right: 0.1rem;
-                // background-color: blue;
-                z-index: 999;
-
-                & > button {
-                    width: 7rem;
-                    height: 3rem;
-                    background-color: $white;
-                    color: $secondary;
-                    opacity: 0;
-                    transition: all 0.2s ease-in;
-                    &:not(:last-child) {
-                        margin-bottom: 1rem;
-                    }
-                    &:hover {
-                        background-color: $secondary;
-                        color: $white;
-                    }
-                }
-            }
-            & > span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 3rem;
-                height: 3rem;
-                & > i {
-                    color: $white !important;
-                }
-            }
-            &:hover > .btns {
-                visibility: visible;
-                & > button {
-                    &:first-child {
-                        opacity: 1;
-                        transition: all 0.2s ease-in;
-                    }
-                    &:last-child {
-                        opacity: 1;
-                        transition: all 0.2s ease-in 0.3s;
-                    }
-                }
-            }
-        }
     }
 
     &__header__main {
@@ -261,8 +199,17 @@
             box-shadow: inset -2px 3px 18px -1px rgba(38, 38, 38, 1);
 
             &__brand {
+                width: calc(100% - 3.5rem);
+                height: $nav-height;
+                position: relative;
+                align-self: stretch;
+                padding: 0.5rem 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // align-items: center;
                 & > .logo {
-                    // width: 5rem;
+                    width: 12rem;
                     height: calc(#{$nav-height}/ 2);
                     & > a {
                         display: block;
@@ -386,6 +333,15 @@
                     &:hover a {
                         text-decoration: underline;
                     }
+                    &.button {
+                        width: 20rem;
+                        margin: 1rem auto;
+                        text-align: center;
+                        background-color: $secondary;
+                        & > a {
+                            color: $white;
+                        }
+                    }
                 }
             }
         }
@@ -399,6 +355,9 @@
             justify-content: flex-start;
             align-items: center;
             padding: 5rem 15rem;
+            @include respond-down(md) {
+                padding: 5rem 2rem;
+            }
             &__line {
                 flex: 1;
                 height: 1px;

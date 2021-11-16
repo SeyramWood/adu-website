@@ -66,8 +66,6 @@
             >
           </div>
         </div>
-      </div>
-      <div class="academics__major__links">
         <div class="link">
           <h3 class="title">{{ $t("pages.academics.title.4") }}</h3>
           <div class="link__box">
@@ -85,7 +83,7 @@
       </div>
     </section>
     <section
-      class="article__wrapper ArtificialIntelligence"
+      class="article__wrapper article__wrapper--aip"
       id="ArtificialIntelligence"
     >
       <page-article
@@ -107,6 +105,7 @@
         </template>
       </page-article>
     </section>
+
     <section
       class="article__wrapper article__wrapper--epbg"
       id="EnglishProgramme"

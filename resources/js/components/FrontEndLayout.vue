@@ -26,10 +26,10 @@
           >
         </li>
       </ul>
-      <div class="page__header__top__locale-btn" title="Translate">
+      <div class="locale-btn" title="Translate">
         <span>
           <!-- <v-icon>mdi-translate</v-icon> -->
-          Language
+          {{ $t("pages.navigation.9") }}
         </span>
         <div class="btns">
           <button type="button" @click="changeLocale('en')">English</button>
@@ -106,7 +106,16 @@
               <img src="/storage/logo-2.png" alt="A.D.U LOGO" srcset="" />
             </Link>
           </div>
-          <Link href="#" as="button">{{ $t("pages.navigation.4") }}</Link>
+          <div class="locale-btn" title="Translate">
+            <span>
+              <!-- <v-icon>mdi-translate</v-icon> -->
+              {{ $t("pages.navigation.9") }}
+            </span>
+            <div class="btns">
+              <button type="button" @click="changeLocale('en')">English</button>
+              <button type="button" @click="changeLocale('fr')">French</button>
+            </div>
+          </div>
         </div>
         <div
           class="page__mobile__nav__content__icon"
@@ -150,17 +159,6 @@
             <Link href="/academics">{{ $t("pages.navigation.3") }}</Link>
           </li>
           <li
-            class="mobile__navigation__link"
-            @click="toggleMobileNav = !toggleMobileNav"
-          >
-            <a
-              href=" https://myilimilms.net/moodle"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ $t("pages.navigation.8") }}</a
-            >
-          </li>
-          <li
             :class="[
               'mobile__navigation__link',
               route().current('academics') && 'active',
@@ -188,6 +186,17 @@
             <Link href="/gallery">{{ $t("pages.navigation.5") }}</Link>
           </li>
           <li
+            class="mobile__navigation__link"
+            @click="toggleMobileNav = !toggleMobileNav"
+          >
+            <a
+              href=" https://myilimilms.net/moodle"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ $t("pages.navigation.8") }}</a
+            >
+          </li>
+          <li
             :class="[
               'mobile__navigation__link',
               route().current('academics') && 'active',
@@ -195,6 +204,21 @@
             @click="toggleMobileNav = !toggleMobileNav"
           >
             <Link href="/donate">{{ $t("pages.navigation.6") }}</Link>
+          </li>
+          <li
+            :class="[
+              'mobile__navigation__link button',
+              route().current('academics') && 'active',
+            ]"
+            @click="toggleMobileNav = !toggleMobileNav"
+          >
+            <a
+              href="https://applications.eduappgh.com"
+              class="button"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ $t("pages.navigation.4") }}</a
+            >
           </li>
         </ul>
       </div>

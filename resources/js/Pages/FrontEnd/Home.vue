@@ -61,7 +61,7 @@
           </div>
           <div class="percentage">$10 million</div>
           <div class="title">
-            {{ $t("pages.home.title.7") }}Required For 1,000 leaders Over 10yrs
+            {{ $t("pages.home.title.7") }}
           </div>
         </div>
       </div>
@@ -117,7 +117,7 @@
               {{ $t("pages.home.p2") }}
             </p>
             <div class="link">
-              <Link href="/academics">{{ $t("pages.home.rm") }}</Link>
+              <Link href="/academics">{{ $t("pages.home.title.11") }}</Link>
               <span>&rarr;</span>
             </div>
           </div>
@@ -330,15 +330,15 @@ export default {
         },
         {
           image: "/storage/pages/home/slides/2.jpg",
-          title: `<h4 class="slide__title">We are leaders, innovators and entreprenuers</h4>`,
+          title: `<div class="slide__title"><p>We are leaders, innovators and entreprenuers</p></div>`,
         },
         {
           image: "/storage/pages/home/slides/1.jpg",
-          title: `<h4 class="slide__title">We are changing the future of the Sahel one leader at a time</h4>`,
+          title: `<div class="slide__title"><p>We are changing the future of the Sahel one leader at a time</p></div>`,
         },
         {
           image: "/storage/pages/home/slides/4.jpg",
-          title: `<h4 class="slide__title">Are you ready to change the conversation about the Sahel?</h4>`,
+          title: `<div class="slide__title"><p>Are you ready to change the conversation about the Sahel?</p></div>`,
         },
       ],
     };

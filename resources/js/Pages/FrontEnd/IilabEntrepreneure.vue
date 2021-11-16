@@ -4,10 +4,7 @@
       <banner bg="images/library-2.jpeg" title="entrepreneures">
         <template #description>
           <p style="padding-bottom: 4rem">
-            The iiLab (ilimi Innovation Lab) is A.D.U’s innovation and
-            entrepreneurship hub committed to empowering our Young Leaders by
-            providing and connecting them with tools, resources, networks and
-            support to scale their innovative and entrepreneurial ideas.
+            {{ $t("pages.iilab.banner") }}
           </p>
         </template>
       </banner>
@@ -84,6 +81,16 @@ export default {
     SLink,
     PageArticle,
     SModal,
+  },
+  mounted() {
+    this.$watch(
+      () => this.$lang.locale,
+      (locale) => {
+        this.events = this.$lang.messages[`${locale}.pages`].iilab.events;
+        this.showrooms = this.$lang.messages[`${locale}.pages`].iilab.showrooms;
+      },
+      { immediate: true }
+    );
   },
   data() {
     return {

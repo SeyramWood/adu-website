@@ -4,6 +4,7 @@
         width: 100%;
         height: calc(100vh - #{$nav-height});
         position: relative;
+
         &__box {
             width: 50%;
             height: 15%;
@@ -16,6 +17,13 @@
             justify-content: center;
             align-items: center;
             color: $primary;
+            @include respond-down(md) {
+                width: 80%;
+                height: 25%;
+            }
+            @include respond-only(xs) {
+                height: 15%;
+            }
             & > h6 {
                 text-transform: uppercase;
                 font-size: 2.5rem;
@@ -45,6 +53,9 @@
                 &:hover {
                     text-decoration: underline;
                 }
+                @include respond-down(md) {
+                    font-size: 2rem;
+                }
             }
         }
         &__line {
@@ -73,6 +84,7 @@
             justify-content: center;
             align-items: flex-start;
             padding: 5rem 15rem;
+
             & > .stat {
                 width: 25%;
                 padding: 0 1rem;
@@ -96,6 +108,32 @@
                     font-size: 1.4rem;
                 }
             }
+            @include respond-down(md) {
+                flex-wrap: wrap;
+                padding: 5rem 2rem;
+            }
+            @include respond-down(xs) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 5rem 3rem;
+                & > .stat {
+                    width: 100%;
+
+                    & > .icon {
+                        & > i {
+                            color: $white;
+                            font-size: 8rem;
+                        }
+                    }
+                    & > .percentage {
+                        font-size: 2rem;
+                    }
+                    & > .title {
+                        font-size: 2rem;
+                    }
+                }
+            }
         }
     }
 
@@ -103,6 +141,9 @@
         width: 100%;
         padding: 0 $container-padding;
         margin: 4rem 0;
+        @include respond-down(md) {
+            padding: 0 2rem;
+        }
         &.clubs-and-societies {
             padding: 0;
             margin: 0;
@@ -120,10 +161,16 @@
             & > .title {
                 font-size: 1.2rem;
                 padding: 1rem 0;
+                // @include respond-down(sm) {
+                //     font-size: 2rem;
+                // }
             }
             & > .text {
                 padding-bottom: 1rem;
                 font-size: 1.2rem;
+                // @include respond-down(sm) {
+                //     font-size: 2rem;
+                // }
             }
 
             & > .link {
@@ -146,6 +193,14 @@
                     transform: translateX(0.5rem);
                 }
             }
+            @include respond-down(md) {
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+                & > .image {
+                    height: 22rem;
+                }
+            }
         }
         & .view__more {
             width: 100%;
@@ -162,6 +217,11 @@
         width: 100%;
         padding: 0 $container-padding;
         margin: 4rem 0;
+        @include respond-down(md) {
+            font-size: 2rem;
+            padding: 0 3rem;
+        }
+
         &__container {
             width: 80%;
             display: flex;
@@ -288,6 +348,9 @@
                         transform: translateY(0);
                     }
                 }
+            }
+            @include respond-down(md) {
+                width: 100%;
             }
         }
     }

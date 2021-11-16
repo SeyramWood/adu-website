@@ -14,6 +14,13 @@
         background-size: cover;
         background-repeat: no-repeat;
         color: $white;
+        @include respond-down(md) {
+            padding: 8rem 2rem 0 2rem;
+        }
+        @include respond-only(xs) {
+            // flex-direction: column;
+            // padding-right: 0rem;
+        }
         & > .title {
             font-size: 2rem;
             text-transform: uppercase;
@@ -29,6 +36,9 @@
     & > .contact {
         width: 100%;
         padding: 5rem $container-padding;
+        @include respond-down(md) {
+            padding: 5rem 2rem;
+        }
         & > .title {
             font-size: 2rem;
             text-transform: uppercase;

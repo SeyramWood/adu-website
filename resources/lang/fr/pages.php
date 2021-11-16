@@ -20,6 +20,7 @@ return [
       '15' => 'Les meilleures réactions',
       '16' => 'Les meilleures réactions',
       '17' => 'Bourses ADU',
+      '18' => 'Administration des affaires',
     ],
     'p' => "A.D.U. offre un diplôme de trois ans en droit des affaires qui enseigne des cours sur de nombreux aspects différents du travail juridique. Les étudiants entrant dans ce programme doivent avoir un engagement fort en faveur de la justice et de l'égalité et de la lutte contre la corruption.",
     'p1' => "Le programme de baccalauréat ès sciences en intelligence artificielle - BS (IA) fournit aux apprenants les connaissances et les compétences nécessaires pour transformer des entrées complexes de texte, de vision, de langage et de grandes bases de données en décisions intelligibles et exploitables pour améliorer les capacités humaines.",
@@ -354,6 +355,7 @@ Remarque : Le iiLab a également des initiatives en vue pour les cohortes Wangar
     '6' => 'Faire un don',
     '7' => 'Vie étudiante',
     '8' => 'Mon Ilimi',
+    '9' => 'Langue',
   ],
   'footer' => [
     'email' => 'Courriel',

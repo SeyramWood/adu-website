@@ -20,6 +20,7 @@ return [
       '15' => 'The Best Reactions',
       '16' => 'The Best Reactions',
       '17' => 'ADU Scholarships',
+      '18' => 'Business Administraion',
     ],
     'p' => "A.D.U. offers a three-year degree in Business Law that teaches
               courses in many different aspects of legal work. Students entering
@@ -482,6 +483,7 @@ This office focuses on employer relations at the national and international leve
     '6' => 'Donate',
     '7' => 'Student Life',
     '8' => 'My Ilimi',
+    '9' => 'Language',
   ],
   'footer' => [
     'email' => 'Email',
