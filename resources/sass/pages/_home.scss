@@ -161,16 +161,10 @@
             & > .title {
                 font-size: 1.2rem;
                 padding: 1rem 0;
-                // @include respond-down(sm) {
-                //     font-size: 2rem;
-                // }
             }
             & > .text {
                 padding-bottom: 1rem;
                 font-size: 1.2rem;
-                // @include respond-down(sm) {
-                //     font-size: 2rem;
-                // }
             }
 
             & > .link {
@@ -197,6 +191,8 @@
                 &:not(:last-child) {
                     margin-bottom: 2rem;
                 }
+            }
+            @include respond-only(xs) {
                 & > .image {
                     height: 22rem;
                 }

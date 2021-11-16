@@ -4,10 +4,7 @@
       <banner bg="images/student-life-1.jpg" title="Student Life">
         <template #description>
           <p style="padding-bottom: 4rem">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-            recusandae officia, similique quam, accusamus tempore consequuntur
-            dolores sapiente non, omnis blanditiis molestiae tempora aspernatur
-            distinctio a debitis qui quas necessitatibus!
+            {{ $t("pages.studentLife.banner") }}
           </p>
         </template>
       </banner>
@@ -200,7 +197,7 @@
       </article>
     </section>
 
-    <s-modal v-model="showroomModal" width="50rem">
+    <s-modal v-model="showroomModal" width="50rem" class="seyram">
       <div class="event-details" v-if="currentShowroom">
         <div class="image">
           <img :src="currentShowroom.image" alt="event image" srcset="" />

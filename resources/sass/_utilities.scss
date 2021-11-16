@@ -6,9 +6,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    // @include respond-only(xs) {
-    //     flex-direction: column;
-    // }
+    @include respond-only(xs) {
+        flex-direction: column;
+    }
 
     & > .s__col {
         &:not(:last-child) {

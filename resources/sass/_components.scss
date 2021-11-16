@@ -841,21 +841,39 @@
 
 .detail__article {
     width: 100%;
-    // position: sticky;
-    top: $nav-height;
-    left: 0;
+    display: none;
     padding: 5rem $container-padding;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
 
+    @include respond-down(md) {
+        padding: 5rem 2rem;
+    }
+    @include respond-only(xs) {
+        flex-direction: column;
+    }
+
     &__aside {
         width: 30%;
         border-right: $line solid 1px;
+        @include respond-only(xs) {
+            width: 100%;
+            border-right: none;
+            height: 8rem;
+            overflow-x: hidden;
+            margin-bottom: 2rem;
+        }
         & > .links {
+            @include respond-only(xs) {
+                width: 100%;
+                // height: 8rem;
+            }
             & > .link {
-                padding: 0.5rem 1rem;
-                // text-align: right;
+                @include respond-only(xs) {
+                    padding: 0.8rem 0;
+                    text-align: center;
+                }
                 background-image: linear-gradient(
                     to right,
                     rgba(193, 193, 193, 0) 0%,
@@ -875,6 +893,7 @@
                     color: $primary;
                     font-size: 1.2rem;
                     display: block;
+                    padding: 0.5rem 1rem;
                 }
                 &:hover {
                     background: rgba(193, 193, 193, 0.49);
@@ -895,6 +914,10 @@
     &__main {
         width: 70%;
         padding-left: 2rem;
+        @include respond-only(xs) {
+            width: 100%;
+            padding-left: 0rem;
+        }
         &__title {
             width: 100%;
             text-align: center;
@@ -1022,6 +1045,63 @@
                 opacity: 1;
                 transition: all 0.2s ease-in 0.3s;
             }
+        }
+    }
+}
+
+.modal-backdrop {
+    position: fixed;
+    z-index: 9999;
+    overflow-x: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.534);
+}
+
+.modal {
+    background: #ffffff;
+    box-shadow: 2px 2px 20px 1px;
+    border-radius: 5px;
+    margin: 3rem auto;
+    width: 600px;
+    @include respond-only(xs) {
+        max-width: 90vw;
+    }
+    & .modal-header {
+    }
+
+    & .modal-header {
+        width: 100%;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    & .modal-body {
+        position: relative;
+        padding: 20px 10px;
+    }
+
+    & .btn-close {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        font-weight: bold;
+        color: #99001c;
+        background: transparent;
+        border-radius: 99999px;
+        transition: all 0.2s ease-in;
+        &:hover {
+            background: #99001c;
+            color: #ffffff;
         }
     }
 }
