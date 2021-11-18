@@ -228,7 +228,12 @@
     </main>
     <section class="page__footer__social">
       <div class="page__footer__social__line"></div>
-      <div class="page__footer__social__icons">
+      <div
+        class="page__footer__social__icons"
+        data-aos="zoom-in"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-duration="1000"
+      >
         <a
           href="https://www.facebook.com/pg/aduniversalis/about/"
           target="_blank"
@@ -257,117 +262,6 @@
       <div class="page__footer__social__line"></div>
     </section>
     <footer class="page__footer">
-      <!-- <section class="page__footer__top">
-        <div class="s__row">
-          <div class="s__col c--3">
-            <div class="page__footer__top__content">
-              <h3 class="page__footer__top__content__header">About A.D.U</h3>
-              <ul class="page__footer__top__content__links">
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-              </ul>
-            </div>
-            <div class="page__footer__top__content">
-              <h3 class="page__footer__top__content__header">Global Scope</h3>
-              <ul class="page__footer__top__content__links">
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="s__col c--3">
-            <div class="page__footer__top__content">
-              <h3 class="page__footer__top__content__header">Admissions</h3>
-              <ul class="page__footer__top__content__links">
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="s__col c--3">
-            <div class="page__footer__top__content">
-              <h3 class="page__footer__top__content__header">
-                Academics Resources
-              </h3>
-              <ul class="page__footer__top__content__links">
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-              </ul>
-            </div>
-            <div class="page__footer__top__content">
-              <h3 class="page__footer__top__content__header">
-                Services/Resources
-              </h3>
-              <ul class="page__footer__top__content__links">
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__content__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="s__col c--3">
-            <div class="page__footer__top__right">
-              <ul class="page__footer__top__right__links">
-                <li class="page__footer__top__right__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__right__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-                <li class="page__footer__top__right__links__link">
-                  <Link href="#">A.D.U at a Glance</Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <section class="page__footer__top__social">
-          <div class="page__footer__top__social__line"></div>
-          <div class="page__footer__top__social__icons">
-            <v-icon>mdi-facebook</v-icon>
-            <v-icon>mdi-twitter</v-icon>
-            <v-icon>mdi-whatsapp</v-icon>
-            <v-icon>mdi-instagram</v-icon>
-            <v-icon>mdi-snpchat</v-icon>
-          </div>
-          <div class="page__footer__top__social__line"></div>
-        </section>
-      </section> -->
       <section class="page__footer__bottom">
         <div class="page__footer__bottom__brand">
           <div class="logo">

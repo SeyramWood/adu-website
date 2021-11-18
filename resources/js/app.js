@@ -14,6 +14,8 @@ import VueMeta from "vue-meta";
 import store from "./store";
 import axios from "axios";
 import Lightbox from "@morioh/v-lightbox";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import VueLang from "@eli5/vue-lang-js";
 import translations from "./lang.js";
@@ -42,6 +44,9 @@ createInertiaApp({
     resolve: name => import(`./Pages/${name}`),
     setup({ el, App, props }) {
         new Vue({
+            created() {
+                AOS.init();
+            },
             vuetify,
             store,
             render: h => h(App, props)
