@@ -34,28 +34,48 @@
     </div>
     <div class="home__stats">
       <div class="content">
-        <div class="stat">
+        <div
+          class="stat"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
           <div class="icon">
             <v-icon>mdi-chart-bar</v-icon>
           </div>
           <div class="percentage">100%</div>
           <div class="title">{{ $t("pages.home.title.4") }}</div>
         </div>
-        <div class="stat">
+        <div
+          class="stat"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1500"
+        >
           <div class="icon">
             <v-icon>mdi-finance</v-icon>
           </div>
           <div class="percentage">70%</div>
           <div class="title">{{ $t("pages.home.title.5") }}</div>
         </div>
-        <div class="stat">
+        <div
+          class="stat"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
           <div class="icon">
             <v-icon>mdi-account-supervisor</v-icon>
           </div>
           <div class="percentage">70%</div>
           <div class="title">{{ $t("pages.home.title.6") }}</div>
         </div>
-        <div class="stat">
+        <div
+          class="stat"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="2000"
+        >
           <div class="icon">
             <v-icon>mdi-currency-usd</v-icon>
           </div>
@@ -69,11 +89,23 @@
     <div class="home__news">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">{{ $t("pages.home.title.8") }}</h4>
+        <h4
+          class="title"
+          data-aos="zoom-in"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
+          {{ $t("pages.home.title.8") }}
+        </h4>
         <div class="line"></div>
       </div>
       <div class="s__row">
-        <div class="s__col c--4">
+        <div
+          class="s__col c--4"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="500"
+        >
           <div class="news__container">
             <div class="image">
               <img src="/storage/pages/academics/law.jpg" alt="" srcset="" />
@@ -88,7 +120,12 @@
             </div>
           </div>
         </div>
-        <div class="s__col c--4">
+        <div
+          class="s__col c--4"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
           <div class="news__container">
             <div class="image">
               <img src="/storage/pages/academics/ai.jpg" alt="" srcset="" />
@@ -103,7 +140,12 @@
             </div>
           </div>
         </div>
-        <div class="s__col c--4">
+        <div
+          class="s__col c--4"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1500"
+        >
           <div class="news__container">
             <div class="image">
               <img
@@ -130,10 +172,21 @@
     <div class="home__spotlight">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">{{ $t("pages.home.title.12") }}</h4>
+        <h4
+          class="title"
+          data-aos="zoom-in"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
+          {{ $t("pages.home.title.12") }}
+        </h4>
         <div class="line"></div>
       </div>
-      <div class="home__spotlight__container">
+      <div
+        class="home__spotlight__container"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+      >
         <div class="image__wrapper content--1" v-if="getSpotlight[0]">
           <figure class="image">
             <Link
@@ -223,11 +276,27 @@
     <div class="home__news">
       <div class="header primary mb-4">
         <div class="line"></div>
-        <h4 class="title">{{ $t("pages.home.title.14") }}</h4>
+        <h4
+          class="title"
+          data-aos="zoom-in"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
+          {{ $t("pages.home.title.14") }}
+        </h4>
         <div class="line"></div>
       </div>
       <div class="s__row">
-        <div class="s__col c--4" v-for="(news, index) in getNews" :key="index">
+        <div
+          class="s__col c--4"
+          v-for="(news, index) in getNews"
+          :key="index"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          :data-aos-duration="`${
+            index === 0 ? '500' : index === 1 ? '1000' : '1500'
+          }`"
+        >
           <div class="news__container">
             <div class="image">
               <img :src="news.image[index]" alt="" srcset="" />
