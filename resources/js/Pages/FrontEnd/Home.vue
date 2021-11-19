@@ -247,6 +247,33 @@
         <Link as="button">{{ $t("pages.home.rm") }}</Link>
       </div>
     </div>
+    <!-- <div class="home__news">
+      <div class="header primary mb-4">
+        <div class="line"></div>
+        <h4 class="title">{{ $t("pages.home.title.14") }}</h4>
+        <div class="line"></div>
+      </div>
+      <div class="s__row">
+        <div class="s__col c--4" v-for="(news, index) in getNews" :key="index">
+          <div class="news__container">
+            <div class="image">
+              <img :src="news.image[index]" alt="" srcset="" />
+            </div>
+            <h1 class="title">{{ news.title }}</h1>
+            <div class="text" v-html="news.text.substr(0, 200)"></div>
+            <div class="link">
+              <Link href="javascript::" @click.prevent="readNews(news)">{{
+                $t("pages.home.title.16")
+              }}</Link>
+              <span>&rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="view__more">
+        <Link as="button">{{ $t("pages.home.rm") }}</Link>
+      </div>
+    </div> -->
 
     <s-modal v-model="newsModal" width="70rem">
       <div class="english-programme-details" v-if="currentNews">
